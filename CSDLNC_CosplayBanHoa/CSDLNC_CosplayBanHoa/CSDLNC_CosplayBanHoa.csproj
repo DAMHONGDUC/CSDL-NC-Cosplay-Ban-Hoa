@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="QuanTri\FormMain_QT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\FormMain_QT.Designer.cs">
+      <DependentUpon>FormMain_QT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LichSuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LichSuXuat.Designer.cs">
+      <DependentUpon>LichSuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LichSuNhap_QT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LichSuNhap_QT.Designer.cs">
+      <DependentUpon>LichSuNhap_QT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LuuVetGia_QT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LuuVetGia_QT.Designer.cs">
+      <DependentUpon>LuuVetGia_QT.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLi\HieuSuatNV_QL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +156,24 @@
     <Compile Include="QuanLi\ThietLapGiamGia_QL.Designer.cs">
       <DependentUpon>ThietLapGiamGia_QL.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanTri\SanPham_QT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SanPham_QT.Designer.cs">
+      <DependentUpon>SanPham_QT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuanTri\FormMain_QT.resx">
+      <DependentUpon>FormMain_QT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\LichSuNhap_QT.resx">
+      <DependentUpon>LichSuNhap_QT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\LichSuXuat.resx">
+      <DependentUpon>LichSuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\LuuVetGia_QT.resx">
+      <DependentUpon>LuuVetGia_QT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLi\FormMain_QL.resx">
       <DependentUpon>FormMain_QL.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +226,9 @@
     <EmbeddedResource Include="QuanLi\ThongKe_QL.resx">
       <DependentUpon>ThongKe_QL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\SanPham_QT.resx">
+      <DependentUpon>SanPham_QT.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NhanSu\" />
-    <Folder Include="QuanTri\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\account.png" />
