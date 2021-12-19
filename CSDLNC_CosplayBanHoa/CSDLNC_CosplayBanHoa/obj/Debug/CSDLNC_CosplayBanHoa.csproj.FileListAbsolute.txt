@@ -31,3 +31,32 @@ C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLN
 C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.ThongKe_QL.resources
 C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.HieuSuatNV_QL.resources
 C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.ThietLapGiamGia_QL.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\bin\Debug\CSDLNC_CosplayBanHoa.exe.config
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\bin\Debug\CSDLNC_CosplayBanHoa.exe
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\bin\Debug\CSDLNC_CosplayBanHoa.pdb
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.csprojAssemblyReference.cache
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.QLNhanVien_NS.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.FormMain_QT.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LichSuNhap_QT.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LichSuXuat.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LuuVetGia_QT.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.FormMain_QL.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.CT_DonHang.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.DangKi.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.DangNhap.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.GioHang_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.DonHang_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.FormMain_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.MuaHang_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LichSuMuaHang_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.Properties.Resources.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.ThanhToan_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.TTNguoiNhan_KH.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.HieuSuatNV_QL.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.ThietLapGiamGia_QL.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.ThongKe_QL.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.SanPham_QT.resources
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.csproj.GenerateResource.cache
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.csproj.CoreCompileInputs.cache
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.exe
+D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.pdb
