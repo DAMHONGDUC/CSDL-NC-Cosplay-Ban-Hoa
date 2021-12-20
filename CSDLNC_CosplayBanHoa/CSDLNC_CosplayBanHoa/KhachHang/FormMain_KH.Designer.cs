@@ -36,9 +36,9 @@
             this.btn_giohang_KH = new System.Windows.Forms.Button();
             this.btn_muahang_KH = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_tendoitac_DT = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_tendoitac_DT = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,6 +154,17 @@
             this.panel2.Size = new System.Drawing.Size(230, 176);
             this.panel2.TabIndex = 1;
             // 
+            // lb_tendoitac_DT
+            // 
+            this.lb_tendoitac_DT.AutoSize = true;
+            this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lb_tendoitac_DT.Location = new System.Drawing.Point(45, 133);
+            this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
+            this.lb_tendoitac_DT.Size = new System.Drawing.Size(118, 25);
+            this.lb_tendoitac_DT.TabIndex = 1;
+            this.lb_tendoitac_DT.Text = "Khách hàng";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -174,17 +185,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lb_tendoitac_DT
-            // 
-            this.lb_tendoitac_DT.AutoSize = true;
-            this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tendoitac_DT.Location = new System.Drawing.Point(45, 133);
-            this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
-            this.lb_tendoitac_DT.Size = new System.Drawing.Size(118, 25);
-            this.lb_tendoitac_DT.TabIndex = 1;
-            this.lb_tendoitac_DT.Text = "Khách hàng";
-            // 
             // FormMain_KH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,7 +194,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "FormMain_KH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain_KH";
+            this.Text = "Khách hàng";
             this.Load += new System.EventHandler(this.FormMain_KH_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

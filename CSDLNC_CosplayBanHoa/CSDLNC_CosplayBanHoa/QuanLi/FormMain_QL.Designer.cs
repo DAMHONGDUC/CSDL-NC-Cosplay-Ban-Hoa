@@ -30,6 +30,7 @@
         {
             this.panelChildForm_KH = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn_thietlapgiamgia_QL = new System.Windows.Forms.Button();
             this.btn_hieusuatnv_QL = new System.Windows.Forms.Button();
             this.btn_dangxuat_QL = new System.Windows.Forms.Button();
             this.btn_thoat_KH = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.lb_tendoitac_DT = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_thietlapgiamgia_QL = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +66,21 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 953);
             this.panelMenu.TabIndex = 6;
+            // 
+            // btn_thietlapgiamgia_QL
+            // 
+            this.btn_thietlapgiamgia_QL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_thietlapgiamgia_QL.FlatAppearance.BorderSize = 0;
+            this.btn_thietlapgiamgia_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_thietlapgiamgia_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_thietlapgiamgia_QL.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_thietlapgiamgia_QL.Location = new System.Drawing.Point(0, 296);
+            this.btn_thietlapgiamgia_QL.Name = "btn_thietlapgiamgia_QL";
+            this.btn_thietlapgiamgia_QL.Size = new System.Drawing.Size(230, 60);
+            this.btn_thietlapgiamgia_QL.TabIndex = 11;
+            this.btn_thietlapgiamgia_QL.Text = "Thiết lập giảm giá";
+            this.btn_thietlapgiamgia_QL.UseVisualStyleBackColor = true;
+            this.btn_thietlapgiamgia_QL.Click += new System.EventHandler(this.btn_thietlapgiamgia_QL_Click);
             // 
             // btn_hieusuatnv_QL
             // 
@@ -169,21 +184,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_thietlapgiamgia_QL
-            // 
-            this.btn_thietlapgiamgia_QL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_thietlapgiamgia_QL.FlatAppearance.BorderSize = 0;
-            this.btn_thietlapgiamgia_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thietlapgiamgia_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_thietlapgiamgia_QL.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thietlapgiamgia_QL.Location = new System.Drawing.Point(0, 296);
-            this.btn_thietlapgiamgia_QL.Name = "btn_thietlapgiamgia_QL";
-            this.btn_thietlapgiamgia_QL.Size = new System.Drawing.Size(230, 60);
-            this.btn_thietlapgiamgia_QL.TabIndex = 11;
-            this.btn_thietlapgiamgia_QL.Text = "Thiết lập giảm giá";
-            this.btn_thietlapgiamgia_QL.UseVisualStyleBackColor = true;
-            this.btn_thietlapgiamgia_QL.Click += new System.EventHandler(this.btn_thietlapgiamgia_QL_Click);
-            // 
             // FormMain_QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,7 +193,7 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "FormMain_QL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain_QL";
+            this.Text = "Quản lí";
             this.Load += new System.EventHandler(this.FormMain_QL_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

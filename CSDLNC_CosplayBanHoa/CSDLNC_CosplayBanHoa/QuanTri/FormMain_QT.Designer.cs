@@ -31,16 +31,16 @@ namespace CSDLNC_CosplayBanHoa
         {
             this.panelChildForm_KH = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn_lichsuxuathang_QT = new System.Windows.Forms.Button();
             this.btn_dangxuat_KH = new System.Windows.Forms.Button();
-            this.btn_taikhoan_KH = new System.Windows.Forms.Button();
+            this.btn_lichsunhaphang_QT = new System.Windows.Forms.Button();
             this.btn_thoat_KH = new System.Windows.Forms.Button();
-            this.btn_giohang_KH = new System.Windows.Forms.Button();
-            this.btn_muahang_KH = new System.Windows.Forms.Button();
+            this.btn_luuvetgia_QT = new System.Windows.Forms.Button();
+            this.btn_sanpham_QT = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_tendoitac_DT = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,29 +49,41 @@ namespace CSDLNC_CosplayBanHoa
             // panelChildForm_KH
             // 
             this.panelChildForm_KH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm_KH.Location = new System.Drawing.Point(259, 0);
-            this.panelChildForm_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelChildForm_KH.Location = new System.Drawing.Point(230, 0);
             this.panelChildForm_KH.Name = "panelChildForm_KH";
-            this.panelChildForm_KH.Size = new System.Drawing.Size(1019, 844);
+            this.panelChildForm_KH.Size = new System.Drawing.Size(1252, 953);
             this.panelChildForm_KH.TabIndex = 7;
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.btn_lichsuxuathang_QT);
             this.panelMenu.Controls.Add(this.btn_dangxuat_KH);
-            this.panelMenu.Controls.Add(this.btn_taikhoan_KH);
+            this.panelMenu.Controls.Add(this.btn_lichsunhaphang_QT);
             this.panelMenu.Controls.Add(this.btn_thoat_KH);
-            this.panelMenu.Controls.Add(this.btn_giohang_KH);
-            this.panelMenu.Controls.Add(this.btn_muahang_KH);
+            this.panelMenu.Controls.Add(this.btn_luuvetgia_QT);
+            this.panelMenu.Controls.Add(this.btn_sanpham_QT);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(259, 844);
+            this.panelMenu.Size = new System.Drawing.Size(230, 953);
             this.panelMenu.TabIndex = 6;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+            // 
+            // btn_lichsuxuathang_QT
+            // 
+            this.btn_lichsuxuathang_QT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_lichsuxuathang_QT.FlatAppearance.BorderSize = 0;
+            this.btn_lichsuxuathang_QT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_lichsuxuathang_QT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_lichsuxuathang_QT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_lichsuxuathang_QT.Location = new System.Drawing.Point(0, 356);
+            this.btn_lichsuxuathang_QT.Name = "btn_lichsuxuathang_QT";
+            this.btn_lichsuxuathang_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_lichsuxuathang_QT.TabIndex = 10;
+            this.btn_lichsuxuathang_QT.Text = "Lịch sử xuất hàng";
+            this.btn_lichsuxuathang_QT.UseVisualStyleBackColor = true;
+            this.btn_lichsuxuathang_QT.Click += new System.EventHandler(this.btn_lichsuxuathang_QT_Click);
             // 
             // btn_dangxuat_KH
             // 
@@ -80,29 +92,27 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_dangxuat_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangxuat_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangxuat_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_dangxuat_KH.Location = new System.Drawing.Point(0, 694);
-            this.btn_dangxuat_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_dangxuat_KH.Location = new System.Drawing.Point(0, 833);
             this.btn_dangxuat_KH.Name = "btn_dangxuat_KH";
-            this.btn_dangxuat_KH.Size = new System.Drawing.Size(259, 75);
+            this.btn_dangxuat_KH.Size = new System.Drawing.Size(230, 60);
             this.btn_dangxuat_KH.TabIndex = 9;
             this.btn_dangxuat_KH.Text = "Đăng xuất";
             this.btn_dangxuat_KH.UseVisualStyleBackColor = true;
             // 
-            // btn_taikhoan_KH
+            // btn_lichsunhaphang_QT
             // 
-            this.btn_taikhoan_KH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_taikhoan_KH.FlatAppearance.BorderSize = 0;
-            this.btn_taikhoan_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_taikhoan_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_taikhoan_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_taikhoan_KH.Location = new System.Drawing.Point(0, 370);
-            this.btn_taikhoan_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_taikhoan_KH.Name = "btn_taikhoan_KH";
-            this.btn_taikhoan_KH.Size = new System.Drawing.Size(259, 75);
-            this.btn_taikhoan_KH.TabIndex = 7;
-            this.btn_taikhoan_KH.Text = "Lịch sử nhập hàng";
-            this.btn_taikhoan_KH.UseVisualStyleBackColor = true;
-            this.btn_taikhoan_KH.Click += new System.EventHandler(this.btn_taikhoan_KH_Click);
+            this.btn_lichsunhaphang_QT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_lichsunhaphang_QT.FlatAppearance.BorderSize = 0;
+            this.btn_lichsunhaphang_QT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_lichsunhaphang_QT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_lichsunhaphang_QT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_lichsunhaphang_QT.Location = new System.Drawing.Point(0, 296);
+            this.btn_lichsunhaphang_QT.Name = "btn_lichsunhaphang_QT";
+            this.btn_lichsunhaphang_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_lichsunhaphang_QT.TabIndex = 7;
+            this.btn_lichsunhaphang_QT.Text = "Lịch sử nhập hàng";
+            this.btn_lichsunhaphang_QT.UseVisualStyleBackColor = true;
+            this.btn_lichsunhaphang_QT.Click += new System.EventHandler(this.btn_lichsunhaphang_QT_Click);
             // 
             // btn_thoat_KH
             // 
@@ -111,43 +121,42 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_thoat_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thoat_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 769);
-            this.btn_thoat_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 893);
             this.btn_thoat_KH.Name = "btn_thoat_KH";
-            this.btn_thoat_KH.Size = new System.Drawing.Size(259, 75);
+            this.btn_thoat_KH.Size = new System.Drawing.Size(230, 60);
             this.btn_thoat_KH.TabIndex = 6;
             this.btn_thoat_KH.Text = "Thoát";
             this.btn_thoat_KH.UseVisualStyleBackColor = true;
             // 
-            // btn_giohang_KH
+            // btn_luuvetgia_QT
             // 
-            this.btn_giohang_KH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_giohang_KH.FlatAppearance.BorderSize = 0;
-            this.btn_giohang_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_giohang_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_giohang_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_giohang_KH.Location = new System.Drawing.Point(0, 295);
-            this.btn_giohang_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_giohang_KH.Name = "btn_giohang_KH";
-            this.btn_giohang_KH.Size = new System.Drawing.Size(259, 75);
-            this.btn_giohang_KH.TabIndex = 2;
-            this.btn_giohang_KH.Text = "Lưu vết giá";
-            this.btn_giohang_KH.UseVisualStyleBackColor = true;
+            this.btn_luuvetgia_QT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_luuvetgia_QT.FlatAppearance.BorderSize = 0;
+            this.btn_luuvetgia_QT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_luuvetgia_QT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_luuvetgia_QT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_luuvetgia_QT.Location = new System.Drawing.Point(0, 236);
+            this.btn_luuvetgia_QT.Name = "btn_luuvetgia_QT";
+            this.btn_luuvetgia_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_luuvetgia_QT.TabIndex = 2;
+            this.btn_luuvetgia_QT.Text = "Lưu vết giá";
+            this.btn_luuvetgia_QT.UseVisualStyleBackColor = true;
+            this.btn_luuvetgia_QT.Click += new System.EventHandler(this.btn_luuvetgia_QT_Click);
             // 
-            // btn_muahang_KH
+            // btn_sanpham_QT
             // 
-            this.btn_muahang_KH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_muahang_KH.FlatAppearance.BorderSize = 0;
-            this.btn_muahang_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_muahang_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_muahang_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_muahang_KH.Location = new System.Drawing.Point(0, 220);
-            this.btn_muahang_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_muahang_KH.Name = "btn_muahang_KH";
-            this.btn_muahang_KH.Size = new System.Drawing.Size(259, 75);
-            this.btn_muahang_KH.TabIndex = 1;
-            this.btn_muahang_KH.Text = "Sản phẩm";
-            this.btn_muahang_KH.UseVisualStyleBackColor = true;
+            this.btn_sanpham_QT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_sanpham_QT.FlatAppearance.BorderSize = 0;
+            this.btn_sanpham_QT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sanpham_QT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_sanpham_QT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_sanpham_QT.Location = new System.Drawing.Point(0, 176);
+            this.btn_sanpham_QT.Name = "btn_sanpham_QT";
+            this.btn_sanpham_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_sanpham_QT.TabIndex = 1;
+            this.btn_sanpham_QT.Text = "Sản phẩm";
+            this.btn_sanpham_QT.UseVisualStyleBackColor = true;
+            this.btn_sanpham_QT.Click += new System.EventHandler(this.btn_sanpham_QT_Click);
             // 
             // panel2
             // 
@@ -157,9 +166,8 @@ namespace CSDLNC_CosplayBanHoa
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 220);
+            this.panel2.Size = new System.Drawing.Size(230, 176);
             this.panel2.TabIndex = 1;
             // 
             // lb_tendoitac_DT
@@ -167,9 +175,9 @@ namespace CSDLNC_CosplayBanHoa
             this.lb_tendoitac_DT.AutoSize = true;
             this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tendoitac_DT.Location = new System.Drawing.Point(74, 167);
+            this.lb_tendoitac_DT.Location = new System.Drawing.Point(66, 134);
             this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
-            this.lb_tendoitac_DT.Size = new System.Drawing.Size(97, 29);
+            this.lb_tendoitac_DT.Size = new System.Drawing.Size(81, 25);
             this.lb_tendoitac_DT.TabIndex = 1;
             this.lb_tendoitac_DT.Text = "Quản trị";
             // 
@@ -178,47 +186,33 @@ namespace CSDLNC_CosplayBanHoa
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 218);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 2);
+            this.panel1.Size = new System.Drawing.Size(230, 2);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(164, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(0, 445);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 75);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Lịch sử xuất hàng";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FormMain_QT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 844);
+            this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.panelChildForm_KH);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMain_QT";
-            this.Text = "FormMain_QT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản trị";
+            this.Load += new System.EventHandler(this.FormMain_QT_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -232,14 +226,14 @@ namespace CSDLNC_CosplayBanHoa
         private System.Windows.Forms.Panel panelChildForm_KH;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btn_dangxuat_KH;
-        private System.Windows.Forms.Button btn_taikhoan_KH;
+        private System.Windows.Forms.Button btn_lichsunhaphang_QT;
         private System.Windows.Forms.Button btn_thoat_KH;
-        private System.Windows.Forms.Button btn_giohang_KH;
-        private System.Windows.Forms.Button btn_muahang_KH;
+        private System.Windows.Forms.Button btn_luuvetgia_QT;
+        private System.Windows.Forms.Button btn_sanpham_QT;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lb_tendoitac_DT;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_lichsuxuathang_QT;
     }
 }

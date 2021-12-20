@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace CSDLNC_CosplayBanHoa
 {
-    public partial class QuanLyNhanVien_NS : Form
+    public partial class QLNhanVien : Form
     {
-        public QuanLyNhanVien_NS()
+        public QLNhanVien()
         {
             InitializeComponent();
         }
+
     }
 }

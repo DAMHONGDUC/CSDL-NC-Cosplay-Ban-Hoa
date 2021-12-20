@@ -60,3 +60,10 @@ D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBa
 D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.csproj.CoreCompileInputs.cache
 D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.exe
 D:\NAT project\WEB projects\Test Github\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.pdb
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.FormMain_QT.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LichSuNhap_QT.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LichSuXuat.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.LuuVetGia_QT.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.SanPham_QT.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.QLNhanVien.resources
+C:\Users\Dam Hong Duc\Desktop\CSDL-NC-Cosplay-Ban-Hoa\CSDLNC_CosplayBanHoa\CSDLNC_CosplayBanHoa\obj\Debug\CSDLNC_CosplayBanHoa.FormMain_NS.resources

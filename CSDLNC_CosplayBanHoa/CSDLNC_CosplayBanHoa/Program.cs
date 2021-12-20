@@ -17,8 +17,10 @@ namespace CSDLNC_CosplayBanHoa
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new DangNhap());          
-            Application.Run(new FormMain_KH());
+            //Application.Run(new FormMain_KH());
+            //Application.Run(new FormMain_NS());
             //Application.Run(new FormMain_QL());
+            //Application.Run(new FormMain_QT());
         }
     }
 }
