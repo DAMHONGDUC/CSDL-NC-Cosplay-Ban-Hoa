@@ -144,7 +144,6 @@ Phan Bội Châu
 Hoàng Sa
 Nguyễn Du
 Phan Chu Chinh
-
 An Phú
 Đường số 19
 Đường số 55
@@ -285,7 +284,6 @@ Xa Lộ Hà Nội
 Đường số 54
 Nguyễn Đôn Tiết
 Xuân Thủy
-
 Bà Huyện Thanh Quan
 Hòa Hưng
 Nguyễn Hiền
@@ -344,7 +342,6 @@ Phạm Ngọc Thạch
 Hồ Xuân Hương
 Nguyễn Gia Thiều
 Rạch Bùng Binh
-
 30/4
 Bạch Đằng
 Bình Lợi
@@ -422,7 +419,6 @@ Vũ Ngọc Phan
 Vũ Tùng
 Xô Viết Nghệ Tĩnh
 Yên Ðổ
-
 Nguyễn Khuyến
 Bác Ái
 Đường số 25
