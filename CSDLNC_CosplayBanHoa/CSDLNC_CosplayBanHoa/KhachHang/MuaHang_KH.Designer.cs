@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -74,7 +75,6 @@
             this.hoaTếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hoaCướiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -107,6 +107,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1282, 535);
             this.panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(566, 51);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 32);
+            this.label8.TabIndex = 86;
+            this.label8.Text = "MUA HÀNG";
             // 
             // button1
             // 
@@ -240,7 +251,7 @@
             this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
             this.picBox_anh_DT.Location = new System.Drawing.Point(904, 130);
             this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(311, 375);
+            this.picBox_anh_DT.Size = new System.Drawing.Size(345, 375);
             this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox_anh_DT.TabIndex = 22;
             this.picBox_anh_DT.TabStop = false;
@@ -468,17 +479,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1282, 318);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(566, 51);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 32);
-            this.label8.TabIndex = 86;
-            this.label8.Text = "MUA HÀNG";
             // 
             // MuaHang_KH
             // 

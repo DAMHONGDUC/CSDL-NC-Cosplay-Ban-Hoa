@@ -31,6 +31,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,11 +59,10 @@ namespace CSDLNC_CosplayBanHoa
             this.button2 = new System.Windows.Forms.Button();
             this.dGV_DoiTac_SP = new System.Windows.Forms.DataGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DoiTac_SP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,12 +95,22 @@ namespace CSDLNC_CosplayBanHoa
             this.panel1.Size = new System.Drawing.Size(1282, 401);
             this.panel1.TabIndex = 5;
             // 
+            // picBox_anh_DT
+            // 
+            this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
+            this.picBox_anh_DT.Location = new System.Drawing.Point(948, 104);
+            this.picBox_anh_DT.Name = "picBox_anh_DT";
+            this.picBox_anh_DT.Size = new System.Drawing.Size(299, 264);
+            this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_anh_DT.TabIndex = 27;
+            this.picBox_anh_DT.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label11.Location = new System.Drawing.Point(912, 79);
+            this.label11.Location = new System.Drawing.Point(943, 76);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 25);
             this.label11.TabIndex = 26;
@@ -109,7 +119,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox6.Location = new System.Drawing.Point(43, 341);
+            this.textBox6.Location = new System.Drawing.Point(74, 338);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(190, 30);
             this.textBox6.TabIndex = 25;
@@ -119,7 +129,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label10.Location = new System.Drawing.Point(39, 315);
+            this.label10.Location = new System.Drawing.Point(70, 312);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 25);
             this.label10.TabIndex = 24;
@@ -128,7 +138,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(308, 200);
+            this.textBox5.Location = new System.Drawing.Point(339, 197);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(239, 169);
@@ -139,7 +149,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(609, 237);
+            this.label9.Location = new System.Drawing.Point(640, 234);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 25);
             this.label9.TabIndex = 22;
@@ -148,7 +158,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(613, 265);
+            this.textBox4.Location = new System.Drawing.Point(644, 262);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 104);
@@ -159,7 +169,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(304, 172);
+            this.label8.Location = new System.Drawing.Point(335, 169);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 25);
             this.label8.TabIndex = 20;
@@ -168,7 +178,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(613, 183);
+            this.textBox3.Location = new System.Drawing.Point(644, 180);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(244, 30);
             this.textBox3.TabIndex = 19;
@@ -178,7 +188,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label7.Location = new System.Drawing.Point(609, 157);
+            this.label7.Location = new System.Drawing.Point(640, 154);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 25);
             this.label7.TabIndex = 18;
@@ -187,7 +197,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(42, 185);
+            this.textBox2.Location = new System.Drawing.Point(73, 182);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 30);
             this.textBox2.TabIndex = 17;
@@ -195,7 +205,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(41, 105);
+            this.textBox1.Location = new System.Drawing.Point(72, 102);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 30);
             this.textBox1.TabIndex = 16;
@@ -205,7 +215,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label6.Location = new System.Drawing.Point(37, 79);
+            this.label6.Location = new System.Drawing.Point(68, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(131, 25);
             this.label6.TabIndex = 15;
@@ -214,7 +224,7 @@ namespace CSDLNC_CosplayBanHoa
             // txtBox_giaban_SP
             // 
             this.txtBox_giaban_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBox_giaban_SP.Location = new System.Drawing.Point(613, 103);
+            this.txtBox_giaban_SP.Location = new System.Drawing.Point(644, 100);
             this.txtBox_giaban_SP.Name = "txtBox_giaban_SP";
             this.txtBox_giaban_SP.Size = new System.Drawing.Size(244, 30);
             this.txtBox_giaban_SP.TabIndex = 14;
@@ -222,7 +232,7 @@ namespace CSDLNC_CosplayBanHoa
             // txtBox_soluong_SP
             // 
             this.txtBox_soluong_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBox_soluong_SP.Location = new System.Drawing.Point(308, 103);
+            this.txtBox_soluong_SP.Location = new System.Drawing.Point(339, 100);
             this.txtBox_soluong_SP.Name = "txtBox_soluong_SP";
             this.txtBox_soluong_SP.Size = new System.Drawing.Size(239, 30);
             this.txtBox_soluong_SP.TabIndex = 13;
@@ -230,7 +240,7 @@ namespace CSDLNC_CosplayBanHoa
             // txtBox_tensanpham_SP
             // 
             this.txtBox_tensanpham_SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBox_tensanpham_SP.Location = new System.Drawing.Point(42, 265);
+            this.txtBox_tensanpham_SP.Location = new System.Drawing.Point(73, 262);
             this.txtBox_tensanpham_SP.Name = "txtBox_tensanpham_SP";
             this.txtBox_tensanpham_SP.Size = new System.Drawing.Size(190, 30);
             this.txtBox_tensanpham_SP.TabIndex = 12;
@@ -240,7 +250,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(608, 75);
+            this.label5.Location = new System.Drawing.Point(639, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 10;
@@ -251,7 +261,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(304, 77);
+            this.label4.Location = new System.Drawing.Point(335, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 25);
             this.label4.TabIndex = 8;
@@ -262,7 +272,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(38, 239);
+            this.label3.Location = new System.Drawing.Point(69, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 25);
             this.label3.TabIndex = 6;
@@ -273,7 +283,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(38, 157);
+            this.label2.Location = new System.Drawing.Point(69, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 4;
@@ -359,16 +369,6 @@ namespace CSDLNC_CosplayBanHoa
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // picBox_anh_DT
-            // 
-            this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_anh_DT.Location = new System.Drawing.Point(917, 107);
-            this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(299, 264);
-            this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_anh_DT.TabIndex = 27;
-            this.picBox_anh_DT.TabStop = false;
-            // 
             // SanPham_QT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,9 +382,9 @@ namespace CSDLNC_CosplayBanHoa
             this.Text = "SanPham_QT";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DoiTac_SP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
             this.ResumeLayout(false);
 
         }

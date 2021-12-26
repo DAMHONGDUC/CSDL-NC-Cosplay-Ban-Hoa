@@ -49,9 +49,9 @@ namespace CSDLNC_CosplayBanHoa
             // panelChildForm_KH
             // 
             this.panelChildForm_KH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm_KH.Location = new System.Drawing.Point(230, 0);
+            this.panelChildForm_KH.Location = new System.Drawing.Point(150, 0);
             this.panelChildForm_KH.Name = "panelChildForm_KH";
-            this.panelChildForm_KH.Size = new System.Drawing.Size(1252, 953);
+            this.panelChildForm_KH.Size = new System.Drawing.Size(1332, 953);
             this.panelChildForm_KH.TabIndex = 7;
             // 
             // panelMenu
@@ -67,7 +67,7 @@ namespace CSDLNC_CosplayBanHoa
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 953);
+            this.panelMenu.Size = new System.Drawing.Size(150, 953);
             this.panelMenu.TabIndex = 6;
             // 
             // btn_lichsuxuathang_QT
@@ -79,7 +79,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_lichsuxuathang_QT.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_lichsuxuathang_QT.Location = new System.Drawing.Point(0, 356);
             this.btn_lichsuxuathang_QT.Name = "btn_lichsuxuathang_QT";
-            this.btn_lichsuxuathang_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_lichsuxuathang_QT.Size = new System.Drawing.Size(150, 60);
             this.btn_lichsuxuathang_QT.TabIndex = 10;
             this.btn_lichsuxuathang_QT.Text = "Lịch sử xuất hàng";
             this.btn_lichsuxuathang_QT.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_dangxuat_KH.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_dangxuat_KH.Location = new System.Drawing.Point(0, 833);
             this.btn_dangxuat_KH.Name = "btn_dangxuat_KH";
-            this.btn_dangxuat_KH.Size = new System.Drawing.Size(230, 60);
+            this.btn_dangxuat_KH.Size = new System.Drawing.Size(150, 60);
             this.btn_dangxuat_KH.TabIndex = 9;
             this.btn_dangxuat_KH.Text = "Đăng xuất";
             this.btn_dangxuat_KH.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_lichsunhaphang_QT.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_lichsunhaphang_QT.Location = new System.Drawing.Point(0, 296);
             this.btn_lichsunhaphang_QT.Name = "btn_lichsunhaphang_QT";
-            this.btn_lichsunhaphang_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_lichsunhaphang_QT.Size = new System.Drawing.Size(150, 60);
             this.btn_lichsunhaphang_QT.TabIndex = 7;
             this.btn_lichsunhaphang_QT.Text = "Lịch sử nhập hàng";
             this.btn_lichsunhaphang_QT.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_thoat_KH.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_thoat_KH.Location = new System.Drawing.Point(0, 893);
             this.btn_thoat_KH.Name = "btn_thoat_KH";
-            this.btn_thoat_KH.Size = new System.Drawing.Size(230, 60);
+            this.btn_thoat_KH.Size = new System.Drawing.Size(150, 60);
             this.btn_thoat_KH.TabIndex = 6;
             this.btn_thoat_KH.Text = "Thoát";
             this.btn_thoat_KH.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_luuvetgia_QT.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_luuvetgia_QT.Location = new System.Drawing.Point(0, 236);
             this.btn_luuvetgia_QT.Name = "btn_luuvetgia_QT";
-            this.btn_luuvetgia_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_luuvetgia_QT.Size = new System.Drawing.Size(150, 60);
             this.btn_luuvetgia_QT.TabIndex = 2;
             this.btn_luuvetgia_QT.Text = "Lưu vết giá";
             this.btn_luuvetgia_QT.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@ namespace CSDLNC_CosplayBanHoa
             this.btn_sanpham_QT.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_sanpham_QT.Location = new System.Drawing.Point(0, 176);
             this.btn_sanpham_QT.Name = "btn_sanpham_QT";
-            this.btn_sanpham_QT.Size = new System.Drawing.Size(230, 60);
+            this.btn_sanpham_QT.Size = new System.Drawing.Size(150, 60);
             this.btn_sanpham_QT.TabIndex = 1;
             this.btn_sanpham_QT.Text = "Sản phẩm";
             this.btn_sanpham_QT.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@ namespace CSDLNC_CosplayBanHoa
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 176);
+            this.panel2.Size = new System.Drawing.Size(150, 176);
             this.panel2.TabIndex = 1;
             // 
             // lb_tendoitac_DT
@@ -175,7 +175,7 @@ namespace CSDLNC_CosplayBanHoa
             this.lb_tendoitac_DT.AutoSize = true;
             this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tendoitac_DT.Location = new System.Drawing.Point(66, 134);
+            this.lb_tendoitac_DT.Location = new System.Drawing.Point(31, 134);
             this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
             this.lb_tendoitac_DT.Size = new System.Drawing.Size(81, 25);
             this.lb_tendoitac_DT.TabIndex = 1;
@@ -188,15 +188,15 @@ namespace CSDLNC_CosplayBanHoa
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 2);
+            this.panel1.Size = new System.Drawing.Size(150, 2);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(126, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
