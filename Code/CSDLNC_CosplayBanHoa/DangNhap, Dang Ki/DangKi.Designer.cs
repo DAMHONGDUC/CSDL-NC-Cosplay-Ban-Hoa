@@ -52,6 +52,7 @@
             this.btn_quaylai.TabIndex = 33;
             this.btn_quaylai.Text = "Quay Lại";
             this.btn_quaylai.UseVisualStyleBackColor = false;
+            this.btn_quaylai.Click += new System.EventHandler(this.btn_quaylai_Click);
             // 
             // label4
             // 
@@ -87,6 +88,7 @@
             this.btn_dangki.TabIndex = 26;
             this.btn_dangki.Text = "Đăng Kí";
             this.btn_dangki.UseVisualStyleBackColor = false;
+            this.btn_dangki.Click += new System.EventHandler(this.btn_dangki_Click);
             // 
             // label3
             // 
@@ -156,6 +158,7 @@
             this.Controls.Add(this.txtBox_matkhau_DK);
             this.Controls.Add(this.textBox1);
             this.Name = "DangKi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng kí";
             this.ResumeLayout(false);
             this.PerformLayout();

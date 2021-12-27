@@ -47,6 +47,7 @@
             this.lb_QLNV_NS = new System.Windows.Forms.Label();
             this.panel_QLNV_NS = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_QLNV_NS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -232,6 +233,7 @@
             // panel_QLNV_NS
             // 
             this.panel_QLNV_NS.BackColor = System.Drawing.Color.White;
+            this.panel_QLNV_NS.Controls.Add(this.button1);
             this.panel_QLNV_NS.Controls.Add(this.btn_Thoat_NS);
             this.panel_QLNV_NS.Controls.Add(this.btn_SuaNV_NS);
             this.panel_QLNV_NS.Controls.Add(this.btn_XoaNV_NS);
@@ -267,6 +269,17 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1282, 434);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(624, 247);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 30);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // QLNhanVien
             // 
@@ -305,5 +318,6 @@
         private System.Windows.Forms.Label lb_QLNV_NS;
         private System.Windows.Forms.Panel panel_QLNV_NS;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

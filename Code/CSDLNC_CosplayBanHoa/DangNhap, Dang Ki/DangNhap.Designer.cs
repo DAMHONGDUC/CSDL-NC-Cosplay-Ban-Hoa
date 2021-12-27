@@ -50,6 +50,7 @@
             this.btn_dangki.TabIndex = 13;
             this.btn_dangki.Text = "Đăng Kí";
             this.btn_dangki.UseVisualStyleBackColor = false;
+            this.btn_dangki.Click += new System.EventHandler(this.btn_dangki_Click);
             // 
             // label3
             // 
@@ -99,6 +100,7 @@
             this.btn_dangnhap.TabIndex = 9;
             this.btn_dangnhap.Text = "Đăng Nhập";
             this.btn_dangnhap.UseVisualStyleBackColor = false;
+            this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
             // 
             // txtBox_matkhau
             // 
@@ -109,6 +111,7 @@
             this.txtBox_matkhau.PasswordChar = '*';
             this.txtBox_matkhau.Size = new System.Drawing.Size(377, 40);
             this.txtBox_matkhau.TabIndex = 8;
+            this.txtBox_matkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_matkhau_KeyDown);
             // 
             // txtBox_tendangnhap
             // 
@@ -118,6 +121,7 @@
             this.txtBox_tendangnhap.Name = "txtBox_tendangnhap";
             this.txtBox_tendangnhap.Size = new System.Drawing.Size(377, 40);
             this.txtBox_tendangnhap.TabIndex = 7;
+            this.txtBox_tendangnhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBox_tendangnhap_KeyDown);
             // 
             // DangNhap
             // 
@@ -134,6 +138,7 @@
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
