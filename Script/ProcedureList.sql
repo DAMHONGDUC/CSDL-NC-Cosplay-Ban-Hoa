@@ -63,4 +63,19 @@ BEGIN
 END
 GO
 
+-- DROP PROC Sp_KH_TimKiemSP
+-- Xử lí đăng nhập tài khoản
+CREATE PROC Sp_KH_TimKiemSP
+	@TUKHOA NVARCHAR(50)	
+AS
+BEGIN	
+
+	SELECT MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON
+	FROM SANPHAM
+	WHERE THANHPHANCHINH LIKE '%'+ @TUKHOA + '%' 
+	OR TENSP LIKE '%'+ @TUKHOA + '%' 
+	OR CHITIETSP LIKE '%'+ @TUKHOA + '%' 
+END
+GO
+
 --------------------------------------------------------------

@@ -19,9 +19,9 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_tieptuc_giohang_DH_KH_Click(object sender, EventArgs e)
         {
-            TTNguoiNhan_KH ttnguoinhan_KH = new TTNguoiNhan_KH();
-            ttnguoinhan_KH.StartPosition = FormStartPosition.CenterScreen;
-            ttnguoinhan_KH.Show();
+            //TTNguoiNhan_KH ttnguoinhan_KH = new TTNguoiNhan_KH();
+            //ttnguoinhan_KH.StartPosition = FormStartPosition.CenterScreen;
+            //ttnguoinhan_KH.Show();
         }
     }
 }

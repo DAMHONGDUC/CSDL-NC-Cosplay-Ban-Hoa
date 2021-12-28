@@ -14,9 +14,11 @@ namespace CSDLNC_CosplayBanHoa
     public partial class FormMain_KH : Form
     {
         Thread t;
-        public FormMain_KH()
+        string ID;
+        public FormMain_KH(string id)
         {
             InitializeComponent();
+            ID = id;
         }
 
         // mở 1 form con
@@ -71,7 +73,7 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_muahang_KH_Click(object sender, EventArgs e)
         {
-            openChildForm(new MuaHang_KH());
+            openChildForm(new MuaHang_KH(ID));
             ActivateButton(sender);
         }
 

@@ -50,6 +50,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_tieptuc_DH_KH = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBox_sdt_TTNN_KH = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -68,7 +70,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(872, 560);
+            this.panel1.Size = new System.Drawing.Size(872, 564);
             this.panel1.TabIndex = 1;
             // 
             // tabControl1
@@ -138,6 +140,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.txtBox_sdt_TTNN_KH);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label10);
@@ -208,11 +212,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(432, 7);
+            this.dataGridView1.Location = new System.Drawing.Point(427, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(5, 393);
+            this.dataGridView1.Size = new System.Drawing.Size(2, 295);
             this.dataGridView1.TabIndex = 5;
             // 
             // label6
@@ -286,12 +290,30 @@
             // 
             // btn_tieptuc_DH_KH
             // 
-            this.btn_tieptuc_DH_KH.Location = new System.Drawing.Point(304, 492);
+            this.btn_tieptuc_DH_KH.Location = new System.Drawing.Point(301, 492);
             this.btn_tieptuc_DH_KH.Name = "btn_tieptuc_DH_KH";
             this.btn_tieptuc_DH_KH.Size = new System.Drawing.Size(258, 57);
             this.btn_tieptuc_DH_KH.TabIndex = 65;
             this.btn_tieptuc_DH_KH.Text = "Thanh toán";
             this.btn_tieptuc_DH_KH.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label13.Location = new System.Drawing.Point(236, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(387, 25);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Lưu ý: Nội dung thanh toán là SĐT của bạn";
+            // 
+            // txtBox_sdt_TTNN_KH
+            // 
+            this.txtBox_sdt_TTNN_KH.Location = new System.Drawing.Point(285, 346);
+            this.txtBox_sdt_TTNN_KH.Multiline = true;
+            this.txtBox_sdt_TTNN_KH.Name = "txtBox_sdt_TTNN_KH";
+            this.txtBox_sdt_TTNN_KH.Size = new System.Drawing.Size(287, 35);
+            this.txtBox_sdt_TTNN_KH.TabIndex = 49;
             // 
             // ThanhToan_KH
             // 
@@ -339,5 +361,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtBox_sdt_TTNN_KH;
     }
 }
