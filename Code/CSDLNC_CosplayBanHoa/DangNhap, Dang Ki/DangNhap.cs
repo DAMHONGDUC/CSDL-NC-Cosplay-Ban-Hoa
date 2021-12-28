@@ -135,6 +135,7 @@ namespace CSDLNC_CosplayBanHoa
 
             // nếu chưa có dữ liệu 
             if (tendn.Length == 0 | matkhau.Length == 0)
+
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -159,7 +160,7 @@ namespace CSDLNC_CosplayBanHoa
 
             // chạy SP đăng nhập, lấy MAACC, LOAIACC
             Run_SP_DangNhap();
-
+            
             // nếu acc này bị khóa
             if (loaitk == -1)
             {
@@ -171,6 +172,7 @@ namespace CSDLNC_CosplayBanHoa
             Functions.Disconnect();
 
             // kết nối với database tương ứng với loại acc
+
             Functions.Connect(Functions.get_ConnectString(loaitk));
 
             // mở giao diện tương ứng từng loại acc                 
