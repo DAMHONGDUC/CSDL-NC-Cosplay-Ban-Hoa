@@ -54,37 +54,31 @@ namespace CSDLNC_CosplayBanHoa
                 // vô danh
                 case -2:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_VODANH;Password=12345";
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_VODANH;Password=12345";
                         break;
                     }
-                // đối tác
+                // quản trị
                 case 0:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_DOITAC;Password=12345";
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_QT;Password=12345";
                         break;
                     }
                 // khách hàng
                 case 1:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_KHACHHANG;Password=12345";
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_KHACHHANG;Password=12345";
                         break;
-                    }
-                // tài xế
-                case 2:
-                    {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_TAIXE;Password=12345";
-                        break;
-                    }
-                // nhân viên
+                    }              
+                // nhân sự
                 case 3:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_NHANVIEN;Password=12345";
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_NHANSU;Password=12345";
                         break;
                     }
-                // admin
+                // quản lý
                 case 4:
                     {
-                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=QL_DH_GH;Persist Security Info=True;User ID=QL_DH_GH_ADMIN;Password=12345";
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_QL;Password=12345";
                         break;
                     }
             }

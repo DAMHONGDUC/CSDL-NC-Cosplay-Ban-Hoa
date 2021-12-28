@@ -12,11 +12,10 @@ using System.Data.SqlClient;
 namespace CSDLNC_CosplayBanHoa
 {
     public partial class DangNhap : Form
-    {
-        public int user_type = -2;
-        string MAACC;
-        string LOAIACC;
-        string tendangnhap;
+    {      
+        string id;
+        int loaitk = -2;
+        string tendn;
         string matkhau;
 
         Thread t;
@@ -35,7 +34,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             //Mở kết nối
             //Functions.Connect(user_type);
-            Functions.Connect(Functions.get_ConnectString(user_type));
+            Functions.Connect(Functions.get_ConnectString(loaitk));
 
             resetvalue_DN();
         }
@@ -46,66 +45,96 @@ namespace CSDLNC_CosplayBanHoa
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             // set kiểu dữ liệu
-            cmd.Parameters.Add("@TENDANGNHAP", SqlDbType.VarChar, 50);
+            cmd.Parameters.Add("@TENDN", SqlDbType.VarChar, 50);
             cmd.Parameters.Add("@MATKHAU", SqlDbType.VarChar, 50);
-            cmd.Parameters.Add("@MAACC", SqlDbType.VarChar, 15).Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("@LOAIACC", SqlDbType.Int).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@ID", SqlDbType.VarChar, 15).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@LOAITK", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             // set giá trị
-            cmd.Parameters["@TENDANGNHAP"].Value = tendangnhap;
+            cmd.Parameters["@TENDN"].Value = tendn;
             cmd.Parameters["@MATKHAU"].Value = matkhau;
 
             cmd.ExecuteNonQuery();
 
-            MAACC = Convert.ToString(cmd.Parameters["@MAACC"].Value);
-            LOAIACC = Convert.ToString(cmd.Parameters["@LOAIACC"].Value);
+            id = Convert.ToString(cmd.Parameters["@ID"].Value);
+            loaitk = Convert.ToInt32(cmd.Parameters["@LOAITK"].Value);
         }
 
         private int Run_SP_KTTenDangNhap()
         {
-            return 1;
+            SqlCommand cmd = new SqlCommand("SP_KTTenDangNhap", Functions.Con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            // set kiểu dữ liệu
+            cmd.Parameters.Add("@TENDN", SqlDbType.VarChar, 50);
+
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
+
+            // set giá trị
+            cmd.Parameters["@TENDN"].Value = tendn;
+           
+            cmd.ExecuteNonQuery();
+
+            return Int32.Parse(returnParameter.Value.ToString());
         }
 
         private int Run_SP_KTMatKhau()
         {
-            return 1;
+            SqlCommand cmd = new SqlCommand("SP_KTMatKhau", Functions.Con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            // set kiểu dữ liệu
+            cmd.Parameters.Add("@TENDN", SqlDbType.VarChar, 50);
+            cmd.Parameters.Add("@MATKHAU", SqlDbType.VarChar, 50);
+
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
+
+            // set giá trị
+            cmd.Parameters["@TENDN"].Value = tendn;
+            cmd.Parameters["@MATKHAU"].Value = matkhau;
+
+            cmd.ExecuteNonQuery();
+
+            return Int32.Parse(returnParameter.Value.ToString());
         }
 
         // xử lí mở form tương ứng từng loại acc      
         public void open_FormMain(object obj)
         {
-            switch (user_type)
+            switch (loaitk)
             {
                 case 0:
                     {
-                        Application.Run(new FormMain_KH());
+                        Application.Run(new FormMain_QT());
                         break;
                     }
                 case 1:
                     {
-                        Application.Run(new FormMain_NS());
-                        break;
-                    }
-                case 2:
-                    {
-                        Application.Run(new FormMain_QL());
+                        Application.Run(new FormMain_KH());
                         break;
                     }
                 case 3:
                     {
-                        Application.Run(new FormMain_QT());
+                        Application.Run(new FormMain_NS());
                         break;
-                    }              
+                    }
+                case 4:
+                    {
+                        Application.Run(new FormMain_QL());
+                        break;
+                    }                
             }
         }
 
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
-            tendangnhap = txtBox_tendangnhap.Text.Trim().ToString();
+            tendn = txtBox_tendangnhap.Text.Trim().ToString();
             matkhau = txtBox_matkhau.Text.Trim().ToString();
 
             // nếu chưa có dữ liệu 
-            if (tendangnhap.Length == 0 | matkhau.Length == 0)
+            if (tendn.Length == 0 | matkhau.Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -115,24 +144,24 @@ namespace CSDLNC_CosplayBanHoa
             if (Run_SP_KTTenDangNhap() == 0)
             {
                 MessageBox.Show("Tên đăng nhập không tồn tại !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBox_tendangnhap.Focus();
                 return;
             }
 
             // Kiểm tra mật khẩu ứng với tên đăng nhập
             if (Run_SP_KTMatKhau() == 0)
             {
-                MessageBox.Show("Mật khẩu không chính xác !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mật khẩu không chính xác !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);           
+                txtBox_matkhau.Text = "";
+                txtBox_matkhau.Focus();
                 return;
             }
 
             // chạy SP đăng nhập, lấy MAACC, LOAIACC
             Run_SP_DangNhap();
 
-            // chuyển loại acc sang int
-            user_type = Int32.Parse(LOAIACC);
-
             // nếu acc này bị khóa
-            if (user_type == -1)
+            if (loaitk == -1)
             {
                 MessageBox.Show("Tài khoản này đã bị khóa !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -142,7 +171,7 @@ namespace CSDLNC_CosplayBanHoa
             Functions.Disconnect();
 
             // kết nối với database tương ứng với loại acc
-            Functions.Connect(Functions.get_ConnectString(user_type));
+            Functions.Connect(Functions.get_ConnectString(loaitk));
 
             // mở giao diện tương ứng từng loại acc                 
             this.Close();
