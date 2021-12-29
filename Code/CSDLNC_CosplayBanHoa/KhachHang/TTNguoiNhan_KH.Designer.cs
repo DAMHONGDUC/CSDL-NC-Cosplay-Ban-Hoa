@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_thanhtoan_TTNN_KH = new System.Windows.Forms.Button();
-            this.dTP_ngaylap_HHCDNV = new System.Windows.Forms.DateTimePicker();
+            this.dTP_thoigianmongmuon_TTNV_KH = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.cBox_nguoinhan_TTNN_KH = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,15 +55,15 @@
             this.btn_thanhtoan_TTNN_KH.UseVisualStyleBackColor = true;
             this.btn_thanhtoan_TTNN_KH.Click += new System.EventHandler(this.btn_thanhtoan_TTNN_KH_Click);
             // 
-            // dTP_ngaylap_HHCDNV
+            // dTP_thoigianmongmuon_TTNV_KH
             // 
-            this.dTP_ngaylap_HHCDNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dTP_ngaylap_HHCDNV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTP_ngaylap_HHCDNV.Location = new System.Drawing.Point(467, 307);
-            this.dTP_ngaylap_HHCDNV.MinimumSize = new System.Drawing.Size(4, 33);
-            this.dTP_ngaylap_HHCDNV.Name = "dTP_ngaylap_HHCDNV";
-            this.dTP_ngaylap_HHCDNV.Size = new System.Drawing.Size(287, 33);
-            this.dTP_ngaylap_HHCDNV.TabIndex = 64;
+            this.dTP_thoigianmongmuon_TTNV_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dTP_thoigianmongmuon_TTNV_KH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTP_thoigianmongmuon_TTNV_KH.Location = new System.Drawing.Point(467, 307);
+            this.dTP_thoigianmongmuon_TTNV_KH.MinimumSize = new System.Drawing.Size(4, 33);
+            this.dTP_thoigianmongmuon_TTNV_KH.Name = "dTP_thoigianmongmuon_TTNV_KH";
+            this.dTP_thoigianmongmuon_TTNV_KH.Size = new System.Drawing.Size(287, 33);
+            this.dTP_thoigianmongmuon_TTNV_KH.TabIndex = 64;
             // 
             // label7
             // 
@@ -123,7 +123,7 @@
             this.txtBox_diachi_TTNN_KH.Name = "txtBox_diachi_TTNN_KH";
             this.txtBox_diachi_TTNN_KH.Size = new System.Drawing.Size(287, 79);
             this.txtBox_diachi_TTNN_KH.TabIndex = 49;
-         
+
             this.txtBox_diachi_TTNN_KH.TextChanged += new System.EventHandler(this.txtBox_diachi_TTNN_KH_TextChanged);
             // 
             // label4
@@ -166,7 +166,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_thanhtoan_TTNN_KH);
-            this.panel1.Controls.Add(this.dTP_ngaylap_HHCDNV);
+            this.panel1.Controls.Add(this.dTP_thoigianmongmuon_TTNV_KH);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cBox_nguoinhan_TTNN_KH);
             this.panel1.Controls.Add(this.label8);
@@ -204,6 +204,7 @@
             this.Name = "TTNguoiNhan_KH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin người nhận";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TTNguoiNhan_KH_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -213,7 +214,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_thanhtoan_TTNN_KH;
-        private System.Windows.Forms.DateTimePicker dTP_ngaylap_HHCDNV;
+        private System.Windows.Forms.DateTimePicker dTP_thoigianmongmuon_TTNV_KH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox cBox_nguoinhan_TTNN_KH;
         private System.Windows.Forms.Label label8;

@@ -15,7 +15,6 @@ namespace CSDLNC_CosplayBanHoa
     {
         DataTable tbl_SP;
         DataTable tbl_SP2;
-        string MASP;
         string MAKH;
 
         public MuaHang_KH(string id)
@@ -103,7 +102,8 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_muangay_MH_KH_Click(object sender, EventArgs e)
         {       
-            DonHang_KH donHang_KH = new DonHang_KH(dGV_SP_MH_KH.CurrentRow.Cells["MASP"].Value.ToString(),
+            DonHang_KH donHang_KH = new DonHang_KH(
+                dGV_SP_MH_KH.CurrentRow.Cells["MASP"].Value.ToString(),
                 dGV_SP_MH_KH.CurrentRow.Cells["TENSP"].Value.ToString(),
                 txtBox_giamoi_MH_KH.Text.Trim().ToString(),
                 dGV_SP_MH_KH.CurrentRow.Cells["SOLUONGTON"].Value.ToString(),

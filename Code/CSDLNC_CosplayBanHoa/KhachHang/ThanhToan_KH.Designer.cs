@@ -30,12 +30,14 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_tienmat_TT_KH = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cBox_choice3 = new System.Windows.Forms.CheckBox();
+            this.cBox_choice2 = new System.Windows.Forms.CheckBox();
+            this.cBox_choice1 = new System.Windows.Forms.CheckBox();
+            this.tabPage_nganhang_TT_KH = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBox_sdt_TTNN_KH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,13 +51,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_tieptuc_DH_KH = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtBox_sdt_TTNN_KH = new System.Windows.Forms.TextBox();
+            this.btn_thanhtoan_TT_KH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage_tienmat_TT_KH.SuspendLayout();
+            this.tabPage_nganhang_TT_KH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btn_tieptuc_DH_KH);
+            this.panel1.Controls.Add(this.btn_thanhtoan_TT_KH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -75,28 +75,29 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage_tienmat_TT_KH);
+            this.tabControl1.Controls.Add(this.tabPage_nganhang_TT_KH);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Location = new System.Drawing.Point(0, 52);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(872, 434);
             this.tabControl1.TabIndex = 67;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tabPage1
+            // tabPage_tienmat_TT_KH
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.checkBox3);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(864, 396);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tiền mặt";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage_tienmat_TT_KH.Controls.Add(this.label1);
+            this.tabPage_tienmat_TT_KH.Controls.Add(this.cBox_choice3);
+            this.tabPage_tienmat_TT_KH.Controls.Add(this.cBox_choice2);
+            this.tabPage_tienmat_TT_KH.Controls.Add(this.cBox_choice1);
+            this.tabPage_tienmat_TT_KH.Location = new System.Drawing.Point(4, 34);
+            this.tabPage_tienmat_TT_KH.Name = "tabPage_tienmat_TT_KH";
+            this.tabPage_tienmat_TT_KH.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_tienmat_TT_KH.Size = new System.Drawing.Size(864, 396);
+            this.tabPage_tienmat_TT_KH.TabIndex = 0;
+            this.tabPage_tienmat_TT_KH.Text = "Tiền mặt";
+            this.tabPage_tienmat_TT_KH.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -108,58 +109,79 @@
             this.label1.Text = "(liên hệ hotline 028.73002010 - 024.73002010 hoặc 18006353 để biết thêm thông tin" +
     ")";
             // 
-            // checkBox3
+            // cBox_choice3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(46, 271);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(604, 29);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Thanh toán tại: 270L Võ Thị Sáu, P.7, Q.3, Tp.Hồ Chí Minh (24/7)";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cBox_choice3.AutoSize = true;
+            this.cBox_choice3.Location = new System.Drawing.Point(46, 271);
+            this.cBox_choice3.Name = "cBox_choice3";
+            this.cBox_choice3.Size = new System.Drawing.Size(604, 29);
+            this.cBox_choice3.TabIndex = 2;
+            this.cBox_choice3.Text = "Thanh toán tại: 270L Võ Thị Sáu, P.7, Q.3, Tp.Hồ Chí Minh (24/7)";
+            this.cBox_choice3.UseVisualStyleBackColor = true;
+            this.cBox_choice3.CheckedChanged += new System.EventHandler(this.cBox_choice3_CheckedChanged);
             // 
-            // checkBox2
+            // cBox_choice2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(46, 163);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(435, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Thanh toán ở nơi khác, phụ phí thu là 30.000đ ";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cBox_choice2.AutoSize = true;
+            this.cBox_choice2.Location = new System.Drawing.Point(46, 163);
+            this.cBox_choice2.Name = "cBox_choice2";
+            this.cBox_choice2.Size = new System.Drawing.Size(435, 29);
+            this.cBox_choice2.TabIndex = 1;
+            this.cBox_choice2.Text = "Thanh toán ở nơi khác, phụ phí thu là 30.000đ ";
+            this.cBox_choice2.UseVisualStyleBackColor = true;
+            this.cBox_choice2.CheckedChanged += new System.EventHandler(this.cBox_choice2_CheckedChanged);
             // 
-            // checkBox1
+            // cBox_choice1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(46, 88);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(313, 29);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "COD - Thanh toán khi nhận hoa";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cBox_choice1.AutoSize = true;
+            this.cBox_choice1.Location = new System.Drawing.Point(46, 88);
+            this.cBox_choice1.Name = "cBox_choice1";
+            this.cBox_choice1.Size = new System.Drawing.Size(313, 29);
+            this.cBox_choice1.TabIndex = 0;
+            this.cBox_choice1.Text = "COD - Thanh toán khi nhận hoa";
+            this.cBox_choice1.UseVisualStyleBackColor = true;
+            this.cBox_choice1.CheckedChanged += new System.EventHandler(this.cBox_choice1_CheckedChanged);
             // 
-            // tabPage2
+            // tabPage_nganhang_TT_KH
             // 
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.txtBox_sdt_TTNN_KH);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(864, 396);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ngân hàng";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label13);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.txtBox_sdt_TTNN_KH);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label7);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label9);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label10);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label11);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label12);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.dataGridView1);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label6);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label5);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label4);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label3);
+            this.tabPage_nganhang_TT_KH.Controls.Add(this.label2);
+            this.tabPage_nganhang_TT_KH.Location = new System.Drawing.Point(4, 34);
+            this.tabPage_nganhang_TT_KH.Name = "tabPage_nganhang_TT_KH";
+            this.tabPage_nganhang_TT_KH.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_nganhang_TT_KH.Size = new System.Drawing.Size(864, 396);
+            this.tabPage_nganhang_TT_KH.TabIndex = 1;
+            this.tabPage_nganhang_TT_KH.Text = "Ngân hàng";
+            this.tabPage_nganhang_TT_KH.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label13.Location = new System.Drawing.Point(236, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(387, 25);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Lưu ý: Nội dung thanh toán là SĐT của bạn";
+            // 
+            // txtBox_sdt_TTNN_KH
+            // 
+            this.txtBox_sdt_TTNN_KH.Location = new System.Drawing.Point(285, 346);
+            this.txtBox_sdt_TTNN_KH.Multiline = true;
+            this.txtBox_sdt_TTNN_KH.Name = "txtBox_sdt_TTNN_KH";
+            this.txtBox_sdt_TTNN_KH.Size = new System.Drawing.Size(287, 35);
+            this.txtBox_sdt_TTNN_KH.TabIndex = 49;
             // 
             // label7
             // 
@@ -288,14 +310,15 @@
             this.label8.TabIndex = 60;
             this.label8.Text = "THANH TOÁN";
             // 
-            // btn_tieptuc_DH_KH
+            // btn_thanhtoan_TT_KH
             // 
-            this.btn_tieptuc_DH_KH.Location = new System.Drawing.Point(301, 492);
-            this.btn_tieptuc_DH_KH.Name = "btn_tieptuc_DH_KH";
-            this.btn_tieptuc_DH_KH.Size = new System.Drawing.Size(258, 57);
-            this.btn_tieptuc_DH_KH.TabIndex = 65;
-            this.btn_tieptuc_DH_KH.Text = "Thanh toán";
-            this.btn_tieptuc_DH_KH.UseVisualStyleBackColor = true;
+            this.btn_thanhtoan_TT_KH.Location = new System.Drawing.Point(301, 492);
+            this.btn_thanhtoan_TT_KH.Name = "btn_thanhtoan_TT_KH";
+            this.btn_thanhtoan_TT_KH.Size = new System.Drawing.Size(258, 57);
+            this.btn_thanhtoan_TT_KH.TabIndex = 65;
+            this.btn_thanhtoan_TT_KH.Text = "Thanh toán";
+            this.btn_thanhtoan_TT_KH.UseVisualStyleBackColor = true;
+            this.btn_thanhtoan_TT_KH.Click += new System.EventHandler(this.btn_thanhtoan_TT_KH_Click);
             // 
             // label13
             // 
@@ -326,10 +349,10 @@
             this.Text = "Thanh Toán";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPage_tienmat_TT_KH.ResumeLayout(false);
+            this.tabPage_tienmat_TT_KH.PerformLayout();
+            this.tabPage_nganhang_TT_KH.ResumeLayout(false);
+            this.tabPage_nganhang_TT_KH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -341,14 +364,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_tieptuc_DH_KH;
+        private System.Windows.Forms.Button btn_thanhtoan_TT_KH;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_tienmat_TT_KH;
+        private System.Windows.Forms.TabPage tabPage_nganhang_TT_KH;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cBox_choice3;
+        private System.Windows.Forms.CheckBox cBox_choice2;
+        private System.Windows.Forms.CheckBox cBox_choice1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

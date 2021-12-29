@@ -256,6 +256,7 @@
             this.Name = "DonHang_KH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đơn hàng";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DonHang_KH_FormClosing);
             this.Load += new System.EventHandler(this.DonHang_KH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

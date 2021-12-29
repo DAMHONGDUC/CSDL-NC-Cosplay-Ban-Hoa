@@ -17,6 +17,10 @@ namespace CSDLNC_CosplayBanHoa
         string giagiam;
         int soluongton;
         string MAKH;
+        string TONGCONG;
+        string SLMUA;
+        string THANHTIEN;
+
 
         public DonHang_KH(string masp, string tensp, string dongia, string slton, string makh)
         {
@@ -27,13 +31,14 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_slmua_DH_KH.Text = "1";
             MASP = masp;
             soluongton = Int32.Parse(slton);
-            MAKH = makh;
+            MAKH = makh;            
+
         }
 
         // xử lí đóng form đơn hàng và mở form TT người nhận
         public void open_FormTTNguoiNhan(object obj)
         {
-            Application.Run(new TTNguoiNhan_KH(MAKH));
+            Application.Run(new TTNguoiNhan_KH(MAKH, TONGCONG, MASP, SLMUA, THANHTIEN));
         }
         private void btn_tieptuc_DH_KH_Click(object sender, EventArgs e)
         {
@@ -86,5 +91,13 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_slmua_DH_KH.Text = slmua.ToString();
             Auto_Tong_Tien();
         }
+        private void DonHang_KH_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           TONGCONG = txtBox_tongcong_DH_KH.Text.Trim();
+           SLMUA = txtBox_slmua_DH_KH.Text.Trim();
+           THANHTIEN = (float.Parse(txtbox_dongia_DH_KH.Text.ToString()) 
+                * Int32.Parse(txtBox_slmua_DH_KH.Text.Trim().ToString())).ToString();
+        }
+
     }
 }
