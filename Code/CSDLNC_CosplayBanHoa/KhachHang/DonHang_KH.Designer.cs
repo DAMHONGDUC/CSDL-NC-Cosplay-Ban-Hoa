@@ -29,57 +29,81 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_tangsl_DH_KH = new System.Windows.Forms.Button();
+            this.btn_giamsl_DH_KH = new System.Windows.Forms.Button();
             this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBox_tongcong_DH_KH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox_slmua_DH_KH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBox_giagiam_DH_KH = new System.Windows.Forms.TextBox();
             this.btn_tieptuc_DH_KH = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtbox_slton_DH_KH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtbox_dongia_DH_KH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbox_tensp_DH_KH = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_tangsl_DH_KH);
+            this.panel1.Controls.Add(this.btn_giamsl_DH_KH);
             this.panel1.Controls.Add(this.picBox_anh_DT);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtBox_tongcong_DH_KH);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBox_slmua_DH_KH);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtBox_giagiam_DH_KH);
             this.panel1.Controls.Add(this.btn_tieptuc_DH_KH);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtbox_slton_DH_KH);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtbox_dongia_DH_KH);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtbox_tensp_DH_KH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1005, 401);
+            this.panel1.Size = new System.Drawing.Size(1031, 396);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_tangsl_DH_KH
+            // 
+            this.btn_tangsl_DH_KH.Location = new System.Drawing.Point(305, 321);
+            this.btn_tangsl_DH_KH.Name = "btn_tangsl_DH_KH";
+            this.btn_tangsl_DH_KH.Size = new System.Drawing.Size(43, 37);
+            this.btn_tangsl_DH_KH.TabIndex = 62;
+            this.btn_tangsl_DH_KH.Text = "+";
+            this.btn_tangsl_DH_KH.UseVisualStyleBackColor = true;
+            this.btn_tangsl_DH_KH.Click += new System.EventHandler(this.btn_tangsl_DH_KH_Click);
+            // 
+            // btn_giamsl_DH_KH
+            // 
+            this.btn_giamsl_DH_KH.Location = new System.Drawing.Point(90, 321);
+            this.btn_giamsl_DH_KH.Name = "btn_giamsl_DH_KH";
+            this.btn_giamsl_DH_KH.Size = new System.Drawing.Size(43, 37);
+            this.btn_giamsl_DH_KH.TabIndex = 61;
+            this.btn_giamsl_DH_KH.Text = "-";
+            this.btn_giamsl_DH_KH.UseVisualStyleBackColor = true;
+            this.btn_giamsl_DH_KH.Click += new System.EventHandler(this.btn_giamsl_DH_KH_Click);
             // 
             // picBox_anh_DT
             // 
             this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_anh_DT.Location = new System.Drawing.Point(766, 54);
+            this.picBox_anh_DT.Location = new System.Drawing.Point(735, 66);
             this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(184, 177);
+            this.picBox_anh_DT.Size = new System.Drawing.Size(253, 251);
             this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox_anh_DT.TabIndex = 60;
             this.picBox_anh_DT.TabStop = false;
@@ -94,13 +118,13 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Tổng cộng";
             // 
-            // textBox7
+            // txtBox_tongcong_DH_KH
             // 
-            this.textBox7.Location = new System.Drawing.Point(431, 224);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(258, 35);
-            this.textBox7.TabIndex = 58;
+            this.txtBox_tongcong_DH_KH.Location = new System.Drawing.Point(431, 224);
+            this.txtBox_tongcong_DH_KH.Multiline = true;
+            this.txtBox_tongcong_DH_KH.Name = "txtBox_tongcong_DH_KH";
+            this.txtBox_tongcong_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_tongcong_DH_KH.TabIndex = 58;
             // 
             // label1
             // 
@@ -108,17 +132,18 @@
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
             this.label1.Location = new System.Drawing.Point(85, 292);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 25);
+            this.label1.Size = new System.Drawing.Size(133, 25);
             this.label1.TabIndex = 57;
-            this.label1.Text = "Giảm giá";
+            this.label1.Text = "Số lượng mua";
             // 
-            // textBox1
+            // txtBox_slmua_DH_KH
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 320);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 35);
-            this.textBox1.TabIndex = 56;
+            this.txtBox_slmua_DH_KH.Location = new System.Drawing.Point(139, 321);
+            this.txtBox_slmua_DH_KH.Multiline = true;
+            this.txtBox_slmua_DH_KH.Name = "txtBox_slmua_DH_KH";
+            this.txtBox_slmua_DH_KH.Size = new System.Drawing.Size(160, 37);
+            this.txtBox_slmua_DH_KH.TabIndex = 56;
+            this.txtBox_slmua_DH_KH.Text = "1";
             // 
             // label3
             // 
@@ -137,6 +162,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(258, 35);
             this.textBox3.TabIndex = 54;
+            this.textBox3.Text = "   -";
             // 
             // label6
             // 
@@ -144,17 +170,17 @@
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
             this.label6.Location = new System.Drawing.Point(426, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
+            this.label6.Size = new System.Drawing.Size(89, 25);
             this.label6.TabIndex = 53;
-            this.label6.Text = "Tạm tính";
+            this.label6.Text = "Giảm giá";
             // 
-            // textBox6
+            // txtBox_giagiam_DH_KH
             // 
-            this.textBox6.Location = new System.Drawing.Point(431, 54);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(258, 35);
-            this.textBox6.TabIndex = 52;
+            this.txtBox_giagiam_DH_KH.Location = new System.Drawing.Point(431, 54);
+            this.txtBox_giagiam_DH_KH.Multiline = true;
+            this.txtBox_giagiam_DH_KH.Name = "txtBox_giagiam_DH_KH";
+            this.txtBox_giagiam_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_giagiam_DH_KH.TabIndex = 52;
             // 
             // btn_tieptuc_DH_KH
             // 
@@ -172,17 +198,17 @@
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
             this.label5.Location = new System.Drawing.Point(85, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 25);
+            this.label5.Size = new System.Drawing.Size(122, 25);
             this.label5.TabIndex = 50;
-            this.label5.Text = "Số lượng";
+            this.label5.Text = "Số lượng tồn";
             // 
-            // textBox5
+            // txtbox_slton_DH_KH
             // 
-            this.textBox5.Location = new System.Drawing.Point(90, 224);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 35);
-            this.textBox5.TabIndex = 49;
+            this.txtbox_slton_DH_KH.Location = new System.Drawing.Point(90, 224);
+            this.txtbox_slton_DH_KH.Multiline = true;
+            this.txtbox_slton_DH_KH.Name = "txtbox_slton_DH_KH";
+            this.txtbox_slton_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtbox_slton_DH_KH.TabIndex = 49;
             // 
             // label4
             // 
@@ -194,13 +220,13 @@
             this.label4.TabIndex = 48;
             this.label4.Text = "Đơn giá";
             // 
-            // textBox4
+            // txtbox_dongia_DH_KH
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 138);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 35);
-            this.textBox4.TabIndex = 47;
+            this.txtbox_dongia_DH_KH.Location = new System.Drawing.Point(90, 138);
+            this.txtbox_dongia_DH_KH.Multiline = true;
+            this.txtbox_dongia_DH_KH.Name = "txtbox_dongia_DH_KH";
+            this.txtbox_dongia_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtbox_dongia_DH_KH.TabIndex = 47;
             // 
             // label2
             // 
@@ -212,24 +238,26 @@
             this.label2.TabIndex = 46;
             this.label2.Text = "Tên sản phẩm";
             // 
-            // textBox2
+            // txtbox_tensp_DH_KH
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 54);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 35);
-            this.textBox2.TabIndex = 45;
+            this.txtbox_tensp_DH_KH.Location = new System.Drawing.Point(90, 54);
+            this.txtbox_tensp_DH_KH.Multiline = true;
+            this.txtbox_tensp_DH_KH.Name = "txtbox_tensp_DH_KH";
+            this.txtbox_tensp_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtbox_tensp_DH_KH.TabIndex = 45;
             // 
             // DonHang_KH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1005, 390);
+            this.ClientSize = new System.Drawing.Size(1031, 398);
             this.Controls.Add(this.panel1);
             this.Name = "DonHang_KH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đơn hàng";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DonHang_KH_FormClosing);
+            this.Load += new System.EventHandler(this.DonHang_KH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
@@ -242,19 +270,21 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_tieptuc_DH_KH;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtbox_slton_DH_KH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtbox_dongia_DH_KH;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbox_tensp_DH_KH;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBox_tongcong_DH_KH;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox_slmua_DH_KH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBox_giagiam_DH_KH;
         private System.Windows.Forms.PictureBox picBox_anh_DT;
+        private System.Windows.Forms.Button btn_tangsl_DH_KH;
+        private System.Windows.Forms.Button btn_giamsl_DH_KH;
     }
 }

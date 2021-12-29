@@ -7,25 +7,107 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Data;
 namespace CSDLNC_CosplayBanHoa
 {
     public partial class MuaHang_KH : Form
     {
-        public MuaHang_KH()
+        DataTable tbl_SP;
+        DataTable tbl_SP2;
+        string MAKH;
+
+        public MuaHang_KH(string id)
         {
             InitializeComponent();
+            string sql = "SELECT MAKH FROM KHACHHANG WHERE ID = '" + id +"'";
+            MAKH = Functions.GetFieldValues(sql);
         }
 
         private void MuaHang_KH_Load(object sender, EventArgs e)
-        {
-          
+        {         
             handle_menu();
+            Load_Data();
         }
 
-        private void btn_muangay_MH_KH_Click(object sender, EventArgs e)
+        private void btn_timkiem_MH_KH_Click(object sender, EventArgs e)
         {
-            DonHang_KH donHang_KH = new DonHang_KH();
+            if (txtBox_timkiem_MH_KH.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa vào ô tìm kiếm !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string tukhoa = txtBox_timkiem_MH_KH.Text.Trim();
+            string sql = "Sp_KH_TimKiemSP '" + tukhoa + "'";
+            tbl_SP2 = Functions.GetDataToTable(sql);
+            dGV_SP_MH_KH.DataSource = tbl_SP2;
+        }
+      
+        private void Load_Data()
+        {
+            string sql = "SELECT TOP 10 MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON " +
+                "FROM SANPHAM";
+            tbl_SP = Functions.GetDataToTable(sql);
+            dGV_SP_MH_KH.DataSource = tbl_SP;
+
+            // set Font cho tên cột
+            dGV_SP_MH_KH.Font = new Font("Time New Roman", 13);
+            dGV_SP_MH_KH.Columns[0].HeaderText = "Mã sản phẩm";
+            dGV_SP_MH_KH.Columns[1].HeaderText = "Tên sản phẩm";
+            dGV_SP_MH_KH.Columns[2].HeaderText = "Giá gốc";
+            dGV_SP_MH_KH.Columns[3].HeaderText = "Khuyến mãi";
+            dGV_SP_MH_KH.Columns[4].HeaderText = "Mô tả";
+            dGV_SP_MH_KH.Columns[5].HeaderText = "Chi tiết sản phẩm";
+            dGV_SP_MH_KH.Columns[6].HeaderText = "Hình ảnh";
+            dGV_SP_MH_KH.Columns[7].HeaderText = "Số lượng tồn";
+
+            // set Font cho dữ liệu hiển thị trong cột
+            dGV_SP_MH_KH.DefaultCellStyle.Font = new Font("Time New Roman", 12);
+
+            // set kích thước cột
+            dGV_SP_MH_KH.Columns[0].Width = 0;
+            dGV_SP_MH_KH.Columns[1].Width = 200;
+            dGV_SP_MH_KH.Columns[2].Width = 200;
+            dGV_SP_MH_KH.Columns[3].Width = 200;
+            dGV_SP_MH_KH.Columns[4].Width = 200;
+            dGV_SP_MH_KH.Columns[5].Width = 200;
+            dGV_SP_MH_KH.Columns[6].Width = 0;
+            dGV_SP_MH_KH.Columns[7].Width = 200;
+            
+
+            //Không cho người dùng thêm dữ liệu trực tiếp
+            dGV_SP_MH_KH.AllowUserToAddRows = false;
+            dGV_SP_MH_KH.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
+
+        private void dGV_SP_MH_KH_Click(object sender, EventArgs e)
+        {
+            //Nếu không có dữ liệu
+            if (tbl_SP.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // set giá trị cho các mục 
+            float giamoi = float.Parse(dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString()) - float.Parse(dGV_SP_MH_KH.CurrentRow.Cells["KHUYENMAI"].Value.ToString());
+            txtBox_tensp_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["TENSP"].Value.ToString();
+            txtBox_giacu_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString();
+            txtBox_giamoi_MH_KH.Text = giamoi.ToString("0.0000");
+            txtBox_mota_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["MOTA"].Value.ToString();
+            txtBox_chitietsp_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["CHITIETSP"].Value.ToString();          
+        }
+
+
+        private void btn_muangay_MH_KH_Click(object sender, EventArgs e)
+        {       
+            DonHang_KH donHang_KH = new DonHang_KH(
+                dGV_SP_MH_KH.CurrentRow.Cells["MASP"].Value.ToString(),
+                dGV_SP_MH_KH.CurrentRow.Cells["TENSP"].Value.ToString(),
+                txtBox_giamoi_MH_KH.Text.Trim().ToString(),
+                dGV_SP_MH_KH.CurrentRow.Cells["SOLUONGTON"].Value.ToString(),
+                MAKH);
             donHang_KH.StartPosition = FormStartPosition.CenterScreen;
             donHang_KH.Show();
         }
@@ -131,15 +213,10 @@ namespace CSDLNC_CosplayBanHoa
             return menu_item;
         }
 
-
-
-        private void btn_timkiem_MH_KH_Click(object sender, EventArgs e)
+        private void btn_huytimkiem_MK_KH_Click(object sender, EventArgs e)
         {
-            if (txtBox_timkiem_MH_KH.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Vui lòng nhập từ khóa vào ô tìm kiếm !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            txtBox_timkiem_MH_KH.Text = "";
+            dGV_SP_MH_KH.DataSource = tbl_SP;
         }
     }
 }

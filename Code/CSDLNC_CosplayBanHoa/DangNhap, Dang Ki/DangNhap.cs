@@ -112,7 +112,7 @@ namespace CSDLNC_CosplayBanHoa
                     }
                 case 1:
                     {
-                        Application.Run(new FormMain_KH());
+                        Application.Run(new FormMain_KH(id));
                         break;
                     }
                 case 3:
