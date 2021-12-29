@@ -1,7 +1,7 @@
 ﻿USE HYT
 GO
 
-----SP phần của Đức (ae đừng chỉnh sửa script gì trong đây nha)
+----SP phần của Đức
 
 -- DROP PROC SP_KTTenDangNhap
 -- Kiểm tra tên đăng nhập
@@ -149,3 +149,81 @@ END
 GO
 
 --------------------------------------------------------------
+
+--------------------------------------------------------------
+
+----------- Phần SP của Tuấn
+
+-- Thêm nhân viên mới
+CREATE PROCEDURE SP_NhanSu_ThemNV
+	@MANV VARCHAR(15),
+	@ID VARCHAR(15),
+	@TENNV NVARCHAR(255),
+	@CHINHANHLV VARCHAR(15),
+	@LOAINV INT,
+	@LUONG DECIMAL(19,4)
+AS
+BEGIN
+	-- Them thông tin vào bảng NHANVIEN
+	INSERT dbo.NHANVIEN (MANV, ID, TENNV, CHINHANHLV, LOAINV)
+	VALUES( @MANV, @ID, @TENNV, @CHINHANHLV, @LOAINV)
+	
+	-- Them thông tin về lương của nhân viên mới vào bảng LUONG
+	INSERT dbo.LUONG(MANV, NGAY, LUONG)
+	VALUES(@MANV, GETDATE(), @LUONG)
+END
+GO
+
+-- Cập nhật thông tin nhân viên
+CREATE PROCEDURE SP_NhanSu_CapNhatNV
+	@MANV VARCHAR(15),
+	@ID VARCHAR(15),
+	@TENNV NVARCHAR(255),
+	@CHINHANHLV VARCHAR(15),
+	@LOAINV INT,
+	@LUONG DECIMAL(19,4)
+AS
+BEGIN
+	-- Cập nhật bảng NHANVIEN
+	UPDATE NHANVIEN 
+	SET 
+		ID = @ID,
+		TENNV = @TENNV,
+		CHINHANHLV = @CHINHANHLV,
+		LOAINV = @LOAINV
+	WHERE MANV = @MANV
+	
+	-- Cập nhật bảng LUONG
+	UPDATE dbo.LUONG
+	SET
+		LUONG = @LUONG,
+		NGAY = GETDATE()
+	WHERE MANV = @MANV
+END
+GO
+
+-- Xóa 1 một nhân viên
+CREATE PROCEDURE SP_NhanSu_XoaNV
+	@MANV VARCHAR(15)
+AS
+BEGIN
+	UPDATE dbo.LICHSUNHAP SET NGUOINHAP=NULL WHERE NGUOINHAP=@MANV
+	DELETE dbo.DIEMDANH WHERE MANV = @MANV
+	DELETE dbo.LUONG WHERE MANV = @MANV
+	DELETE dbo.NHANVIEN WHERE MANV = @MANV
+END
+GO
+
+-- Tìm danh sách nhân viên theo chi nhánh
+CREATE PROCEDURE SP_NhanSu_TimNVtheoCN
+	@MACN VARCHAR(15)
+AS
+BEGIN
+	SELECT NV.MANV, NV.ID, NV.TENNV, NV.CHINHANHLV, NV.LOAINV ,L.LUONG
+	FROM NHANVIEN NV, LUONG L
+	WHERE NV.MANV = L.MANV
+	AND NV.CHINHANHLV = @MACN
+	GROUP BY NV.MANV, L.MANV, L.NGAY, NV.ID, NV.TENNV, NV.CHINHANHLV, NV.LOAINV, L.LUONG
+	HAVING ABS(DATEDIFF(day, GETDATE(), L.NGAY)) = (SELECT MIN(ABS(DATEDIFF(day, GETDATE(), L.NGAY))) FROM LUONG L1 WHERE L1.MANV = L.MANV GROUP BY L1.MANV, L1.NGAY)
+END
+GO

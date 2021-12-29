@@ -82,7 +82,6 @@ namespace CSDLNC_CosplayBanHoa
         {
             txtBox_phigiaohang_TTNN_KH.Text = "30.000";
         }
-
         private void TTNguoiNhan_KH_FormClosing(object sender, FormClosingEventArgs e)
         {
             TENKH = txtBox_ten_TTNN_KH.Text.Trim();

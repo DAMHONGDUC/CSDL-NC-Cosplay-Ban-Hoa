@@ -320,6 +320,24 @@
             this.btn_thanhtoan_TT_KH.UseVisualStyleBackColor = true;
             this.btn_thanhtoan_TT_KH.Click += new System.EventHandler(this.btn_thanhtoan_TT_KH_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label13.Location = new System.Drawing.Point(236, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(387, 25);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "Lưu ý: Nội dung thanh toán là SĐT của bạn";
+            // 
+            // txtBox_sdt_TTNN_KH
+            // 
+            this.txtBox_sdt_TTNN_KH.Location = new System.Drawing.Point(285, 346);
+            this.txtBox_sdt_TTNN_KH.Multiline = true;
+            this.txtBox_sdt_TTNN_KH.Name = "txtBox_sdt_TTNN_KH";
+            this.txtBox_sdt_TTNN_KH.Size = new System.Drawing.Size(287, 35);
+            this.txtBox_sdt_TTNN_KH.TabIndex = 49;
+            // 
             // ThanhToan_KH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

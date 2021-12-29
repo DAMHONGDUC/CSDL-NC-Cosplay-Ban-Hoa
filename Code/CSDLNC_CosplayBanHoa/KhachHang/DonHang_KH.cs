@@ -21,6 +21,7 @@ namespace CSDLNC_CosplayBanHoa
         string SLMUA;
         string THANHTIEN;
 
+
         public DonHang_KH(string masp, string tensp, string dongia, string slton, string makh)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace CSDLNC_CosplayBanHoa
             MASP = masp;
             soluongton = Int32.Parse(slton);
             MAKH = makh;            
+
         }
 
         // xử lí đóng form đơn hàng và mở form TT người nhận
@@ -89,7 +91,6 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_slmua_DH_KH.Text = slmua.ToString();
             Auto_Tong_Tien();
         }
-
         private void DonHang_KH_FormClosing(object sender, FormClosingEventArgs e)
         {
            TONGCONG = txtBox_tongcong_DH_KH.Text.Trim();
@@ -97,5 +98,6 @@ namespace CSDLNC_CosplayBanHoa
            THANHTIEN = (float.Parse(txtbox_dongia_DH_KH.Text.ToString()) 
                 * Int32.Parse(txtBox_slmua_DH_KH.Text.Trim().ToString())).ToString();
         }
+
     }
 }

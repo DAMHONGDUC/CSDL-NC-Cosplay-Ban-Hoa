@@ -123,6 +123,7 @@
             this.txtBox_diachi_TTNN_KH.Name = "txtBox_diachi_TTNN_KH";
             this.txtBox_diachi_TTNN_KH.Size = new System.Drawing.Size(287, 79);
             this.txtBox_diachi_TTNN_KH.TabIndex = 49;
+
             this.txtBox_diachi_TTNN_KH.TextChanged += new System.EventHandler(this.txtBox_diachi_TTNN_KH_TextChanged);
             // 
             // label4
