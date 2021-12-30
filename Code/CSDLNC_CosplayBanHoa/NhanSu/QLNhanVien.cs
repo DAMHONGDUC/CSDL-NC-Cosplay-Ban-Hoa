@@ -57,7 +57,7 @@ namespace CSDLNC_CosplayBanHoa
                 "HAVING ABS(DATEDIFF(day, GETDATE(), L.NGAY)) = (SELECT MIN(ABS(DATEDIFF(day, GETDATE(), L.NGAY))) FROM LUONG L1 WHERE L1.MANV = L.MANV GROUP BY L1.MANV, L1.NGAY)";
 
          
-            Functions.Connect();
+           // Functions.Connect();
             tbQLNV = Functions.GetDataToTable(sql);
             dataGridView1.DataSource = tbQLNV;
         }
@@ -326,7 +326,7 @@ namespace CSDLNC_CosplayBanHoa
 
             string maCNdeTimNV = tb_CNlamviec_NS.Text.Trim();
             sql = "SP_NhanSu_TimNVtheoCN '" + maCNdeTimNV + "'";
-            Functions.Connect();
+          //  Functions.Connect();
             tbTimNVtheoCN = Functions.GetDataToTable(sql);
             dataGridView1.DataSource = tbTimNVtheoCN;
         }

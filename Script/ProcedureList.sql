@@ -148,6 +148,50 @@ BEGIN
 END
 GO
 
+
+-- DROP PROC Sp_KH_LayThongTinDH
+-- Xử lí lấy thông tin đơn hàng
+CREATE PROC Sp_KH_LayThongTinDH
+	@MAKH VARCHAR(15)	
+AS
+BEGIN	
+	--Kiểm tra mã KH
+	IF NOT EXISTS (SELECT MAKH FROM KHACHHANG WHERE MAKH = @MAKH)
+	BEGIN
+		PRINT N'MÃ KH KHÔNG TỒN TẠI'
+		RETURN 0
+	END
+	
+	-- lấy thông tin
+	SELECT * FROM DONHANG WHERE MAKH = @MAKH
+	RETURN 1
+END
+GO
+
+
+-- DROP PROC Sp_KH_LayThongTinCTDH
+-- Xử lí lấy thông tin chi tiết đơn hàng
+CREATE PROC Sp_KH_LayThongTinCTDH
+	@MADH VARCHAR(15)	
+AS
+BEGIN	
+	--Kiểm tra mã DH
+	IF NOT EXISTS (SELECT MADH FROM DONHANG WHERE MADH = @MADH)
+	BEGIN
+		PRINT N'MÃ DH KHÔNG TỒN TẠI'
+		RETURN 0
+	END
+	
+	-- lấy thông tin
+	SELECT CTDH.MADH, CTDH.MASP , SP.TENSP ,SP.GIAGOC, SP.KHUYENMAI, GG.GIAGIAM, CTDH.SOLUONG, CTDH.THANHTIEN
+	FROM CT_DONHANG CTDH, SANPHAM SP, GIAMGIA GG
+	WHERE CTDH.MADH = @MADH
+	AND SP.MASP = CTDH.MASP
+	AND GG.MASP = SP.MASP
+	RETURN 1
+END
+GO
+
 --------------------------------------------------------------
 
 --------------------------------------------------------------

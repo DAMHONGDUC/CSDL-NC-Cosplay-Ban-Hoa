@@ -28,41 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGV_CTDH_KH = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBox_thanhtien_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox_giamgia_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBox_phuphi_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBox_khuyenmai_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBox_soluong_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBox_dongia_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox_tensp_CTDH_KH = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtBox_madh_CTDH_KH = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_CTDH_KH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dGV_CTDH_KH
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 474);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1282, 379);
-            this.dataGridView1.TabIndex = 4;
+            this.dGV_CTDH_KH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_CTDH_KH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dGV_CTDH_KH.Location = new System.Drawing.Point(0, 474);
+            this.dGV_CTDH_KH.Name = "dGV_CTDH_KH";
+            this.dGV_CTDH_KH.RowHeadersWidth = 51;
+            this.dGV_CTDH_KH.RowTemplate.Height = 24;
+            this.dGV_CTDH_KH.Size = new System.Drawing.Size(1282, 379);
+            this.dGV_CTDH_KH.TabIndex = 4;
+            this.dGV_CTDH_KH.Click += new System.EventHandler(this.dGV_CTDH_KH_Click);
             // 
             // label8
             // 
@@ -91,17 +92,17 @@
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
             this.label7.Location = new System.Drawing.Point(499, 365);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 25);
+            this.label7.Size = new System.Drawing.Size(105, 25);
             this.label7.TabIndex = 59;
-            this.label7.Text = "Tổng cộng";
+            this.label7.Text = "Thành tiền";
             // 
-            // textBox7
+            // txtBox_thanhtien_CTDH_KH
             // 
-            this.textBox7.Location = new System.Drawing.Point(504, 393);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(258, 35);
-            this.textBox7.TabIndex = 58;
+            this.txtBox_thanhtien_CTDH_KH.Location = new System.Drawing.Point(504, 393);
+            this.txtBox_thanhtien_CTDH_KH.Multiline = true;
+            this.txtBox_thanhtien_CTDH_KH.Name = "txtBox_thanhtien_CTDH_KH";
+            this.txtBox_thanhtien_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_thanhtien_CTDH_KH.TabIndex = 58;
             // 
             // label1
             // 
@@ -113,13 +114,13 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "Giảm giá";
             // 
-            // textBox1
+            // txtBox_giamgia_CTDH_KH
             // 
-            this.textBox1.Location = new System.Drawing.Point(504, 127);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 35);
-            this.textBox1.TabIndex = 56;
+            this.txtBox_giamgia_CTDH_KH.Location = new System.Drawing.Point(504, 127);
+            this.txtBox_giamgia_CTDH_KH.Multiline = true;
+            this.txtBox_giamgia_CTDH_KH.Name = "txtBox_giamgia_CTDH_KH";
+            this.txtBox_giamgia_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_giamgia_CTDH_KH.TabIndex = 56;
             // 
             // label3
             // 
@@ -131,13 +132,13 @@
             this.label3.TabIndex = 55;
             this.label3.Text = "Phụ phí";
             // 
-            // textBox3
+            // txtBox_phuphi_CTDH_KH
             // 
-            this.textBox3.Location = new System.Drawing.Point(504, 297);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 35);
-            this.textBox3.TabIndex = 54;
+            this.txtBox_phuphi_CTDH_KH.Location = new System.Drawing.Point(504, 297);
+            this.txtBox_phuphi_CTDH_KH.Multiline = true;
+            this.txtBox_phuphi_CTDH_KH.Name = "txtBox_phuphi_CTDH_KH";
+            this.txtBox_phuphi_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_phuphi_CTDH_KH.TabIndex = 54;
             // 
             // label6
             // 
@@ -145,17 +146,17 @@
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
             this.label6.Location = new System.Drawing.Point(499, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
+            this.label6.Size = new System.Drawing.Size(116, 25);
             this.label6.TabIndex = 53;
-            this.label6.Text = "Tạm tính";
+            this.label6.Text = "Khuyến mãi";
             // 
-            // textBox6
+            // txtBox_khuyenmai_CTDH_KH
             // 
-            this.textBox6.Location = new System.Drawing.Point(504, 213);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(258, 35);
-            this.textBox6.TabIndex = 52;
+            this.txtBox_khuyenmai_CTDH_KH.Location = new System.Drawing.Point(504, 213);
+            this.txtBox_khuyenmai_CTDH_KH.Multiline = true;
+            this.txtBox_khuyenmai_CTDH_KH.Name = "txtBox_khuyenmai_CTDH_KH";
+            this.txtBox_khuyenmai_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_khuyenmai_CTDH_KH.TabIndex = 52;
             // 
             // label5
             // 
@@ -167,13 +168,13 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Số lượng";
             // 
-            // textBox5
+            // txtBox_soluong_CTDH_KH
             // 
-            this.textBox5.Location = new System.Drawing.Point(176, 393);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(258, 35);
-            this.textBox5.TabIndex = 49;
+            this.txtBox_soluong_CTDH_KH.Location = new System.Drawing.Point(176, 393);
+            this.txtBox_soluong_CTDH_KH.Multiline = true;
+            this.txtBox_soluong_CTDH_KH.Name = "txtBox_soluong_CTDH_KH";
+            this.txtBox_soluong_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_soluong_CTDH_KH.TabIndex = 49;
             // 
             // label4
             // 
@@ -185,13 +186,13 @@
             this.label4.TabIndex = 48;
             this.label4.Text = "Đơn giá";
             // 
-            // textBox4
+            // txtBox_dongia_CTDH_KH
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 297);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 35);
-            this.textBox4.TabIndex = 47;
+            this.txtBox_dongia_CTDH_KH.Location = new System.Drawing.Point(176, 297);
+            this.txtBox_dongia_CTDH_KH.Multiline = true;
+            this.txtBox_dongia_CTDH_KH.Name = "txtBox_dongia_CTDH_KH";
+            this.txtBox_dongia_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_dongia_CTDH_KH.TabIndex = 47;
             // 
             // label2
             // 
@@ -203,35 +204,35 @@
             this.label2.TabIndex = 46;
             this.label2.Text = "Tên sản phẩm";
             // 
-            // textBox2
+            // txtBox_tensp_CTDH_KH
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 213);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 35);
-            this.textBox2.TabIndex = 45;
+            this.txtBox_tensp_CTDH_KH.Location = new System.Drawing.Point(176, 213);
+            this.txtBox_tensp_CTDH_KH.Multiline = true;
+            this.txtBox_tensp_CTDH_KH.Name = "txtBox_tensp_CTDH_KH";
+            this.txtBox_tensp_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_tensp_CTDH_KH.TabIndex = 45;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.txtBox_madh_CTDH_KH);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.picBox_anh_DT);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtBox_thanhtien_CTDH_KH);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBox_giamgia_CTDH_KH);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtBox_phuphi_CTDH_KH);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtBox_khuyenmai_CTDH_KH);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtBox_soluong_CTDH_KH);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtBox_dongia_CTDH_KH);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtBox_tensp_CTDH_KH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -249,25 +250,26 @@
             this.label9.TabIndex = 63;
             this.label9.Text = "Mã đơn hàng";
             // 
-            // textBox8
+            // txtBox_madh_CTDH_KH
             // 
-            this.textBox8.Location = new System.Drawing.Point(176, 127);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(258, 35);
-            this.textBox8.TabIndex = 62;
+            this.txtBox_madh_CTDH_KH.Location = new System.Drawing.Point(176, 127);
+            this.txtBox_madh_CTDH_KH.Multiline = true;
+            this.txtBox_madh_CTDH_KH.Name = "txtBox_madh_CTDH_KH";
+            this.txtBox_madh_CTDH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_madh_CTDH_KH.TabIndex = 62;
             // 
             // CT_DonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 853);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGV_CTDH_KH);
             this.Controls.Add(this.panel1);
             this.Name = "CT_DonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết đơn hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.CT_DonHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_CTDH_KH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -277,25 +279,25 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGV_CTDH_KH;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox picBox_anh_DT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBox_thanhtien_CTDH_KH;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox_giamgia_CTDH_KH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBox_phuphi_CTDH_KH;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBox_khuyenmai_CTDH_KH;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBox_soluong_CTDH_KH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBox_dongia_CTDH_KH;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBox_tensp_CTDH_KH;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBox_madh_CTDH_KH;
     }
 }

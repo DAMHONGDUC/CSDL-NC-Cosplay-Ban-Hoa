@@ -102,8 +102,9 @@ namespace CSDLNC_CosplayBanHoa
         }
 
         private void btn_taikhoan_KH_Click(object sender, EventArgs e)
-        {           
-            openChildForm(new LichSuMuaHang_KH());
+        {
+            string sql = "SELECT MAKH FROM KHACHHANG WHERE ID = '" + ID + "'";    
+            openChildForm(new LichSuMuaHang_KH(Functions.GetFieldValues(sql)));
             ActivateButton(sender);
         }
     }
