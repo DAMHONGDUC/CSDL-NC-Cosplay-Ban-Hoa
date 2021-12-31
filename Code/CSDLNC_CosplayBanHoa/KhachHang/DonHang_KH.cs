@@ -76,8 +76,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             int slmua = Int32.Parse(txtBox_slmua_DH_KH.Text.Trim().ToString());
             slmua += 1;
-            if (slmua > soluongton) slmua = soluongton;
-            txtbox_slton_DH_KH.Text = (soluongton - slmua).ToString();
+            if (slmua >= soluongton) slmua = soluongton;        
             txtBox_slmua_DH_KH.Text = slmua.ToString();
             Auto_Tong_Tien();
         }
@@ -86,8 +85,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             int slmua = Int32.Parse(txtBox_slmua_DH_KH.Text.Trim().ToString());
             slmua -= 1;
-            if (slmua < 0) slmua = 0;
-            txtbox_slton_DH_KH.Text = (soluongton - slmua).ToString();
+            if (slmua < 1) slmua = 1;         
             txtBox_slmua_DH_KH.Text = slmua.ToString();
             Auto_Tong_Tien();
         }

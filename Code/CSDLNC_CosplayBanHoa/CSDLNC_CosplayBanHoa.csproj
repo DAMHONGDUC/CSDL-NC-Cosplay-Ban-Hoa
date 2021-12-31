@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NhanVien\FormMain_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\FormMain_NV.Designer.cs">
+      <DependentUpon>FormMain_NV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="NhanSu\FormMain_NS.cs">
       <SubType>Form</SubType>
@@ -175,6 +181,21 @@
     <Compile Include="QuanTri\SanPham_QT.Designer.cs">
       <DependentUpon>SanPham_QT.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\ThemDH_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\ThemDH_NV.Designer.cs">
+      <DependentUpon>ThemDH_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\ThongTinTT_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\ThongTinTT_NV.Designer.cs">
+      <DependentUpon>ThongTinTT_NV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NhanVien\FormMain_NV.resx">
+      <DependentUpon>FormMain_NV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\FormMain_NS.resx">
       <DependentUpon>FormMain_NS.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\SanPham_QT.resx">
       <DependentUpon>SanPham_QT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\ThemDH_NV.resx">
+      <DependentUpon>ThemDH_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\ThongTinTT_NV.resx">
+      <DependentUpon>ThongTinTT_NV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

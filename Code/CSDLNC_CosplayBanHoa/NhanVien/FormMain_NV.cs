@@ -5,17 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
 namespace CSDLNC_CosplayBanHoa
 {
-    public partial class FormMain_KH : Form
+    public partial class FormMain_NV : Form
     {
         Thread t;
         string ID;
-        public FormMain_KH(string id)
+        public FormMain_NV(string id)
         {
             InitializeComponent();
             ID = id;
@@ -65,47 +64,15 @@ namespace CSDLNC_CosplayBanHoa
             }
         }
 
-        // xử lí đăng xuất + đăng nhập lại
-        public void open_FormDangNhap(object obj)
+        private void btn_themdh_NV_Click(object sender, EventArgs e)
         {
-            Application.Run(new DangNhap());
-        }
-
-        private void btn_muahang_KH_Click(object sender, EventArgs e)
-        {
-            openChildForm(new MuaHang_KH(ID));
+            openChildForm(new ThemDH_NV(ID));
             ActivateButton(sender);
         }
 
-        private void FormMain_KH_Load(object sender, EventArgs e)
+        private void FormMain_NV_Load(object sender, EventArgs e)
         {
-            btn_muahang_KH.PerformClick();
-        }
-
-        private void btn_dangxuat_KH_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            t = new Thread(open_FormDangNhap);
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-        }
-
-        private void btn_thoat_KH_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_giohang_KH_Click(object sender, EventArgs e)
-        {
-            openChildForm(new GioHang_KH());
-            ActivateButton(sender);
-        }
-
-        private void btn_taikhoan_KH_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT MAKH FROM KHACHHANG WHERE ID = '" + ID + "'";    
-            openChildForm(new LichSuMuaHang_KH(Functions.GetFieldValues(sql)));
-            ActivateButton(sender);
+            btn_themdh_NV.PerformClick();
         }
     }
 }

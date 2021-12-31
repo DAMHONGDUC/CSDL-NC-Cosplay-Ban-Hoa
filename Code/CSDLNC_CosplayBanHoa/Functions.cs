@@ -68,7 +68,13 @@ namespace CSDLNC_CosplayBanHoa
                     {
                         s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_KHACHHANG;Password=12345";
                         break;
-                    }              
+                    }
+                // nhân viên
+                case 2:
+                    {
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_NHANVIEN;Password=12345";
+                        break;
+                    }
                 // nhân sự
                 case 3:
                     {
