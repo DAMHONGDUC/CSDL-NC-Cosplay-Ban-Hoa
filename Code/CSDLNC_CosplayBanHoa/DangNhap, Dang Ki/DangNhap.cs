@@ -115,6 +115,11 @@ namespace CSDLNC_CosplayBanHoa
                         Application.Run(new FormMain_KH(id));
                         break;
                     }
+                case 2:
+                    {
+                        Application.Run(new FormMain_NV(id));
+                        break;
+                    }
                 case 3:
                     {
                         Application.Run(new FormMain_NS());
@@ -124,7 +129,8 @@ namespace CSDLNC_CosplayBanHoa
                     {
                         Application.Run(new FormMain_QL());
                         break;
-                    }                
+                    }
+                
             }
         }
 

@@ -80,7 +80,7 @@ namespace CSDLNC_CosplayBanHoa
 
         private void txtBox_diachi_TTNN_KH_TextChanged(object sender, EventArgs e)
         {
-            txtBox_phigiaohang_TTNN_KH.Text = "30.000";
+            txtBox_phigiaohang_TTNN_KH.Text = "30000.0000";
         }
         private void TTNguoiNhan_KH_FormClosing(object sender, FormClosingEventArgs e)
         {
