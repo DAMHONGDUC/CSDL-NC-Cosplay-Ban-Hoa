@@ -198,6 +198,8 @@ GO
 
 ----------- Phần SP của Tuấn
 
+-- Phân hệ Nhân Sự
+
 -- Thêm nhân viên mới
 CREATE PROCEDURE SP_NhanSu_ThemNV
 	@MANV VARCHAR(15),
@@ -271,3 +273,56 @@ BEGIN
 	HAVING ABS(DATEDIFF(day, GETDATE(), L.NGAY)) = (SELECT MIN(ABS(DATEDIFF(day, GETDATE(), L.NGAY))) FROM LUONG L1 WHERE L1.MANV = L.MANV GROUP BY L1.MANV, L1.NGAY)
 END
 GO
+
+---- Phân hệ Quản lý (Sử dụng partition)
+
+-- Xuất danh sách các nhân viên và ngày làm việc của nhân viên trong tháng
+CREATE PROC SP_QuanLy_XuatNgayLamViecCuaNVTrongThang
+	@THUTU INT
+AS
+BEGIN
+	SELECT NV.MANV, NV.TENNV, NV.CHINHANHLV, NGAY
+	FROM NHANVIEN NV, DIEMDANH 
+	WHERE NV.MANV = dbo.DIEMDANH.MANV
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+END
+GO
+
+-- Số ngày đi làm của nhân viên trong tháng
+CREATE PROC SP_QuanLy_SoNgayDiLamTrongThang
+	@MANV VARCHAR(15),
+	@THUTU INT,
+	@SONGAYLAM INT OUTPUT
+AS
+BEGIN
+	SELECT @SONGAYLAM = COUNT(*)
+	FROM dbo.DIEMDANH
+	WHERE MANV = @MANV
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+END
+GO
+
+-- Số lượng đơn hàng, doanh thu, số hàng hóa/nhân viên trong 1 tháng
+CREATE PROC SP_QuanLy_HieuSuatNVTrongThang
+	@MANV VARCHAR(15),
+	@THANG INT,
+	@NAM INT,
+	@SOLUONGDON INT OUTPUT,
+	@SOLUONGHANG INT OUTPUT,
+	@DOANHTHU DECIMAL(19,4) OUTPUT
+AS
+BEGIN
+	-- Số đơn hàng và doanh thu
+	SELECT @SOLUONGDON = COUNT(*), @DOANHTHU = SUM(DH.TONGTIEN)
+	FROM dbo.DONHANG DH
+	WHERE MONTH(DH.NGAYLAP) = @THANG
+	AND YEAR(DH.NGAYLAP) = @NAM
+	AND DH.MANV = @MANV
+	
+	-- Số lượng hàng bán được
+	SELECT @SOLUONGHANG = SUM(CT.SOLUONG)
+	FROM dbo.CT_DONHANG CT, dbo.DONHANG DH
+	WHERE CT.MADH = DH.MADH
+
+END
+GO 
