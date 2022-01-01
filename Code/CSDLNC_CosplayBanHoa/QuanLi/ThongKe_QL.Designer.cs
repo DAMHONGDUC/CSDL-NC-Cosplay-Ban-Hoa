@@ -51,7 +51,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.cbB_Nam = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtBox_doanhthu_MHBC = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBox_SLDB_MHBC = new System.Windows.Forms.TextBox();
@@ -67,35 +67,40 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBox_TenSP_MHBC = new System.Windows.Forms.TextBox();
             this.tabPage_mathangbancham = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_BanCham = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.cbx_Nam = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.cbx_Thang = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtBox_LN_BanCham = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtBox_SLDB_BanCham = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.btn_Tim_BanCham = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtBox_MaSP_BanCham = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtBox_SLT_BanCham = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtBox_TenSP_BanCham = new System.Windows.Forms.TextBox();
             this.tabPage_doanhthu = new System.Windows.Forms.TabPage();
             this.dgv_DThu = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.cbo_Nam = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cbo_Thang = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtBox_DT_DoanhThu = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtBox_DT_LoiNhuan = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtBox_DT_SLDB = new System.Windows.Forms.TextBox();
+            this.btn_Tim_DT = new System.Windows.Forms.Button();
             this.tabControl_sub_thongke.SuspendLayout();
             this.tabPage_soluonghang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MHSH)).BeginInit();
@@ -106,7 +111,7 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage_mathangbancham.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage_doanhthu.SuspendLayout();
@@ -336,6 +341,7 @@
             this.tabPage_mathangbanchay.TabIndex = 1;
             this.tabPage_mathangbanchay.Text = "  Mặt Hàng Bán Chạy  ";
             this.tabPage_mathangbanchay.UseVisualStyleBackColor = true;
+            this.tabPage_mathangbanchay.Enter += new System.EventHandler(this.tabPage_mathangbanchay_Enter);
             // 
             // dgv_MHBC
             // 
@@ -354,7 +360,7 @@
             // 
             this.panel10.Controls.Add(this.cbB_Nam);
             this.panel10.Controls.Add(this.label27);
-            this.panel10.Controls.Add(this.textBox19);
+            this.panel10.Controls.Add(this.txtBox_doanhthu_MHBC);
             this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.txtBox_SLDB_MHBC);
@@ -382,7 +388,8 @@
             this.cbB_Nam.FormattingEnabled = true;
             this.cbB_Nam.Items.AddRange(new object[] {
             "2020",
-            "2021"});
+            "2021",
+            "2022"});
             this.cbB_Nam.Location = new System.Drawing.Point(434, 115);
             this.cbB_Nam.Margin = new System.Windows.Forms.Padding(2);
             this.cbB_Nam.Name = "cbB_Nam";
@@ -400,14 +407,14 @@
             this.label27.TabIndex = 87;
             this.label27.Text = "Năm bán";
             // 
-            // textBox19
+            // txtBox_doanhthu_MHBC
             // 
-            this.textBox19.Location = new System.Drawing.Point(336, 271);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(194, 29);
-            this.textBox19.TabIndex = 86;
+            this.txtBox_doanhthu_MHBC.Location = new System.Drawing.Point(336, 271);
+            this.txtBox_doanhthu_MHBC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_doanhthu_MHBC.Multiline = true;
+            this.txtBox_doanhthu_MHBC.Name = "txtBox_doanhthu_MHBC";
+            this.txtBox_doanhthu_MHBC.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_doanhthu_MHBC.TabIndex = 86;
             // 
             // label25
             // 
@@ -416,9 +423,9 @@
             this.label25.Location = new System.Drawing.Point(332, 249);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(217, 20);
+            this.label25.Size = new System.Drawing.Size(212, 20);
             this.label25.TabIndex = 85;
-            this.label25.Text = "Doanh thu của sản phẩm này";
+            this.label25.Text = "Lợi nhuận của sản phẩm này";
             // 
             // pictureBox1
             // 
@@ -569,7 +576,7 @@
             // 
             // tabPage_mathangbancham
             // 
-            this.tabPage_mathangbancham.Controls.Add(this.dataGridView1);
+            this.tabPage_mathangbancham.Controls.Add(this.dgv_BanCham);
             this.tabPage_mathangbancham.Controls.Add(this.panel1);
             this.tabPage_mathangbancham.Location = new System.Drawing.Point(4, 29);
             this.tabPage_mathangbancham.Margin = new System.Windows.Forms.Padding(2);
@@ -579,35 +586,38 @@
             this.tabPage_mathangbancham.Text = "  Mặt Hàng Bán Chậm";
             this.tabPage_mathangbancham.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_BanCham
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 358);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(954, 157);
-            this.dataGridView1.TabIndex = 3;
+            this.dgv_BanCham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_BanCham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_BanCham.Location = new System.Drawing.Point(0, 358);
+            this.dgv_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_BanCham.Name = "dgv_BanCham";
+            this.dgv_BanCham.RowHeadersWidth = 51;
+            this.dgv_BanCham.RowTemplate.Height = 24;
+            this.dgv_BanCham.Size = new System.Drawing.Size(954, 157);
+            this.dgv_BanCham.TabIndex = 3;
+            this.dgv_BanCham.Click += new System.EventHandler(this.dgv_BanCham_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox20);
+            this.panel1.Controls.Add(this.cbx_Nam);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.cbx_Thang);
+            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.txtBox_LN_BanCham);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.txtBox_SLDB_BanCham);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.btn_Tim_BanCham);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.textBox12);
+            this.panel1.Controls.Add(this.txtBox_MaSP_BanCham);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.textBox13);
+            this.panel1.Controls.Add(this.txtBox_SLT_BanCham);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.textBox14);
+            this.panel1.Controls.Add(this.txtBox_TenSP_BanCham);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -616,14 +626,71 @@
             this.panel1.Size = new System.Drawing.Size(954, 358);
             this.panel1.TabIndex = 2;
             // 
-            // textBox20
+            // cbx_Nam
             // 
-            this.textBox20.Location = new System.Drawing.Point(336, 271);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(194, 29);
-            this.textBox20.TabIndex = 88;
+            this.cbx_Nam.FormattingEnabled = true;
+            this.cbx_Nam.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022"});
+            this.cbx_Nam.Location = new System.Drawing.Point(434, 115);
+            this.cbx_Nam.Margin = new System.Windows.Forms.Padding(2);
+            this.cbx_Nam.Name = "cbx_Nam";
+            this.cbx_Nam.Size = new System.Drawing.Size(81, 28);
+            this.cbx_Nam.TabIndex = 92;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label28.Location = new System.Drawing.Point(430, 93);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(73, 20);
+            this.label28.TabIndex = 91;
+            this.label28.Text = "Năm bán";
+            // 
+            // cbx_Thang
+            // 
+            this.cbx_Thang.FormattingEnabled = true;
+            this.cbx_Thang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbx_Thang.Location = new System.Drawing.Point(336, 115);
+            this.cbx_Thang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbx_Thang.Name = "cbx_Thang";
+            this.cbx_Thang.Size = new System.Drawing.Size(81, 28);
+            this.cbx_Thang.TabIndex = 90;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label29.Location = new System.Drawing.Point(332, 93);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(85, 20);
+            this.label29.TabIndex = 89;
+            this.label29.Text = "Tháng bán";
+            // 
+            // txtBox_LN_BanCham
+            // 
+            this.txtBox_LN_BanCham.Location = new System.Drawing.Point(336, 271);
+            this.txtBox_LN_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_LN_BanCham.Multiline = true;
+            this.txtBox_LN_BanCham.Name = "txtBox_LN_BanCham";
+            this.txtBox_LN_BanCham.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_LN_BanCham.TabIndex = 88;
             // 
             // label26
             // 
@@ -632,9 +699,9 @@
             this.label26.Location = new System.Drawing.Point(332, 249);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(217, 20);
+            this.label26.Size = new System.Drawing.Size(212, 20);
             this.label26.TabIndex = 87;
-            this.label26.Text = "Doanh thu của sản phẩm này";
+            this.label26.Text = "Lợi nhuận của sản phẩm này";
             // 
             // pictureBox2
             // 
@@ -647,14 +714,14 @@
             this.pictureBox2.TabIndex = 84;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox11
+            // txtBox_SLDB_BanCham
             // 
-            this.textBox11.Location = new System.Drawing.Point(336, 193);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(194, 29);
-            this.textBox11.TabIndex = 83;
+            this.txtBox_SLDB_BanCham.Location = new System.Drawing.Point(336, 193);
+            this.txtBox_SLDB_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_SLDB_BanCham.Multiline = true;
+            this.txtBox_SLDB_BanCham.Name = "txtBox_SLDB_BanCham";
+            this.txtBox_SLDB_BanCham.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_SLDB_BanCham.TabIndex = 83;
             // 
             // label14
             // 
@@ -667,35 +734,16 @@
             this.label14.TabIndex = 82;
             this.label14.Text = "Số lượng đã bán";
             // 
-            // button2
+            // btn_Tim_BanCham
             // 
-            this.button2.Location = new System.Drawing.Point(534, 115);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 28);
-            this.button2.TabIndex = 81;
-            this.button2.Text = "Tìm";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(336, 115);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(194, 28);
-            this.comboBox2.TabIndex = 80;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label15.Location = new System.Drawing.Point(332, 93);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 20);
-            this.label15.TabIndex = 79;
-            this.label15.Text = "Tháng bán";
+            this.btn_Tim_BanCham.Location = new System.Drawing.Point(534, 115);
+            this.btn_Tim_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Tim_BanCham.Name = "btn_Tim_BanCham";
+            this.btn_Tim_BanCham.Size = new System.Drawing.Size(60, 28);
+            this.btn_Tim_BanCham.TabIndex = 81;
+            this.btn_Tim_BanCham.Text = "Tìm";
+            this.btn_Tim_BanCham.UseVisualStyleBackColor = true;
+            this.btn_Tim_BanCham.Click += new System.EventHandler(this.btn_Tim_BanCham_Click);
             // 
             // label16
             // 
@@ -720,14 +768,14 @@
             this.label17.TabIndex = 76;
             this.label17.Text = "Mã sản phẩm";
             // 
-            // textBox12
+            // txtBox_MaSP_BanCham
             // 
-            this.textBox12.Location = new System.Drawing.Point(78, 115);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(194, 29);
-            this.textBox12.TabIndex = 75;
+            this.txtBox_MaSP_BanCham.Location = new System.Drawing.Point(78, 115);
+            this.txtBox_MaSP_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_MaSP_BanCham.Multiline = true;
+            this.txtBox_MaSP_BanCham.Name = "txtBox_MaSP_BanCham";
+            this.txtBox_MaSP_BanCham.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_MaSP_BanCham.TabIndex = 75;
             // 
             // label18
             // 
@@ -740,14 +788,14 @@
             this.label18.TabIndex = 74;
             this.label18.Text = "Số lượng tồn";
             // 
-            // textBox13
+            // txtBox_SLT_BanCham
             // 
-            this.textBox13.Location = new System.Drawing.Point(78, 271);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(194, 29);
-            this.textBox13.TabIndex = 73;
+            this.txtBox_SLT_BanCham.Location = new System.Drawing.Point(78, 271);
+            this.txtBox_SLT_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_SLT_BanCham.Multiline = true;
+            this.txtBox_SLT_BanCham.Name = "txtBox_SLT_BanCham";
+            this.txtBox_SLT_BanCham.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_SLT_BanCham.TabIndex = 73;
             // 
             // label19
             // 
@@ -760,14 +808,14 @@
             this.label19.TabIndex = 72;
             this.label19.Text = "Tên sản phẩm";
             // 
-            // textBox14
+            // txtBox_TenSP_BanCham
             // 
-            this.textBox14.Location = new System.Drawing.Point(78, 193);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(194, 29);
-            this.textBox14.TabIndex = 71;
+            this.txtBox_TenSP_BanCham.Location = new System.Drawing.Point(78, 193);
+            this.txtBox_TenSP_BanCham.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_TenSP_BanCham.Multiline = true;
+            this.txtBox_TenSP_BanCham.Name = "txtBox_TenSP_BanCham";
+            this.txtBox_TenSP_BanCham.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_TenSP_BanCham.TabIndex = 71;
             // 
             // tabPage_doanhthu
             // 
@@ -792,24 +840,85 @@
             this.dgv_DThu.RowTemplate.Height = 24;
             this.dgv_DThu.Size = new System.Drawing.Size(954, 268);
             this.dgv_DThu.TabIndex = 1;
+            this.dgv_DThu.Click += new System.EventHandler(this.dgv_DThu_Click);
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.btn_Tim_DT);
+            this.panel11.Controls.Add(this.cbo_Nam);
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Controls.Add(this.cbo_Thang);
+            this.panel11.Controls.Add(this.label30);
             this.panel11.Controls.Add(this.label24);
             this.panel11.Controls.Add(this.label21);
-            this.panel11.Controls.Add(this.textBox16);
+            this.panel11.Controls.Add(this.txtBox_DT_DoanhThu);
             this.panel11.Controls.Add(this.label23);
-            this.panel11.Controls.Add(this.textBox18);
-            this.panel11.Controls.Add(this.label20);
-            this.panel11.Controls.Add(this.textBox15);
+            this.panel11.Controls.Add(this.txtBox_DT_LoiNhuan);
             this.panel11.Controls.Add(this.label22);
-            this.panel11.Controls.Add(this.textBox17);
+            this.panel11.Controls.Add(this.txtBox_DT_SLDB);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(954, 247);
             this.panel11.TabIndex = 0;
+            // 
+            // cbo_Nam
+            // 
+            this.cbo_Nam.FormattingEnabled = true;
+            this.cbo_Nam.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022"});
+            this.cbo_Nam.Location = new System.Drawing.Point(324, 89);
+            this.cbo_Nam.Margin = new System.Windows.Forms.Padding(2);
+            this.cbo_Nam.Name = "cbo_Nam";
+            this.cbo_Nam.Size = new System.Drawing.Size(81, 28);
+            this.cbo_Nam.TabIndex = 92;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label15.Location = new System.Drawing.Point(320, 67);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 91;
+            this.label15.Text = "Năm bán";
+            // 
+            // cbo_Thang
+            // 
+            this.cbo_Thang.FormattingEnabled = true;
+            this.cbo_Thang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbo_Thang.Location = new System.Drawing.Point(226, 89);
+            this.cbo_Thang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbo_Thang.Name = "cbo_Thang";
+            this.cbo_Thang.Size = new System.Drawing.Size(81, 28);
+            this.cbo_Thang.TabIndex = 90;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label30.Location = new System.Drawing.Point(222, 67);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(85, 20);
+            this.label30.TabIndex = 89;
+            this.label30.Text = "Tháng bán";
             // 
             // label24
             // 
@@ -834,14 +943,14 @@
             this.label21.TabIndex = 86;
             this.label21.Text = "Doanh thu";
             // 
-            // textBox16
+            // txtBox_DT_DoanhThu
             // 
-            this.textBox16.Location = new System.Drawing.Point(517, 89);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(194, 29);
-            this.textBox16.TabIndex = 85;
+            this.txtBox_DT_DoanhThu.Location = new System.Drawing.Point(517, 89);
+            this.txtBox_DT_DoanhThu.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_DT_DoanhThu.Multiline = true;
+            this.txtBox_DT_DoanhThu.Name = "txtBox_DT_DoanhThu";
+            this.txtBox_DT_DoanhThu.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_DT_DoanhThu.TabIndex = 85;
             // 
             // label23
             // 
@@ -854,34 +963,14 @@
             this.label23.TabIndex = 84;
             this.label23.Text = "Lợi nhuận";
             // 
-            // textBox18
+            // txtBox_DT_LoiNhuan
             // 
-            this.textBox18.Location = new System.Drawing.Point(517, 167);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(194, 29);
-            this.textBox18.TabIndex = 83;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label20.Location = new System.Drawing.Point(222, 67);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(54, 20);
-            this.label20.TabIndex = 82;
-            this.label20.Text = "Tháng";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(226, 89);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(194, 29);
-            this.textBox15.TabIndex = 81;
+            this.txtBox_DT_LoiNhuan.Location = new System.Drawing.Point(517, 167);
+            this.txtBox_DT_LoiNhuan.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_DT_LoiNhuan.Multiline = true;
+            this.txtBox_DT_LoiNhuan.Name = "txtBox_DT_LoiNhuan";
+            this.txtBox_DT_LoiNhuan.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_DT_LoiNhuan.TabIndex = 83;
             // 
             // label22
             // 
@@ -894,14 +983,25 @@
             this.label22.TabIndex = 78;
             this.label22.Text = "Số lượng đã bán";
             // 
-            // textBox17
+            // txtBox_DT_SLDB
             // 
-            this.textBox17.Location = new System.Drawing.Point(226, 167);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(194, 29);
-            this.textBox17.TabIndex = 77;
+            this.txtBox_DT_SLDB.Location = new System.Drawing.Point(226, 167);
+            this.txtBox_DT_SLDB.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBox_DT_SLDB.Multiline = true;
+            this.txtBox_DT_SLDB.Name = "txtBox_DT_SLDB";
+            this.txtBox_DT_SLDB.Size = new System.Drawing.Size(194, 29);
+            this.txtBox_DT_SLDB.TabIndex = 77;
+            // 
+            // btn_Tim_DT
+            // 
+            this.btn_Tim_DT.Location = new System.Drawing.Point(419, 88);
+            this.btn_Tim_DT.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Tim_DT.Name = "btn_Tim_DT";
+            this.btn_Tim_DT.Size = new System.Drawing.Size(60, 28);
+            this.btn_Tim_DT.TabIndex = 93;
+            this.btn_Tim_DT.Text = "Tìm";
+            this.btn_Tim_DT.UseVisualStyleBackColor = true;
+            this.btn_Tim_DT.Click += new System.EventHandler(this.btn_Tim_DT_Click);
             // 
             // ThongKe_QL
             // 
@@ -912,7 +1012,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThongKe_QL";
             this.Text = "ThongKe_QL";
-            this.Load += new System.EventHandler(this.ThongKe_QL_Load);
             this.tabControl_sub_thongke.ResumeLayout(false);
             this.tabPage_soluonghang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MHSH)).EndInit();
@@ -925,7 +1024,7 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage_mathangbancham.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -977,35 +1076,40 @@
         private System.Windows.Forms.Button btn_Tim_BanChay;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage_mathangbancham;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_BanCham;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBox_SLDB_BanCham;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btn_Tim_BanCham;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtBox_MaSP_BanCham;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBox_SLT_BanCham;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtBox_TenSP_BanCham;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtBox_DT_DoanhThu;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtBox_DT_LoiNhuan;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtBox_DT_SLDB;
+        private System.Windows.Forms.TextBox txtBox_doanhthu_MHBC;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtBox_LN_BanCham;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cbB_Nam;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cbx_Nam;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cbx_Thang;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox cbo_Nam;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cbo_Thang;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button btn_Tim_DT;
     }
 }
