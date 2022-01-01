@@ -1,4 +1,5 @@
 ﻿
+﻿
 namespace CSDLNC_CosplayBanHoa
 {
     partial class LichSuNhap_QT

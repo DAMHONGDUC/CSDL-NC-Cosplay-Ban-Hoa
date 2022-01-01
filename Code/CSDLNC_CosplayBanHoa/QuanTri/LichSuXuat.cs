@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace CSDLNC_CosplayBanHoa
 {
-    
     public partial class LichSuXuat : Form
     {
         DataTable tbl_QT_LSX;
@@ -41,7 +40,7 @@ namespace CSDLNC_CosplayBanHoa
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dGV_QT_LSX.AllowUserToAddRows = false;
-            
+
             dGV_QT_LSX.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
@@ -74,8 +73,8 @@ namespace CSDLNC_CosplayBanHoa
 
         private void LoadData_TimLSXByNgayXuat() // tải dữ liệu vào DataGridView
         {
-            string sql = "SP_QT_TimLSXTheoNgayLap" + "'"+ dateTimePicker_QT_NgayXuat.Text.Trim().ToString() + "'";
-            tbl_QT_LSX = Functions.GetDataToTable(sql); 
+            string sql = "SP_QT_TimLSXTheoNgayLap" + "'" + dateTimePicker_QT_NgayXuat.Text.Trim().ToString() + "'";
+            tbl_QT_LSX = Functions.GetDataToTable(sql);
             dGV_QT_LSX.DataSource = tbl_QT_LSX;
 
             // set Font cho tên cột
@@ -126,5 +125,6 @@ namespace CSDLNC_CosplayBanHoa
             dateTimePicker_QT_NgayXuat.Text = dGV_QT_LSX.CurrentRow.Cells["NGAYLAP"].Value.ToString();
             textBox_QT_LSN_SOLUONG.Text = dGV_QT_LSX.CurrentRow.Cells["SOLUONG"].Value.ToString();
         }
+
     }
 }

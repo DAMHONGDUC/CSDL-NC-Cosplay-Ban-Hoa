@@ -47,7 +47,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             LoadData_TatCaLSN();
         }
-        
+
 
         private void dGV_QT_LSN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -63,13 +63,13 @@ namespace CSDLNC_CosplayBanHoa
             dateTimePicker_QT_NGAYNHAP.Text = dGV_QT_LSN.CurrentRow.Cells["NGAYNHAP"].Value.ToString();
             textBox_QT_NGUOINHAP.Text = dGV_QT_LSN.CurrentRow.Cells["TENNV"].Value.ToString();
             textBox_QT_SOLUONG.Text = dGV_QT_LSN.CurrentRow.Cells["SOLUONG"].Value.ToString();
-          
+
         }
 
         private void LoadData_LSNByMaSP() // tải dữ liệu vào DataGridView
         {
 
-            string sql = "SP_QT_TimLSNTheoMaSP" +"'"+ textBox_QT_MASP.Text.Trim().ToString()+"'";
+            string sql = "SP_QT_TimLSNTheoMaSP" + "'" + textBox_QT_MASP.Text.Trim().ToString() + "'";
             tbl_QT_LSN = Functions.GetDataToTable(sql);
             dGV_QT_LSN.DataSource = tbl_QT_LSN;
 
@@ -132,5 +132,7 @@ namespace CSDLNC_CosplayBanHoa
         {
             LoadData_LSNByNgayNhap();
         }
+
+       
     }
 }

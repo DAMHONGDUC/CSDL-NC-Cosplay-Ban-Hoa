@@ -17,7 +17,7 @@ namespace CSDLNC_CosplayBanHoa
         public static void Connect(string ConnectString)
         {
             Con = new SqlConnection();
-            //Con.ConnectionString = ConnectString;
+            // Con.ConnectionString = ConnectString;
             Con.ConnectionString = "Data Source=DESKTOP-0QKBNDR;Initial Catalog=HYT;Integrated Security=True";
             //Mở kết nối
             Con.Open();
@@ -69,7 +69,13 @@ namespace CSDLNC_CosplayBanHoa
                     {
                         s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_KHACHHANG;Password=12345";
                         break;
-                    }              
+                    }
+                // nhân viên
+                case 2:
+                    {
+                        s = @"Data Source=" + exactly_server_name + ";Initial Catalog=HYT;Persist Security Info=True;User ID=HYT_NHANVIEN;Password=12345";
+                        break;
+                    }
                 // nhân sự
                 case 3:
                     {
