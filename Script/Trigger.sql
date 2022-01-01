@@ -1,6 +1,4 @@
-﻿USE MASTER
-
-USE HYT
+﻿USE HYT
 GO
 
 --Tạo trigger để tự cập nhật Thành tiền ở bản chi tiết hóa đơn 
