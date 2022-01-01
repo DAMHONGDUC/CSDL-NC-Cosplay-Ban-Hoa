@@ -33,7 +33,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.txtBox_ktsdt = new System.Windows.Forms.TextBox();
             this.cBox_KH_cotk = new System.Windows.Forms.CheckBox();
-            this.cbBox_HTTT = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dTP_ngaymua = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +41,7 @@
             this.btn_tangsl_DH_KH = new System.Windows.Forms.Button();
             this.btn_giamsl_DH_KH = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtBox_tongcong = new System.Windows.Forms.TextBox();
+            this.txtBox_tongcong_DH_KH = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtBox_slmua = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.txtBox_ktsdt);
             this.panel1.Controls.Add(this.cBox_KH_cotk);
-            this.panel1.Controls.Add(this.cbBox_HTTT);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.dTP_ngaymua);
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.btn_tangsl_DH_KH);
             this.panel1.Controls.Add(this.btn_giamsl_DH_KH);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.txtBox_tongcong);
+            this.panel1.Controls.Add(this.txtBox_tongcong_DH_KH);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txtBox_slmua);
             this.panel1.Controls.Add(this.label15);
@@ -180,18 +180,18 @@
             this.cBox_KH_cotk.UseVisualStyleBackColor = true;
             this.cBox_KH_cotk.CheckedChanged += new System.EventHandler(this.cBox_KH_cotk_CheckedChanged);
             // 
-            // cbBox_HTTT
+            // comboBox1
             // 
-            this.cbBox_HTTT.FormattingEnabled = true;
-            this.cbBox_HTTT.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Thanh toán khi nhận hàng",
             "Thanh toán ở nơi khác",
             "Chuyển khoản ngân hàng",
             "Thanh toán trực tiếp"});
-            this.cbBox_HTTT.Location = new System.Drawing.Point(680, 618);
-            this.cbBox_HTTT.Name = "cbBox_HTTT";
-            this.cbBox_HTTT.Size = new System.Drawing.Size(258, 33);
-            this.cbBox_HTTT.TabIndex = 100;
+            this.comboBox1.Location = new System.Drawing.Point(680, 618);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(258, 33);
+            this.comboBox1.TabIndex = 100;
             // 
             // label21
             // 
@@ -263,13 +263,13 @@
             this.label13.TabIndex = 92;
             this.label13.Text = "Tổng cộng";
             // 
-            // txtBox_tongcong
+            // txtBox_tongcong_DH_KH
             // 
-            this.txtBox_tongcong.Location = new System.Drawing.Point(991, 395);
-            this.txtBox_tongcong.Multiline = true;
-            this.txtBox_tongcong.Name = "txtBox_tongcong";
-            this.txtBox_tongcong.Size = new System.Drawing.Size(258, 35);
-            this.txtBox_tongcong.TabIndex = 91;
+            this.txtBox_tongcong_DH_KH.Location = new System.Drawing.Point(991, 395);
+            this.txtBox_tongcong_DH_KH.Multiline = true;
+            this.txtBox_tongcong_DH_KH.Name = "txtBox_tongcong_DH_KH";
+            this.txtBox_tongcong_DH_KH.Size = new System.Drawing.Size(258, 35);
+            this.txtBox_tongcong_DH_KH.TabIndex = 91;
             // 
             // label14
             // 
@@ -653,7 +653,7 @@
         private System.Windows.Forms.Button btn_tangsl_DH_KH;
         private System.Windows.Forms.Button btn_giamsl_DH_KH;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtBox_tongcong;
+        private System.Windows.Forms.TextBox txtBox_tongcong_DH_KH;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtBox_slmua;
         private System.Windows.Forms.Label label15;
@@ -667,7 +667,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtbox_tensp;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cbBox_HTTT;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtBox_ktsdt;

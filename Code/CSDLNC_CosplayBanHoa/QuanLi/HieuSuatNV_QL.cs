@@ -7,26 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace CSDLNC_CosplayBanHoa
 {
     public partial class HieuSuatNV_QL : Form
     {
-        // Hai mảng này dùng cho việc tối ưu truy vấn dựa trên partition
-        int[] nam2020 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-        int[] nam2021 = { 0, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
-
-        int Thang, Nam;
-        int ThuTu; // Biến này dùng để lưu vị trí của phần dữ liệu sau khi đã partition
-        int[] soNgay = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-        string manv;
-        int soNgayLam, soNgayNghi;
-        int SoLuongDon, SoLuongHang;
-
-        decimal DoanhThu;
-
         public HieuSuatNV_QL()
         {
             InitializeComponent();

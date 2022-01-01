@@ -23,7 +23,7 @@ namespace CSDLNC_CosplayBanHoa
             //Application.Run(new FormMain_QL());
             //Application.Run(new FormMain_QT());
 
-
+           
 
         }
     }
