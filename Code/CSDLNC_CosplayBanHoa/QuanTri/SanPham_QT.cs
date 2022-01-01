@@ -36,7 +36,7 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_SP.Columns[5].HeaderText = "Số lượng tồn";
             dGV_QT_SP.Columns[6].HeaderText = "Giá gốc";
             dGV_QT_SP.Columns[7].HeaderText = "Chi tiết sản phẩm";
-            dGV_QT_SP.Columns[8].HeaderText = "Khuyễn mãi";
+            dGV_QT_SP.Columns[8].HeaderText = "Khuyến mãi";
             dGV_QT_SP.Columns[9].HeaderText = "Hình ảnh";
 
             // set Font cho dữ liệu hiển thị trong cột
