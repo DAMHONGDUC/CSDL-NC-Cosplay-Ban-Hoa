@@ -1,5 +1,4 @@
-﻿use master
-USE HYT
+﻿USE HYT
 GO
 
 INSERT INTO TAIKHOAN
@@ -33,8 +32,8 @@ VALUES
 	('SP1',N'SNOW DROP',N'hoa hồng','https://www.pinterest.com/pin/756956649877065867/',N'HOA SIU DEP',150000,N'999 bong hwa hong',0,999,'1/1/2021'),
 	('SP2',N'lovesick girls',N'hoa hướng dương','https://www.pinterest.com/pin/68742994984/',N'HOA SIU DEP',150000,N'doi hwa mat troi',0,10,'10/1/2021'),
 	('SP3',N'stay',N'hoa tulip','https://www.pinterest.com/pin/443393525823105628/',N'HOA SIU DEP',10000,N'doi hwa mat troi',0,1,'10/10/2021'),
-	('SP4',N'2AM',N'hoa ly','https://www.pinterest.com/pin/422281206039061/',N'HOA SIU DEP',50000,N'hoa tang nguoi yeu cu',10,7,'10/12/2021'),
-	('SP5',N'Hoa biet ly',N'hoa ly','https://www.pinterest.com/pin/35043703341935787/',N'HOA SIU thom',1500000,N'hoa dep hoa thom hoa so 1',15,15,'5/12/2021')
+	('SP4',N'2AM',N'hoa ly','https://www.pinterest.com/pin/422281206039061/',N'HOA SIU DEP',50000,N'hoa tang nguoi yeu cu',1000,7,'10/12/2021'),
+	('SP5',N'Hoa biet ly',N'hoa ly','https://www.pinterest.com/pin/35043703341935787/',N'HOA SIU thom',1500000,N'hoa dep hoa thom hoa so 1',15000,15,'5/12/2021')
 GO
 
 INSERT INTO SANPHAM_CHINHANH
@@ -93,22 +92,17 @@ GO
 
 INSERT INTO DONHANG
 VALUES
-	('DH1','KH1','NV1',N'Peter Parker',N'1 Đường 1, Phường Đa Kao, Quận 1, TP.HCM','012458633',30000,0,'12/29/2021','12/28/2021',2,0),
-	('DH2','KH2','NV2',N'Tony Stark',N'2 Đường 2, Phường 2, Quận 2, TP.HCM','0141123633',30000,0,'12/30/2021','12/28/2021',0,0)
+	('DH1','KH1',NULL,N'Peter Parker',N'1 Đường 1, Phường Đa Kao, Quận 1, TP.HCM','012458633',30000,0,'12/29/2021','12/28/2021',0,150000),
+	('DH2','KH2',NULL,N'Tony Stark',N'2 Đường 2, Phường 2, Quận 2, TP.HCM','0141123633',30000,0,'12/30/2021','12/28/2021',0,300000)
 GO
 
 INSERT INTO CT_DONHANG
 VALUES
-	('DH1','SP2',10,150000),
-	('DH1','SP3',15,150000),
-	('DH1','SP4',10,150000),
-	('DH1','SP5',2,150000),
 	('DH1','SP1',1,150000),
 	('DH2','SP1',1,150000),
 	('DH2','SP2',1,150000)
 GO
 
---SELECT * FROM CT_DONHANG
 INSERT INTO DIEMDANH
 VALUES
 	('NV1','12/28/2021'),
@@ -135,12 +129,3 @@ VALUES
 	('DH1','TX1','12/28/2021',NULL),
 	('DH2',NULL,NULL,NULL)
 GO
-
-INSERT INTO LICHSUNHAP
-VALUES
-	('SP1','12/12/2021','NV1',1000,110000),
-	('SP1','12/20/2021','NV1',1000,100000),
-	('SP2','12/20/2021','NV2',10,100000),
-	('SP3','12/20/2021','NV1',10,5000),
-	('SP4','12/20/2021','NV1',50,30000),
-	('SP5','12/20/2021','NV3',30,500000)

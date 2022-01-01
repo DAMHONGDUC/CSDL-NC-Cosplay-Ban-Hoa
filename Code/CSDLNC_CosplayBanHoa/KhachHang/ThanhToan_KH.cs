@@ -61,12 +61,13 @@ namespace CSDLNC_CosplayBanHoa
 
         private int Run_SP_Sp_KH_ThemDH()
         {
-            SqlCommand cmd = new SqlCommand("Sp_KH_ThemDH", Functions.Con);
+            SqlCommand cmd = new SqlCommand("Sp_ThemDH", Functions.Con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             // set kiểu dữ liệu
             cmd.Parameters.Add("@MADH", SqlDbType.VarChar, 15);
-            cmd.Parameters.Add("@MAKH", SqlDbType.VarChar, 15);
+            cmd.Parameters.Add("@MAKH", SqlDbType.VarChar, 15);         
+            cmd.Parameters.Add("@MANV", SqlDbType.VarChar, 15);
             cmd.Parameters.Add("@TENNGUOINHAN", SqlDbType.NVarChar, 255);
             cmd.Parameters.Add("@DIACHI_NGUOINHAN", SqlDbType.NVarChar, 255);
             cmd.Parameters.Add("@SDT_NGUOINHAN", SqlDbType.NVarChar, 255);
@@ -88,7 +89,7 @@ namespace CSDLNC_CosplayBanHoa
 
             // set giá trị
             cmd.Parameters["@MADH"].Value = madh;
-            cmd.Parameters["@MAKH"].Value = makh;
+            cmd.Parameters["@MAKH"].Value = makh;     
             cmd.Parameters["@TENNGUOINHAN"].Value = tennguoinhan;
             cmd.Parameters["@DIACHI_NGUOINHAN"].Value = diachi_nguoinhan;
             cmd.Parameters["@SDT_NGUOINHAN"].Value = sdt_nguoinhan;
@@ -106,7 +107,7 @@ namespace CSDLNC_CosplayBanHoa
 
         private int Run_SP_Sp_KH_ThemCTDH()
         {
-            SqlCommand cmd = new SqlCommand("Sp_KH_ThemCTDH", Functions.Con);
+            SqlCommand cmd = new SqlCommand("Sp_ThemCTDH", Functions.Con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             // set kiểu dữ liệu
