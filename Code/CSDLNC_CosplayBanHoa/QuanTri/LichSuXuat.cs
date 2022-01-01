@@ -37,7 +37,6 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSX.Columns[1].Width = 320;
             dGV_QT_LSX.Columns[2].Width = 320;
 
-
             //Không cho người dùng thêm dữ liệu trực tiếp
             dGV_QT_LSX.AllowUserToAddRows = false;
 
