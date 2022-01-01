@@ -502,6 +502,7 @@ BEGIN
 	SET GIAGIAM=@GIAGIAM
 	WHERE MASP=@MASP
 END
+GO
 -----------------------------------------------------------------------
 --sp của Bình Minh đẹp trai nhất nhóm
 --proc xem danh sách mặt hàng bán chạy theo tháng
