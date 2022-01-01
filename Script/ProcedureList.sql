@@ -337,7 +337,7 @@ BEGIN
 	SELECT NV.MANV, NV.TENNV, NV.CHINHANHLV, NGAY
 	FROM NHANVIEN NV, DIEMDANH 
 	WHERE NV.MANV = dbo.DIEMDANH.MANV
-	--AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
 END
 GO
 
@@ -351,7 +351,7 @@ BEGIN
 	SELECT @SONGAYLAM = COUNT(*)
 	FROM dbo.DIEMDANH
 	WHERE MANV = @MANV
-	--AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
 END
 GO
 
@@ -502,7 +502,6 @@ BEGIN
 	SET GIAGIAM=@GIAGIAM
 	WHERE MASP=@MASP
 END
-GO
 -----------------------------------------------------------------------
 --sp của Bình Minh đẹp trai nhất nhóm
 --proc xem danh sách mặt hàng bán chạy theo tháng
@@ -639,17 +638,40 @@ AS
 GO
 
 --proc xem DOANH THU mặt hàng bán được theo tháng
---DROP PROC SP_QL_DOANHTHU_BANDUOC
-CREATE PROC SP_QL_DOANHTHU_BANDUOC @THANG INT, @NAM INT
+CREATE PROC SP_QL_TONGDHDB @THANG INT, @NAM INT
 AS
 	BEGIN
-		SELECT SUM(CT.THANHTIEN) AS DT
-		FROM SANPHAM SP1, DONHANG DH, CT_DONHANG CT, LICHSUNHAP LS
-		WHERE SP1.MASP = CT.MASP AND DH.MADH = CT.MADH AND DH.TINHTRANG = 2 AND MONTH(DH.NGAYLAP) = @THANG AND YEAR(DH.NGAYLAP) = @NAM
-		AND LS.MASP = SP1.MASP AND LS.NGAYNHAP = (SELECT TOP 1 NGAYNHAP
-													FROM LICHSUNHAP
-													WHERE MASP = SP1.MASP
-													ORDER BY NGAYNHAP DESC)
-		GROUP BY SP1.MASP, LS.GIANHAP
+		SELECT COUNT(DH.MADH) 
+                    FROM DONHANG DH, CT_DONHANG CTDH 
+                    WHERE DH.MADH = CTDH.MADH 
+					AND DH.TINHTRANG= 2
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
 	END
 GO
+
+CREATE PROC SP_QL_TONG_SLSP_DB @THANG INT, @NAM INT
+AS
+	BEGIN
+		SELECT SUM(CAST(DH.TONGTIEN AS BIGINT)) , SUM(CAST(CTDH.SOLUONG AS BIGINT))
+                    FROM DONHANG DH, CT_DONHANG CTDH 
+                    WHERE DH.MADH = CTDH.MADH 
+					AND DH.TINHTRANG = 2
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
+	END
+GO
+CREATE PROC SP_QL_TONG_CHIPHI @THANG INT, @NAM INT
+AS
+	BEGIN
+		SELECT SUM(CAST((SP.GIAGOC*CTDH.SOLUONG) AS BIGINT)) 
+                    FROM CT_DONHANG CTDH, SANPHAM SP, DONHANG DH
+                    WHERE CTDH.MASP = SP.MASP 
+					AND DH.TINHTRANG=2
+                    AND CTDH.MADH = DH.MADH 
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
+	END
+GO
+
+
