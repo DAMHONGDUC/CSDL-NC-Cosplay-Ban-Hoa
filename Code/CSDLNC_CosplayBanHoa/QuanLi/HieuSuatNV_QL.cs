@@ -172,7 +172,7 @@ namespace CSDLNC_CosplayBanHoa
 
             DataTable ngayDiLamTrongThangNV;
             string sql = "SP_QuanLy_XuatNgayLamViecCuaNVTrongThang '" + ThuTu + "'";
-            Functions.Connect();
+            //Functions.Connect();
             ngayDiLamTrongThangNV = Functions.GetDataToTable(sql);
             dgv_HSNV.DataSource = ngayDiLamTrongThangNV;
 
