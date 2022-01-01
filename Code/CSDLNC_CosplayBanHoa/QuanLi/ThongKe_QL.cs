@@ -279,22 +279,24 @@ namespace CSDLNC_CosplayBanHoa
                 String sl_hangdaban = "0";
 
                 // lấy số lượng hoá đơn theo tháng
-                sql = "SELECT COUNT(DH.MADH) " +
-                    "FROM DONHANG DH, CT_DONHANG CTDH " +
-                    "WHERE DH.MADH = CTDH.MADH " +
-                    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
-                    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                //sql = "SELECT COUNT(DH.MADH) " +
+                //    "FROM DONHANG DH, CT_DONHANG CTDH " +
+                //    "WHERE DH.MADH = CTDH.MADH " +
+                //    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
+                //    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                sql = "SP_QL_TONGDHDB " + i + "," + currYear_DT;
 
                 String sl_hoadon = Functions.GetFieldValues(sql);
                 if (sl_hoadon.Length == 0)
                     sl_hoadon = "0";
 
                 // lấy doanh thu, số lượng hàng đã bán
-                sql = "SELECT SUM(CAST(DH.TONGTIEN AS BIGINT)) , SUM(CAST(CTDH.SOLUONG AS BIGINT)) " +
-                    "FROM DONHANG DH, CT_DONHANG CTDH " +
-                    "WHERE DH.MADH = CTDH.MADH " +
-                    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
-                    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                //sql = "SELECT SUM(CAST(DH.TONGTIEN AS BIGINT)) , SUM(CAST(CTDH.SOLUONG AS BIGINT)) " +
+                //    "FROM DONHANG DH, CT_DONHANG CTDH " +
+                //    "WHERE DH.MADH = CTDH.MADH " +
+                //    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
+                //    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                sql = "SP_QL_TONG_SLSP_DB " + i + "," + currYear_DT;
                 DataTable tbl = Functions.GetDataToTable(sql);
                 if (!sl_hoadon.Equals("0"))
                 {
@@ -303,12 +305,13 @@ namespace CSDLNC_CosplayBanHoa
                 }
 
                 // lấy tổng chi phí bỏ ra 
-                sql = "SELECT SUM(CAST((SP.GIAGOC*CTDH.SOLUONG) AS BIGINT)) " +
-                    "FROM CT_DONHANG CTDH, SANPHAM SP, DONHANG DH " +
-                    "WHERE CTDH.MASP = SP.MASP " +
-                    "AND CTDH.MADH = DH.MADH " +
-                    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
-                    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                //sql = "SELECT SUM(CAST((SP.GIAGOC*CTDH.SOLUONG) AS BIGINT)) " +
+                //    "FROM CT_DONHANG CTDH, SANPHAM SP, DONHANG DH " +
+                //    "WHERE CTDH.MASP = SP.MASP " +
+                //    "AND CTDH.MADH = DH.MADH " +
+                //    "AND YEAR(DH.NGAYLAP) = '" + currYear_DT + "' " +
+                //    "AND MONTH(DH.NGAYLAP) = '" + i + "'";
+                sql = "SP_QL_TONG_CHIPHI " + i + "," + currYear_DT;
                 String tongchiphi = Functions.GetFieldValues(sql);
                 if (tongchiphi.Length == 0)
                     tongchiphi = "0";
