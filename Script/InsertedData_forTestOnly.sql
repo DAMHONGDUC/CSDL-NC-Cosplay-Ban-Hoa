@@ -92,8 +92,8 @@ GO
 
 INSERT INTO DONHANG
 VALUES
-	('DH1','KH1',N'Peter Parker',N'1 Đường 1, Phường Đa Kao, Quận 1, TP.HCM','012458633',30000,0,'12/29/2021','12/28/2021',0,150000),
-	('DH2','KH2',N'Tony Stark',N'2 Đường 2, Phường 2, Quận 2, TP.HCM','0141123633',30000,0,'12/30/2021','12/28/2021',0,300000)
+	('DH1','KH1',NULL,N'Peter Parker',N'1 Đường 1, Phường Đa Kao, Quận 1, TP.HCM','012458633',30000,0,'12/29/2021','12/28/2021',0,150000),
+	('DH2','KH2',NULL,N'Tony Stark',N'2 Đường 2, Phường 2, Quận 2, TP.HCM','0141123633',30000,0,'12/30/2021','12/28/2021',0,300000)
 GO
 
 INSERT INTO CT_DONHANG
