@@ -140,7 +140,7 @@ namespace CSDLNC_CosplayBanHoa
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(864, 142);
+            this.button1.Location = new System.Drawing.Point(864, 140);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 44);
@@ -151,29 +151,32 @@ namespace CSDLNC_CosplayBanHoa
             // 
             // textBox_QT_SOLUONG
             // 
+            this.textBox_QT_SOLUONG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_QT_SOLUONG.Location = new System.Drawing.Point(569, 394);
             this.textBox_QT_SOLUONG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_SOLUONG.Multiline = true;
             this.textBox_QT_SOLUONG.Name = "textBox_QT_SOLUONG";
-            this.textBox_QT_SOLUONG.Size = new System.Drawing.Size(276, 43);
+            this.textBox_QT_SOLUONG.Size = new System.Drawing.Size(276, 41);
             this.textBox_QT_SOLUONG.TabIndex = 90;
             // 
             // textBox_QT_NGUOINHAP
             // 
+            this.textBox_QT_NGUOINHAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_QT_NGUOINHAP.Location = new System.Drawing.Point(569, 310);
             this.textBox_QT_NGUOINHAP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_NGUOINHAP.Multiline = true;
             this.textBox_QT_NGUOINHAP.Name = "textBox_QT_NGUOINHAP";
-            this.textBox_QT_NGUOINHAP.Size = new System.Drawing.Size(276, 43);
+            this.textBox_QT_NGUOINHAP.Size = new System.Drawing.Size(276, 41);
             this.textBox_QT_NGUOINHAP.TabIndex = 89;
             // 
             // textBox_QT_MASP
             // 
+            this.textBox_QT_MASP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_QT_MASP.Location = new System.Drawing.Point(569, 142);
             this.textBox_QT_MASP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_MASP.Multiline = true;
             this.textBox_QT_MASP.Name = "textBox_QT_MASP";
-            this.textBox_QT_MASP.Size = new System.Drawing.Size(276, 43);
+            this.textBox_QT_MASP.Size = new System.Drawing.Size(276, 42);
             this.textBox_QT_MASP.TabIndex = 87;
             // 
             // label5

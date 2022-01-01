@@ -100,7 +100,7 @@ namespace CSDLNC_CosplayBanHoa
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(864, 235);
+            this.button2.Location = new System.Drawing.Point(864, 229);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 44);
@@ -124,17 +124,18 @@ namespace CSDLNC_CosplayBanHoa
             // 
             // textBox_QT_LSN_SOLUONG
             // 
+            this.textBox_QT_LSN_SOLUONG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_QT_LSN_SOLUONG.Location = new System.Drawing.Point(569, 329);
             this.textBox_QT_LSN_SOLUONG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_LSN_SOLUONG.Multiline = true;
             this.textBox_QT_LSN_SOLUONG.Name = "textBox_QT_LSN_SOLUONG";
-            this.textBox_QT_LSN_SOLUONG.Size = new System.Drawing.Size(276, 43);
+            this.textBox_QT_LSN_SOLUONG.Size = new System.Drawing.Size(276, 45);
             this.textBox_QT_LSN_SOLUONG.TabIndex = 96;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(864, 141);
+            this.button1.Location = new System.Drawing.Point(864, 139);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 44);
@@ -145,11 +146,12 @@ namespace CSDLNC_CosplayBanHoa
             // 
             // textBox_QT_LSX_MaSP
             // 
+            this.textBox_QT_LSX_MaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_QT_LSX_MaSP.Location = new System.Drawing.Point(569, 141);
             this.textBox_QT_LSX_MaSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_LSX_MaSP.Multiline = true;
             this.textBox_QT_LSX_MaSP.Name = "textBox_QT_LSX_MaSP";
-            this.textBox_QT_LSX_MaSP.Size = new System.Drawing.Size(276, 43);
+            this.textBox_QT_LSX_MaSP.Size = new System.Drawing.Size(276, 48);
             this.textBox_QT_LSX_MaSP.TabIndex = 93;
             // 
             // label7

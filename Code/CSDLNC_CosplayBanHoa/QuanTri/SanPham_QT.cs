@@ -17,9 +17,11 @@ namespace CSDLNC_CosplayBanHoa
         {
             InitializeComponent();
         }
+        
 
         private void LoadData_TatCaSP() // tải dữ liệu vào DataGridView
         {
+           
             string sql = "SP_QT_TatCaSP";
             tbl_QT_SP = Functions.GetDataToTable(sql);
             dGV_QT_SP.DataSource = tbl_QT_SP;
@@ -58,12 +60,13 @@ namespace CSDLNC_CosplayBanHoa
 
             dGV_QT_SP.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
+
         private void SanPham_QT_Load(object sender, EventArgs e)
         {
             LoadData_TatCaSP();
         }
 
-        private void dGV_QT_SP_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGV_QT_SP_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (tbl_QT_SP.Rows.Count == 0)
             {
@@ -82,7 +85,7 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_QT_SP_GiaGoc.Text = dGV_QT_SP.CurrentRow.Cells["GIAGOC"].Value.ToString();
             textBox_QT_SP_CTSP.Text = dGV_QT_SP.CurrentRow.Cells["CHITIETSP"].Value.ToString();
             textBox_QT_SP_KM.Text = dGV_QT_SP.CurrentRow.Cells["KHUYENMAI"].Value.ToString();
-            textBox_QT_SP_TenCN.Text = dGV_QT_SP.CurrentRow.Cells["HINHANH"].Value.ToString();
+            picBox_QT_SP_Anh.Text = dGV_QT_SP.CurrentRow.Cells["HINHANH"].Value.ToString();
         }
     }
 }
