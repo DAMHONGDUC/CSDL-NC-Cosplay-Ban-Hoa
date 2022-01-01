@@ -61,7 +61,7 @@ namespace CSDLNC_CosplayBanHoa
             dgv_MHBC.Font = new Font("Time New Roman", 13);
 
             dgv_MHBC.Columns[3].HeaderText = "Số lượng đã bán";
-            dgv_MHBC.Columns[3].HeaderText = "Doanh thu";
+            //dgv_MHBC.Columns[4].HeaderText = "Doanh thu";
 
             // set Font cho dữ liệu hiển thị trong cột
             dgv_MHBC.DefaultCellStyle.Font = new Font("Time New Roman", 12);
