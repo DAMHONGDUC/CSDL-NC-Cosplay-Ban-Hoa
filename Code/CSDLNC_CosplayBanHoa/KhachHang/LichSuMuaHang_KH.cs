@@ -30,16 +30,15 @@ namespace CSDLNC_CosplayBanHoa
             dGV_LSMH_KH.Font = new Font("Time New Roman", 13);
             dGV_LSMH_KH.Columns[0].HeaderText = "Mã đơn hàng";
             dGV_LSMH_KH.Columns[1].HeaderText = "Mã khách hàng";
-            dGV_LSMH_KH.Columns[2].HeaderText = "Mã nhân viên";
-            dGV_LSMH_KH.Columns[3].HeaderText = "Tên người nhận";
-            dGV_LSMH_KH.Columns[4].HeaderText = "Địa chỉ người nhận";
-            dGV_LSMH_KH.Columns[5].HeaderText = "SĐT người nhận";
-            dGV_LSMH_KH.Columns[6].HeaderText = "Phí vận chuyển";
-            dGV_LSMH_KH.Columns[7].HeaderText = "Hình thức thanh toán";
-            dGV_LSMH_KH.Columns[8].HeaderText = "Ngày muốn giao";
-            dGV_LSMH_KH.Columns[9].HeaderText = "Ngày lập";
-            dGV_LSMH_KH.Columns[10].HeaderText = "Tình trạng";
-            dGV_LSMH_KH.Columns[11].HeaderText = "Tổng tiền";
+            dGV_LSMH_KH.Columns[2].HeaderText = "Tên người nhận";
+            dGV_LSMH_KH.Columns[3].HeaderText = "Địa chỉ người nhận";
+            dGV_LSMH_KH.Columns[4].HeaderText = "SĐT người nhận";
+            dGV_LSMH_KH.Columns[5].HeaderText = "Phí vận chuyển";
+            dGV_LSMH_KH.Columns[6].HeaderText = "Hình thức thanh toán";
+            dGV_LSMH_KH.Columns[7].HeaderText = "Ngày muốn giao";
+            dGV_LSMH_KH.Columns[8].HeaderText = "Ngày lập";
+            dGV_LSMH_KH.Columns[9].HeaderText = "Tình trạng";
+            dGV_LSMH_KH.Columns[10].HeaderText = "Tổng tiền";
 
             // set Font cho dữ liệu hiển thị trong cột
             dGV_LSMH_KH.DefaultCellStyle.Font = new Font("Time New Roman", 12);
@@ -47,16 +46,15 @@ namespace CSDLNC_CosplayBanHoa
             // set kích thước cột
             dGV_LSMH_KH.Columns[0].Width = 200;
             dGV_LSMH_KH.Columns[1].Width = 0;
-            dGV_LSMH_KH.Columns[2].Width = 0;
+            dGV_LSMH_KH.Columns[2].Width = 200;
             dGV_LSMH_KH.Columns[3].Width = 200;
             dGV_LSMH_KH.Columns[4].Width = 200;
             dGV_LSMH_KH.Columns[5].Width = 200;
-            dGV_LSMH_KH.Columns[6].Width = 200;
-            dGV_LSMH_KH.Columns[7].Width = 0;
+            dGV_LSMH_KH.Columns[6].Width = 0;
+            dGV_LSMH_KH.Columns[7].Width = 200;
             dGV_LSMH_KH.Columns[8].Width = 200;
             dGV_LSMH_KH.Columns[9].Width = 200;
             dGV_LSMH_KH.Columns[10].Width = 200;
-            dGV_LSMH_KH.Columns[11].Width = 200;
 
 
             //Không cho người dùng thêm dữ liệu trực tiếp

@@ -9,7 +9,7 @@ namespace CSDLNC_CosplayBanHoa
     {
         // tên server của SQL server
         //private static string exactly_server_name = @"DESKTOP-0QKBNDR";     
-        //private static string exactly_server_name = @"LTBM-PC";
+      //  private static string exactly_server_name = @"LTBM-PC";
         private static string exactly_server_name = @"(LocalDB)\MSSQLLocalDB";
 
         //Khai báo đối tượng kết nối  
@@ -17,7 +17,8 @@ namespace CSDLNC_CosplayBanHoa
         public static void Connect(string ConnectString)
         {
             Con = new SqlConnection();
-            Con.ConnectionString = ConnectString;       
+            Con.ConnectionString = ConnectString;
+            //Con.ConnectionString = "Data Source=DESKTOP-0QKBNDR;Initial Catalog=HYT;Integrated Security=True";
             //Mở kết nối
             Con.Open();
 
