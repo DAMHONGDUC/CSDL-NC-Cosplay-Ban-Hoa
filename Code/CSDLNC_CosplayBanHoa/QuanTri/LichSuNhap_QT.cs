@@ -63,6 +63,7 @@ namespace CSDLNC_CosplayBanHoa
             dateTimePicker_QT_NGAYNHAP.Text = dGV_QT_LSN.CurrentRow.Cells["NGAYNHAP"].Value.ToString();
             textBox_QT_NGUOINHAP.Text = dGV_QT_LSN.CurrentRow.Cells["TENNV"].Value.ToString();
             textBox_QT_SOLUONG.Text = dGV_QT_LSN.CurrentRow.Cells["SOLUONG"].Value.ToString();
+            txtbox_LSN_GiaNhap.Text = "";
 
         }
 

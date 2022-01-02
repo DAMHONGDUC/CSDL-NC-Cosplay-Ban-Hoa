@@ -42,7 +42,6 @@ namespace CSDLNC_CosplayBanHoa
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_QT_SP_TPC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_QT_SP_TenCN = new System.Windows.Forms.TextBox();
             this.textBox_QT_SP_MASP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBox_QT_SP_GiaGoc = new System.Windows.Forms.TextBox();
@@ -51,15 +50,15 @@ namespace CSDLNC_CosplayBanHoa
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_LuuSP = new System.Windows.Forms.Button();
+            this.button_QT_CapNhatSP = new System.Windows.Forms.Button();
+            this.button_QT_XoaSP = new System.Windows.Forms.Button();
+            this.button_ThemSP = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dGV_QT_SP = new System.Windows.Forms.DataGridView();
+            this.textBox_HinhAnh = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_QT_SP_Anh)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +68,7 @@ namespace CSDLNC_CosplayBanHoa
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox_HinhAnh);
             this.panel1.Controls.Add(this.picBox_QT_SP_Anh);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.textBox_QT_SP_KM);
@@ -79,7 +79,6 @@ namespace CSDLNC_CosplayBanHoa
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox_QT_SP_TPC);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox_QT_SP_TenCN);
             this.panel1.Controls.Add(this.textBox_QT_SP_MASP);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtBox_QT_SP_GiaGoc);
@@ -88,7 +87,6 @@ namespace CSDLNC_CosplayBanHoa
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -100,10 +98,10 @@ namespace CSDLNC_CosplayBanHoa
             // picBox_QT_SP_Anh
             // 
             this.picBox_QT_SP_Anh.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_QT_SP_Anh.Location = new System.Drawing.Point(1066, 107);
+            this.picBox_QT_SP_Anh.Location = new System.Drawing.Point(1066, 105);
             this.picBox_QT_SP_Anh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBox_QT_SP_Anh.Name = "picBox_QT_SP_Anh";
-            this.picBox_QT_SP_Anh.Size = new System.Drawing.Size(336, 330);
+            this.picBox_QT_SP_Anh.Size = new System.Drawing.Size(285, 315);
             this.picBox_QT_SP_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox_QT_SP_Anh.TabIndex = 27;
             this.picBox_QT_SP_Anh.TabStop = false;
@@ -113,7 +111,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label11.Location = new System.Drawing.Point(1061, 72);
+            this.label11.Location = new System.Drawing.Point(719, 355);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 29);
             this.label11.TabIndex = 26;
@@ -122,7 +120,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox_QT_SP_KM
             // 
             this.textBox_QT_SP_KM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_QT_SP_KM.Location = new System.Drawing.Point(83, 399);
+            this.textBox_QT_SP_KM.Location = new System.Drawing.Point(82, 296);
             this.textBox_QT_SP_KM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_SP_KM.Name = "textBox_QT_SP_KM";
             this.textBox_QT_SP_KM.Size = new System.Drawing.Size(213, 35);
@@ -133,7 +131,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label10.Location = new System.Drawing.Point(79, 367);
+            this.label10.Location = new System.Drawing.Point(78, 264);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 29);
             this.label10.TabIndex = 24;
@@ -142,7 +140,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox_QT_SP_MoTa
             // 
             this.textBox_QT_SP_MoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_QT_SP_MoTa.Location = new System.Drawing.Point(381, 223);
+            this.textBox_QT_SP_MoTa.Location = new System.Drawing.Point(376, 226);
             this.textBox_QT_SP_MoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_SP_MoTa.Multiline = true;
             this.textBox_QT_SP_MoTa.Name = "textBox_QT_SP_MoTa";
@@ -154,7 +152,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label9.Location = new System.Drawing.Point(720, 269);
+            this.label9.Location = new System.Drawing.Point(719, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 29);
             this.label9.TabIndex = 22;
@@ -163,7 +161,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox_QT_SP_CTSP
             // 
             this.textBox_QT_SP_CTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_QT_SP_CTSP.Location = new System.Drawing.Point(724, 305);
+            this.textBox_QT_SP_CTSP.Location = new System.Drawing.Point(723, 205);
             this.textBox_QT_SP_CTSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_SP_CTSP.Multiline = true;
             this.textBox_QT_SP_CTSP.Name = "textBox_QT_SP_CTSP";
@@ -175,7 +173,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(377, 188);
+            this.label8.Location = new System.Drawing.Point(372, 191);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 29);
             this.label8.TabIndex = 20;
@@ -184,7 +182,7 @@ namespace CSDLNC_CosplayBanHoa
             // textBox_QT_SP_TPC
             // 
             this.textBox_QT_SP_TPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_QT_SP_TPC.Location = new System.Drawing.Point(724, 202);
+            this.textBox_QT_SP_TPC.Location = new System.Drawing.Point(375, 105);
             this.textBox_QT_SP_TPC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_QT_SP_TPC.Name = "textBox_QT_SP_TPC";
             this.textBox_QT_SP_TPC.Size = new System.Drawing.Size(274, 35);
@@ -195,20 +193,11 @@ namespace CSDLNC_CosplayBanHoa
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label7.Location = new System.Drawing.Point(720, 169);
+            this.label7.Location = new System.Drawing.Point(371, 72);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(203, 29);
             this.label7.TabIndex = 18;
             this.label7.Text = "Thành phần chính";
-            // 
-            // textBox_QT_SP_TenCN
-            // 
-            this.textBox_QT_SP_TenCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_QT_SP_TenCN.Location = new System.Drawing.Point(82, 205);
-            this.textBox_QT_SP_TenCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox_QT_SP_TenCN.Name = "textBox_QT_SP_TenCN";
-            this.textBox_QT_SP_TenCN.Size = new System.Drawing.Size(213, 35);
-            this.textBox_QT_SP_TenCN.TabIndex = 17;
             // 
             // textBox_QT_SP_MASP
             // 
@@ -242,16 +231,16 @@ namespace CSDLNC_CosplayBanHoa
             // txtBox_QT_SP_SL
             // 
             this.txtBox_QT_SP_SL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBox_QT_SP_SL.Location = new System.Drawing.Point(381, 102);
+            this.txtBox_QT_SP_SL.Location = new System.Drawing.Point(80, 399);
             this.txtBox_QT_SP_SL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_QT_SP_SL.Name = "txtBox_QT_SP_SL";
-            this.txtBox_QT_SP_SL.Size = new System.Drawing.Size(268, 35);
+            this.txtBox_QT_SP_SL.Size = new System.Drawing.Size(215, 35);
             this.txtBox_QT_SP_SL.TabIndex = 13;
             // 
             // txtBox_QT_SP_TenSP
             // 
             this.txtBox_QT_SP_TenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBox_QT_SP_TenSP.Location = new System.Drawing.Point(82, 305);
+            this.txtBox_QT_SP_TenSP.Location = new System.Drawing.Point(81, 202);
             this.txtBox_QT_SP_TenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_QT_SP_TenSP.Name = "txtBox_QT_SP_TenSP";
             this.txtBox_QT_SP_TenSP.Size = new System.Drawing.Size(213, 35);
@@ -273,7 +262,7 @@ namespace CSDLNC_CosplayBanHoa
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(377, 69);
+            this.label4.Location = new System.Drawing.Point(76, 366);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 29);
             this.label4.TabIndex = 8;
@@ -284,22 +273,11 @@ namespace CSDLNC_CosplayBanHoa
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label3.Location = new System.Drawing.Point(78, 272);
+            this.label3.Location = new System.Drawing.Point(77, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tên sản phẩm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(78, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Chi nhánh";
             // 
             // label1
             // 
@@ -314,10 +292,10 @@ namespace CSDLNC_CosplayBanHoa
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button_LuuSP);
+            this.panel2.Controls.Add(this.button_QT_CapNhatSP);
+            this.panel2.Controls.Add(this.button_QT_XoaSP);
+            this.panel2.Controls.Add(this.button_ThemSP);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 935);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -325,49 +303,53 @@ namespace CSDLNC_CosplayBanHoa
             this.panel2.Size = new System.Drawing.Size(1442, 115);
             this.panel2.TabIndex = 6;
             // 
-            // button4
+            // button_LuuSP
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Location = new System.Drawing.Point(449, 35);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 56);
-            this.button4.TabIndex = 55;
-            this.button4.Text = "Lưu";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_LuuSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_LuuSP.Location = new System.Drawing.Point(449, 35);
+            this.button_LuuSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_LuuSP.Name = "button_LuuSP";
+            this.button_LuuSP.Size = new System.Drawing.Size(212, 56);
+            this.button_LuuSP.TabIndex = 55;
+            this.button_LuuSP.Text = "Lưu";
+            this.button_LuuSP.UseVisualStyleBackColor = true;
+            this.button_LuuSP.Click += new System.EventHandler(this.button_LuuSP_Click);
             // 
-            // button3
+            // button_QT_CapNhatSP
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(1117, 35);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(212, 56);
-            this.button3.TabIndex = 54;
-            this.button3.Text = "Cập nhật";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_QT_CapNhatSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_QT_CapNhatSP.Location = new System.Drawing.Point(1117, 35);
+            this.button_QT_CapNhatSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_QT_CapNhatSP.Name = "button_QT_CapNhatSP";
+            this.button_QT_CapNhatSP.Size = new System.Drawing.Size(212, 56);
+            this.button_QT_CapNhatSP.TabIndex = 54;
+            this.button_QT_CapNhatSP.Text = "Cập nhật";
+            this.button_QT_CapNhatSP.UseVisualStyleBackColor = true;
+            this.button_QT_CapNhatSP.Click += new System.EventHandler(this.button_QT_CapNhatSP_Click);
             // 
-            // button1
+            // button_QT_XoaSP
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(783, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 56);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_QT_XoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_QT_XoaSP.Location = new System.Drawing.Point(783, 35);
+            this.button_QT_XoaSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_QT_XoaSP.Name = "button_QT_XoaSP";
+            this.button_QT_XoaSP.Size = new System.Drawing.Size(212, 56);
+            this.button_QT_XoaSP.TabIndex = 53;
+            this.button_QT_XoaSP.Text = "Xóa";
+            this.button_QT_XoaSP.UseVisualStyleBackColor = true;
+            this.button_QT_XoaSP.Click += new System.EventHandler(this.button_QT_XoaSP_Click);
             // 
-            // button2
+            // button_ThemSP
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(115, 35);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 56);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_ThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_ThemSP.Location = new System.Drawing.Point(114, 35);
+            this.button_ThemSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_ThemSP.Name = "button_ThemSP";
+            this.button_ThemSP.Size = new System.Drawing.Size(212, 56);
+            this.button_ThemSP.TabIndex = 52;
+            this.button_ThemSP.Text = "Thêm";
+            this.button_ThemSP.UseVisualStyleBackColor = true;
+            this.button_ThemSP.Click += new System.EventHandler(this.button_ThemSP_Click);
             // 
             // imageList1
             // 
@@ -386,6 +368,15 @@ namespace CSDLNC_CosplayBanHoa
             this.dGV_QT_SP.Size = new System.Drawing.Size(1442, 474);
             this.dGV_QT_SP.TabIndex = 7;
             this.dGV_QT_SP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_QT_SP_CellClick_1);
+            // 
+            // textBox_HinhAnh
+            // 
+            this.textBox_HinhAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox_HinhAnh.Location = new System.Drawing.Point(724, 388);
+            this.textBox_HinhAnh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_HinhAnh.Name = "textBox_HinhAnh";
+            this.textBox_HinhAnh.Size = new System.Drawing.Size(274, 35);
+            this.textBox_HinhAnh.TabIndex = 28;
             // 
             // SanPham_QT
             // 
@@ -420,7 +411,6 @@ namespace CSDLNC_CosplayBanHoa
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_QT_SP_TPC;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_QT_SP_TenCN;
         private System.Windows.Forms.TextBox textBox_QT_SP_MASP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_QT_SP_GiaGoc;
@@ -429,15 +419,15 @@ namespace CSDLNC_CosplayBanHoa
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_LuuSP;
+        private System.Windows.Forms.Button button_QT_CapNhatSP;
+        private System.Windows.Forms.Button button_QT_XoaSP;
+        private System.Windows.Forms.Button button_ThemSP;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox picBox_QT_SP_Anh;
         private System.Windows.Forms.DataGridView dGV_QT_SP;
+        private System.Windows.Forms.TextBox textBox_HinhAnh;
     }
 }
