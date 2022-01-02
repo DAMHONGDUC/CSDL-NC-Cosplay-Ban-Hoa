@@ -27,4 +27,8 @@ CREATE NONCLUSTERED INDEX [LSX_NgayXuat_index] ON [dbo].[DONHANG]
 	[NGAYLAP] ASC
 )
 
-
+-- Index Phần của Đức
+CREATE NONCLUSTERED INDEX [TimKiemSP_index] ON [dbo].[SANPHAM]
+(
+	[THANHPHANCHINH] ASC
+)
