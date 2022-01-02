@@ -29,15 +29,17 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSN.Columns[1].HeaderText = "Ngày nhập";
             dGV_QT_LSN.Columns[2].HeaderText = "Người nhập";
             dGV_QT_LSN.Columns[3].HeaderText = "Số lượng";
+            dGV_QT_LSN.Columns[4].HeaderText = "Giá nhập";
 
             // set Font cho dữ liệu hiển thị trong cột
             dGV_QT_LSN.DefaultCellStyle.Font = new Font("Time New Roman", 12);
 
             // set kích thước cột
-            dGV_QT_LSN.Columns[0].Width = 235;
-            dGV_QT_LSN.Columns[1].Width = 235;
-            dGV_QT_LSN.Columns[2].Width = 235;
-            dGV_QT_LSN.Columns[3].Width = 240;
+            dGV_QT_LSN.Columns[0].Width = 200;
+            dGV_QT_LSN.Columns[1].Width = 200;
+            dGV_QT_LSN.Columns[2].Width = 200;
+            dGV_QT_LSN.Columns[3].Width = 200;
+            dGV_QT_LSN.Columns[4].Width = 200;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dGV_QT_LSN.AllowUserToAddRows = false;
@@ -63,7 +65,7 @@ namespace CSDLNC_CosplayBanHoa
             dateTimePicker_QT_NGAYNHAP.Text = dGV_QT_LSN.CurrentRow.Cells["NGAYNHAP"].Value.ToString();
             textBox_QT_NGUOINHAP.Text = dGV_QT_LSN.CurrentRow.Cells["TENNV"].Value.ToString();
             textBox_QT_SOLUONG.Text = dGV_QT_LSN.CurrentRow.Cells["SOLUONG"].Value.ToString();
-            txtbox_LSN_GiaNhap.Text = "";
+            txtbox_LSN_GiaNhap.Text = dGV_QT_LSN.CurrentRow.Cells["GIANHAP"].Value.ToString();
 
         }
 
@@ -80,6 +82,7 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSN.Columns[1].HeaderText = "Ngày nhập";
             dGV_QT_LSN.Columns[2].HeaderText = "Người nhập";
             dGV_QT_LSN.Columns[3].HeaderText = "Số lượng";
+            dGV_QT_LSN.Columns[4].HeaderText = "Giá nhập";
 
             // set Font cho dữ liệu hiển thị trong cột
             dGV_QT_LSN.DefaultCellStyle.Font = new Font("Time New Roman", 12);
@@ -89,6 +92,7 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSN.Columns[1].Width = 200;
             dGV_QT_LSN.Columns[2].Width = 200;
             dGV_QT_LSN.Columns[3].Width = 200;
+            dGV_QT_LSN.Columns[4].Width = 200;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             //Không cho người dùng thêm dữ liệu trực tiếp
@@ -109,7 +113,7 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSN.Columns[1].HeaderText = "Ngày nhập";
             dGV_QT_LSN.Columns[2].HeaderText = "Người nhập";
             dGV_QT_LSN.Columns[3].HeaderText = "Số lượng";
-
+            dGV_QT_LSN.Columns[4].HeaderText = "Giá nhập";
             // set Font cho dữ liệu hiển thị trong cột
             dGV_QT_LSN.DefaultCellStyle.Font = new Font("Time New Roman", 12);
 
@@ -118,6 +122,7 @@ namespace CSDLNC_CosplayBanHoa
             dGV_QT_LSN.Columns[1].Width = 200;
             dGV_QT_LSN.Columns[2].Width = 200;
             dGV_QT_LSN.Columns[3].Width = 200;
+            dGV_QT_LSN.Columns[4].Width = 200;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             //Không cho người dùng thêm dữ liệu trực tiếp
