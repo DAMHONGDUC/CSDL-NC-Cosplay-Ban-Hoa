@@ -30,7 +30,6 @@
         {
             this.tabControl_sub_thongke = new System.Windows.Forms.TabControl();
             this.tabPage_soluonghang = new System.Windows.Forms.TabPage();
-            this.dgv_tatcaSP_SLH = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.txtBox_slton_SLH = new System.Windows.Forms.TextBox();
@@ -45,7 +44,7 @@
             this.txtBox_khuyenmai_SLH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBox_masp_SLH = new System.Windows.Forms.TextBox();
-            this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
+            this.picBox_anh_SLH = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBox_gianhap_SLH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,11 +109,11 @@
             this.txtBox_DT_LoiNhuan = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtBox_DT_SLDH = new System.Windows.Forms.TextBox();
+            this.dgv_tatcaSP_SLH = new System.Windows.Forms.DataGridView();
             this.tabControl_sub_thongke.SuspendLayout();
             this.tabPage_soluonghang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_SLH)).BeginInit();
             this.tabPage_mathangbanchay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MHBC)).BeginInit();
             this.panel10.SuspendLayout();
@@ -126,6 +125,7 @@
             this.tabPage_doanhthu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DThu)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_sub_thongke
@@ -157,19 +157,6 @@
             this.tabPage_soluonghang.Text = "Số lượng hàng";
             this.tabPage_soluonghang.UseVisualStyleBackColor = true;
             // 
-            // dgv_tatcaSP_SLH
-            // 
-            this.dgv_tatcaSP_SLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tatcaSP_SLH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tatcaSP_SLH.Location = new System.Drawing.Point(3, 479);
-            this.dgv_tatcaSP_SLH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_tatcaSP_SLH.Name = "dgv_tatcaSP_SLH";
-            this.dgv_tatcaSP_SLH.RowHeadersWidth = 51;
-            this.dgv_tatcaSP_SLH.RowTemplate.Height = 24;
-            this.dgv_tatcaSP_SLH.Size = new System.Drawing.Size(1269, 155);
-            this.dgv_tatcaSP_SLH.TabIndex = 1;
-            this.dgv_tatcaSP_SLH.Click += new System.EventHandler(this.dgv_tatcaSP_SLH_Click);
-            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label32);
@@ -185,7 +172,7 @@
             this.panel9.Controls.Add(this.txtBox_khuyenmai_SLH);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.txtBox_masp_SLH);
-            this.panel9.Controls.Add(this.picBox_anh_DT);
+            this.panel9.Controls.Add(this.picBox_anh_SLH);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.txtBox_gianhap_SLH);
             this.panel9.Controls.Add(this.label4);
@@ -325,16 +312,16 @@
             this.txtBox_masp_SLH.Size = new System.Drawing.Size(257, 35);
             this.txtBox_masp_SLH.TabIndex = 69;
             // 
-            // picBox_anh_DT
+            // picBox_anh_SLH
             // 
-            this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_anh_DT.Location = new System.Drawing.Point(922, 115);
-            this.picBox_anh_DT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(302, 317);
-            this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_anh_DT.TabIndex = 68;
-            this.picBox_anh_DT.TabStop = false;
+            this.picBox_anh_SLH.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
+            this.picBox_anh_SLH.Location = new System.Drawing.Point(922, 115);
+            this.picBox_anh_SLH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBox_anh_SLH.Name = "picBox_anh_SLH";
+            this.picBox_anh_SLH.Size = new System.Drawing.Size(302, 317);
+            this.picBox_anh_SLH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_anh_SLH.TabIndex = 68;
+            this.picBox_anh_SLH.TabStop = false;
             // 
             // label5
             // 
@@ -1081,6 +1068,18 @@
             this.txtBox_DT_SLDH.Size = new System.Drawing.Size(257, 35);
             this.txtBox_DT_SLDH.TabIndex = 77;
             // 
+            // dgv_tatcaSP_SLH
+            // 
+            this.dgv_tatcaSP_SLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tatcaSP_SLH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tatcaSP_SLH.Location = new System.Drawing.Point(3, 479);
+            this.dgv_tatcaSP_SLH.Name = "dgv_tatcaSP_SLH";
+            this.dgv_tatcaSP_SLH.RowHeadersWidth = 51;
+            this.dgv_tatcaSP_SLH.RowTemplate.Height = 24;
+            this.dgv_tatcaSP_SLH.Size = new System.Drawing.Size(1269, 155);
+            this.dgv_tatcaSP_SLH.TabIndex = 1;
+            this.dgv_tatcaSP_SLH.Click += new System.EventHandler(this.dgv_tatcaSP_SLH_Click);
+            // 
             // ThongKe_QL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1092,10 +1091,9 @@
             this.Text = "ThongKe_QL";
             this.tabControl_sub_thongke.ResumeLayout(false);
             this.tabPage_soluonghang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_SLH)).EndInit();
             this.tabPage_mathangbanchay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MHBC)).EndInit();
             this.panel10.ResumeLayout(false);
@@ -1110,6 +1108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DThu)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1118,7 +1117,6 @@
 
         private System.Windows.Forms.TabControl tabControl_sub_thongke;
         private System.Windows.Forms.TabPage tabPage_soluonghang;
-        private System.Windows.Forms.DataGridView dgv_tatcaSP_SLH;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TabPage tabPage_mathangbanchay;
         private System.Windows.Forms.DataGridView dgv_MHBC;
@@ -1137,7 +1135,7 @@
         private System.Windows.Forms.TextBox txtBox_khuyenmai_SLH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBox_masp_SLH;
-        private System.Windows.Forms.PictureBox picBox_anh_DT;
+        private System.Windows.Forms.PictureBox picBox_anh_SLH;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_giamgia_SLH;
         private System.Windows.Forms.ComboBox cbB_Thang;
@@ -1198,5 +1196,6 @@
         private System.Windows.Forms.Button btn_xemtatcaSp_SLH;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtBox_slton_SLH;
+        private System.Windows.Forms.DataGridView dgv_tatcaSP_SLH;
     }
 }

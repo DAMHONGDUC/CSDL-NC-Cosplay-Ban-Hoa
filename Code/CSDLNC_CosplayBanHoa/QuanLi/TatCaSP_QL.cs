@@ -58,7 +58,6 @@ namespace CSDLNC_CosplayBanHoa
             Load_Data_TCSP();
         }
 
-
         private void dgv_tatcaSP_SLH_Click(object sender, EventArgs e)
         {
             //Nếu không có dữ liệu
@@ -76,6 +75,17 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_giaban_SLH.Text = dgv_tatcaSP_SLH.CurrentRow.Cells["GIAGOC"].Value.ToString();
             txtBox_khuyenmai_SLH.Text = dgv_tatcaSP_SLH.CurrentRow.Cells["KHUYENMAI"].Value.ToString();
             txtBox_giamgia_SLH.Text = dgv_tatcaSP_SLH.CurrentRow.Cells["GIAGIAM"].Value.ToString();
+
+            // load anh 
+            try
+            {
+                picBox_anh_SLH.Load(dgv_tatcaSP_SLH.CurrentRow.Cells["HINHANH"].Value.ToString());
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
       
         private void btn_timkiem_SLH_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_tangsl_DH_KH = new System.Windows.Forms.Button();
             this.btn_giamsl_DH_KH = new System.Windows.Forms.Button();
-            this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
+            this.picBox_anh_DH = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBox_tongcong_DH_KH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,14 +48,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtbox_tensp_DH_KH = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DH)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_tangsl_DH_KH);
             this.panel1.Controls.Add(this.btn_giamsl_DH_KH);
-            this.panel1.Controls.Add(this.picBox_anh_DT);
+            this.panel1.Controls.Add(this.picBox_anh_DH);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtBox_tongcong_DH_KH);
             this.panel1.Controls.Add(this.label1);
@@ -98,15 +98,15 @@
             this.btn_giamsl_DH_KH.UseVisualStyleBackColor = true;
             this.btn_giamsl_DH_KH.Click += new System.EventHandler(this.btn_giamsl_DH_KH_Click);
             // 
-            // picBox_anh_DT
+            // picBox_anh_DH
             // 
-            this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_anh_DT.Location = new System.Drawing.Point(735, 66);
-            this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(253, 251);
-            this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_anh_DT.TabIndex = 60;
-            this.picBox_anh_DT.TabStop = false;
+            this.picBox_anh_DH.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
+            this.picBox_anh_DH.Location = new System.Drawing.Point(735, 66);
+            this.picBox_anh_DH.Name = "picBox_anh_DH";
+            this.picBox_anh_DH.Size = new System.Drawing.Size(253, 251);
+            this.picBox_anh_DH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_anh_DH.TabIndex = 60;
+            this.picBox_anh_DH.TabStop = false;
             // 
             // label7
             // 
@@ -260,7 +260,7 @@
             this.Load += new System.EventHandler(this.DonHang_KH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,7 +283,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_giagiam_DH_KH;
-        private System.Windows.Forms.PictureBox picBox_anh_DT;
+        private System.Windows.Forms.PictureBox picBox_anh_DH;
         private System.Windows.Forms.Button btn_tangsl_DH_KH;
         private System.Windows.Forms.Button btn_giamsl_DH_KH;
     }

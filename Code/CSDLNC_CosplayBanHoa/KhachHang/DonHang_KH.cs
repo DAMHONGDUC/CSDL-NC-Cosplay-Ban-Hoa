@@ -20,9 +20,10 @@ namespace CSDLNC_CosplayBanHoa
         string TONGCONG;
         string SLMUA;
         string THANHTIEN;
+        string HINHANH;
 
 
-        public DonHang_KH(string masp, string tensp, string dongia, string slton, string makh)
+        public DonHang_KH(string masp, string tensp, string dongia, string slton, string makh, string hinhanh)
         {
             InitializeComponent();
             txtbox_tensp_DH_KH.Text = tensp;
@@ -31,7 +32,8 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_slmua_DH_KH.Text = "1";
             MASP = masp;
             soluongton = Int32.Parse(slton);
-            MAKH = makh;            
+            MAKH = makh;
+            HINHANH = hinhanh;
 
         }
 
@@ -54,7 +56,18 @@ namespace CSDLNC_CosplayBanHoa
                 "FROM GIAMGIA " +
                 "WHERE MASP = '" + MASP + "'";
             giagiam = Functions.GetFieldValues(sql);
-            txtBox_giagiam_DH_KH.Text = giagiam;            
+            txtBox_giagiam_DH_KH.Text = giagiam;
+
+            // load anh 
+            try
+            {
+                picBox_anh_DH.Load(HINHANH);
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         private void DonHang_KH_Load(object sender, EventArgs e)
