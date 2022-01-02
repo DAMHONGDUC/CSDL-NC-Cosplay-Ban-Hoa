@@ -193,6 +193,9 @@
     <Compile Include="NhanVien\ThongTinTT_NV.Designer.cs">
       <DependentUpon>ThongTinTT_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLi\TatCaSP_QL.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="NhanVien\FormMain_NV.resx">
       <DependentUpon>FormMain_NV.cs</DependentUpon>
     </EmbeddedResource>
