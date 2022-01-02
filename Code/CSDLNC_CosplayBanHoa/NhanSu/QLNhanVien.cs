@@ -19,6 +19,7 @@ namespace CSDLNC_CosplayBanHoa
         string id;
         float luong;
         Int32 loainv;
+        DataTable tbQLNV;
 
         public QLNhanVien()
         {
@@ -56,27 +57,34 @@ namespace CSDLNC_CosplayBanHoa
                 "GROUP BY NV.MANV, L.MANV, L.NGAY, NV.ID, NV.TENNV, NV.CHINHANHLV, NV.LOAINV, L.LUONG " +
                 "HAVING ABS(DATEDIFF(day, GETDATE(), L.NGAY)) = (SELECT MIN(ABS(DATEDIFF(day, GETDATE(), L.NGAY))) FROM LUONG L1 WHERE L1.MANV = L.MANV GROUP BY L1.MANV, L1.NGAY)";
 
-         
-           // Functions.Connect();
+
+            // Functions.Connect();
             tbQLNV = Functions.GetDataToTable(sql);
-            dataGridView1.DataSource = tbQLNV;
-        }
+            dGV_QLNV.DataSource = tbQLNV;
 
-        // Click vào 1 dòng trong dataGridView thì sẽ hiển thị dữ liệu tương ứng lên textbox
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tb_MaNV_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            tb_IdNV_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_TenNV_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tb_CNlamviec_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            tb_LoaiNV_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            tb_LuongNV_NS.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            // set Font cho tên cột
+            dGV_QLNV.Font = new Font("Time New Roman", 13);
+            dGV_QLNV.Columns[0].HeaderText = "Mã nhân viên";
+            dGV_QLNV.Columns[1].HeaderText = "ID";
+            dGV_QLNV.Columns[2].HeaderText = "Tên nhân viên";
+            dGV_QLNV.Columns[3].HeaderText = "Mã chi nhánh";
+            dGV_QLNV.Columns[4].HeaderText = "Loại NV";
 
-            // Xử lý enable cho các button và textbox
-            tb_MaNV_NS.Enabled = false;
-            btn_SuaNV_NS.Enabled = true;
-            btn_XoaNV_NS.Enabled = true;
-            btn_ThemNV_NS.Enabled = false;
+            // set Font cho dữ liệu hiển thị trong cột
+            dGV_QLNV.DefaultCellStyle.Font = new Font("Time New Roman", 12);
+
+            // set kích thước cột
+            dGV_QLNV.Columns[0].Width = 200;
+            dGV_QLNV.Columns[1].Width = 200;
+            dGV_QLNV.Columns[2].Width = 200;
+            dGV_QLNV.Columns[3].Width = 200;
+            dGV_QLNV.Columns[4].Width = 200;
+
+
+            //Không cho người dùng thêm dữ liệu trực tiếp
+            dGV_QLNV.AllowUserToAddRows = false;
+            dGV_QLNV.EditMode = DataGridViewEditMode.EditProgrammatically;
+
         }
 
         // Hàm chạy SP_NhanSu_ThemNV
@@ -147,8 +155,8 @@ namespace CSDLNC_CosplayBanHoa
         private void Btn_ThemNV_NS_Click(object sender, EventArgs e) // Xu ly click khi nhan vao nut Them
         {
             //Kiem tra co nhap day du du lieu chua
-            if (tb_CNlamviec_NS.Text.Trim().Length ==0 | tb_IdNV_NS.Text.Trim().Length ==0 | tb_LoaiNV_NS.Text.Trim().Length ==0 |
-                tb_LuongNV_NS.Text.Trim().Length ==0 | tb_MaNV_NS.Text.Trim().Length ==0 | tb_TenNV_NS.Text.Trim().Length == 0)
+            if (tb_CNlamviec_NS.Text.Trim().Length == 0 | tb_IdNV_NS.Text.Trim().Length == 0 | tb_LoaiNV_NS.Text.Trim().Length == 0 |
+                tb_LuongNV_NS.Text.Trim().Length == 0 | tb_MaNV_NS.Text.Trim().Length == 0 | tb_TenNV_NS.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -193,7 +201,7 @@ namespace CSDLNC_CosplayBanHoa
 
             //TH Loai NV khong thuoc khoảng từ 0 đến 2
             int giaTriLoaiNV = Int32.Parse(tb_LoaiNV_NS.Text.Trim().ToString());
-            if(giaTriLoaiNV < 0 | giaTriLoaiNV > 2)
+            if (giaTriLoaiNV < 0 | giaTriLoaiNV > 2)
             {
                 MessageBox.Show("Loại nhân viên không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tb_LoaiNV_NS.Focus();
@@ -304,7 +312,7 @@ namespace CSDLNC_CosplayBanHoa
         private void Btn_TimNVtheoCN_NS_Click(object sender, EventArgs e)
         {
             //Kiem tra xem chi nhanh lam viec da duoc nhap chua
-            if(tb_CNlamviec_NS.Text.Trim().Length == 0)
+            if (tb_CNlamviec_NS.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -326,9 +334,33 @@ namespace CSDLNC_CosplayBanHoa
 
             string maCNdeTimNV = tb_CNlamviec_NS.Text.Trim();
             sql = "SP_NhanSu_TimNVtheoCN '" + maCNdeTimNV + "'";
-          //  Functions.Connect();
+            //  Functions.Connect();
             tbTimNVtheoCN = Functions.GetDataToTable(sql);
-            dataGridView1.DataSource = tbTimNVtheoCN;
+            dGV_QLNV.DataSource = tbTimNVtheoCN;
+        }
+
+
+        private void QLNhanVien_Load(object sender, EventArgs e)
+        {
+            SetFont_QLNhanVien();
+            Resetvalues_QLNhanVien();
+            LoadData_QLNhanVien();
+        }
+
+        private void dGV_QLNV_Click(object sender, EventArgs e)
+        {
+            tb_MaNV_NS.Text = dGV_QLNV.CurrentRow.Cells["MANV"].Value.ToString();
+            tb_IdNV_NS.Text = dGV_QLNV.CurrentRow.Cells["ID"].Value.ToString();
+            tb_TenNV_NS.Text = dGV_QLNV.CurrentRow.Cells["TENNV"].Value.ToString();
+            tb_CNlamviec_NS.Text = dGV_QLNV.CurrentRow.Cells["CHINHANHLV"].Value.ToString();
+            tb_LoaiNV_NS.Text = dGV_QLNV.CurrentRow.Cells["LOAINV"].Value.ToString();
+            tb_LuongNV_NS.Text = dGV_QLNV.CurrentRow.Cells["LUONG"].Value.ToString();
+
+            // Xử lý enable cho các button và textbox
+            tb_MaNV_NS.Enabled = false;
+            btn_SuaNV_NS.Enabled = true;
+            btn_XoaNV_NS.Enabled = true;
+            btn_ThemNV_NS.Enabled = false;
         }
     }
 }

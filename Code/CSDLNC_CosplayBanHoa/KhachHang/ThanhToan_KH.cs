@@ -29,20 +29,20 @@ namespace CSDLNC_CosplayBanHoa
         string tongcong;
         string masp, slmua, thanhtien;
 
-        public ThanhToan_KH(        
+        public ThanhToan_KH(
             string MAKH,
             string TENNGUOINHAN,
             string DIACHI_NGUOINHAN,
             string SDT_NGUOINHAN,
             string PHIVANCHUYEN,
-            string NGAYMUONGIAO,         
+            string NGAYMUONGIAO,
             string TONGCONG,
             string MASP,
             string SLMUA,
             string THANHTIEN
             )
         {
-            InitializeComponent();        
+            InitializeComponent();
             makh = MAKH;
             tennguoinhan = TENNGUOINHAN;
             diachi_nguoinhan = DIACHI_NGUOINHAN;
@@ -50,9 +50,9 @@ namespace CSDLNC_CosplayBanHoa
             phivanchuyen = PHIVANCHUYEN;
             tongcong = TONGCONG;
             ngaymuongiao = NGAYMUONGIAO;
-            masp = MASP ;
-            slmua = SLMUA  ;
-            thanhtien = THANHTIEN  ;
+            masp = MASP;
+            slmua = SLMUA;
+            thanhtien = THANHTIEN;
 
             DateTime today = DateTime.Today;
             ngaylap = today.ToString();
@@ -66,7 +66,7 @@ namespace CSDLNC_CosplayBanHoa
 
             // set kiểu dữ liệu
             cmd.Parameters.Add("@MADH", SqlDbType.VarChar, 15);
-            cmd.Parameters.Add("@MAKH", SqlDbType.VarChar, 15);         
+            cmd.Parameters.Add("@MAKH", SqlDbType.VarChar, 15);
             cmd.Parameters.Add("@MANV", SqlDbType.VarChar, 15);
             cmd.Parameters.Add("@TENNGUOINHAN", SqlDbType.NVarChar, 255);
             cmd.Parameters.Add("@DIACHI_NGUOINHAN", SqlDbType.NVarChar, 255);
@@ -89,7 +89,7 @@ namespace CSDLNC_CosplayBanHoa
 
             // set giá trị
             cmd.Parameters["@MADH"].Value = madh;
-            cmd.Parameters["@MAKH"].Value = makh;     
+            cmd.Parameters["@MAKH"].Value = makh;
             cmd.Parameters["@TENNGUOINHAN"].Value = tennguoinhan;
             cmd.Parameters["@DIACHI_NGUOINHAN"].Value = diachi_nguoinhan;
             cmd.Parameters["@SDT_NGUOINHAN"].Value = sdt_nguoinhan;
@@ -115,7 +115,7 @@ namespace CSDLNC_CosplayBanHoa
             cmd.Parameters.Add("@MASP", SqlDbType.VarChar, 15);
             cmd.Parameters.Add("@SOLUONG", SqlDbType.Int);
             cmd.Parameters.Add("@THANHTIEN", SqlDbType.Decimal);
-                     
+
             cmd.Parameters["@THANHTIEN"].Precision = 19;
             cmd.Parameters["@THANHTIEN"].Scale = 4;
 
@@ -127,7 +127,7 @@ namespace CSDLNC_CosplayBanHoa
             cmd.Parameters["@MASP"].Value = masp;
             cmd.Parameters["@SOLUONG"].Value = slmua;
             cmd.Parameters["@THANHTIEN"].Value = thanhtien;
-            
+
             cmd.ExecuteNonQuery();
 
             return Int32.Parse(returnParameter.Value.ToString());
@@ -144,7 +144,7 @@ namespace CSDLNC_CosplayBanHoa
                 {
                     MessageBox.Show("Vui lòng chon hình thức thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
-                }              
+                }
             }
             else if (tab == 2)
             {
@@ -159,16 +159,16 @@ namespace CSDLNC_CosplayBanHoa
             string sql = "SELECT COUNT(*) FROM DONHANG";
             int rows_number = Int32.Parse(Functions.GetFieldValues(sql));
             rows_number++;
-            madh = "DH"+ rows_number.ToString();         
+            madh = "DH" + rows_number.ToString();
 
             try
             {
-                
+
                 int status1 = Run_SP_Sp_KH_ThemDH();
 
                 int status2 = Run_SP_Sp_KH_ThemCTDH();
 
-                if (status1 == 1 &&  status2 == 1)
+                if (status1 == 1 && status2 == 1)
                 {
                     MessageBox.Show("Thanh toán thành công, đơn hàng của bạn đang được xử lí!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -179,7 +179,7 @@ namespace CSDLNC_CosplayBanHoa
             {
                 MessageBox.Show("Thêm đơn hàng thất bại, mã lỗi: " + ex.Message);
             }
-          
+
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -197,7 +197,7 @@ namespace CSDLNC_CosplayBanHoa
                 tab = 2;
             }
         }
-     
+
         private void cBox_choice1_CheckedChanged(object sender, EventArgs e)
         {
             if (cBox_choice1.Checked == true)

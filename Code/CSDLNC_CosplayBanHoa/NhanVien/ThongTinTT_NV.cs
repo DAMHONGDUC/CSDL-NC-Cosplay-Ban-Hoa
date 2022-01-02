@@ -45,7 +45,7 @@ namespace CSDLNC_CosplayBanHoa
         private void ThongTinTT_NV_Load(object sender, EventArgs e)
         {
             txtbox_tensp.Text = TENSP;
-                txtbox_dongia.Text = GIAGOC;
+            txtbox_dongia.Text = GIAGOC;
             txtbox_slton.Text = SLTON;
 
             string sql = "SELECT GIAGIAM " +
@@ -108,7 +108,7 @@ namespace CSDLNC_CosplayBanHoa
             }
         }
 
-      
+
         private void dTP_ngaygiao_Enter(object sender, EventArgs e)
         {
             dTP_ngaygiao.CustomFormat = "yyyy-MM-dd";
@@ -140,7 +140,7 @@ namespace CSDLNC_CosplayBanHoa
             if (cBox_nguoinhan.Checked == true)
             {
                 txtBox_tennguoinhan.Text = txtBox_tenkh.Text;
-                txtBox_sdtnguoinhan.Text = txtBox_sdt.Text;             
+                txtBox_sdtnguoinhan.Text = txtBox_sdt.Text;
                 txtBox_diachinguoinhan.Text = txtBox_diachi.Text;
                 dTP_ngaymua.Text = DateTime.Today.ToString();
             }
@@ -226,7 +226,7 @@ namespace CSDLNC_CosplayBanHoa
         }
 
         private int Run_SP_TaoTK_KH()
-        {          
+        {
             SqlCommand cmd = new SqlCommand("Sp_TaoTK_KH", Functions.Con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -241,7 +241,7 @@ namespace CSDLNC_CosplayBanHoa
             cmd.Parameters.Add("@MAKH", SqlDbType.VarChar, 15);
             cmd.Parameters.Add("@TENKH", SqlDbType.NVarChar, 50);
             cmd.Parameters.Add("@STK", SqlDbType.VarChar, 30);
-         
+
             var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
             returnParameter.Direction = ParameterDirection.ReturnValue;
 
@@ -254,12 +254,12 @@ namespace CSDLNC_CosplayBanHoa
             cmd.Parameters["@EMAIL"].Value = txtBox_email.Text;
             cmd.Parameters["@DIACHI"].Value = txtBox_diachi.Text;
             cmd.Parameters["@MAKH"].Value = makh;
-            cmd.Parameters["@TENKH"].Value = txtBox_tenkh.Text;      
+            cmd.Parameters["@TENKH"].Value = txtBox_tenkh.Text;
 
             cmd.ExecuteNonQuery();
 
             return Int32.Parse(returnParameter.Value.ToString());
-            
+
         }
 
         private void btn_themdh_Click(object sender, EventArgs e)
@@ -267,7 +267,7 @@ namespace CSDLNC_CosplayBanHoa
             string sql = "SELECT COUNT(*) FROM DONHANG";
             int rows_number = Int32.Parse(Functions.GetFieldValues(sql));
             rows_number++;
-            madh = "DH" + rows_number.ToString();          
+            madh = "DH" + rows_number.ToString();
 
 
 
@@ -280,7 +280,7 @@ namespace CSDLNC_CosplayBanHoa
                     rows_number++;
                     makh = "KH" + rows_number.ToString();
 
-                    int status = Run_SP_TaoTK_KH();                    
+                    int status = Run_SP_TaoTK_KH();
                 }
                 catch (Exception loi)
                 {
@@ -294,7 +294,7 @@ namespace CSDLNC_CosplayBanHoa
                 int status1 = Run_SP_Sp_KH_ThemDH();
                 int status2 = Run_SP_Sp_KH_ThemCTDH();
 
-                if (status1 == 1 && status2 ==1 )
+                if (status1 == 1 && status2 == 1)
                 {
                     MessageBox.Show("Thêm đơn hàng thành công!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;

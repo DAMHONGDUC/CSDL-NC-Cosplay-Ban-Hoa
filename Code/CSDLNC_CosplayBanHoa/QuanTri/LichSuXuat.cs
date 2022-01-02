@@ -12,6 +12,7 @@ namespace CSDLNC_CosplayBanHoa
 {
     public partial class LichSuXuat : Form
     {
+        DataTable tbl_QT_LSX;
         public LichSuXuat()
         {
             InitializeComponent();

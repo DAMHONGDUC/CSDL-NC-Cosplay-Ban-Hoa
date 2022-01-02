@@ -64,7 +64,7 @@ END
 GO
 
 -- DROP PROC Sp_KH_TimKiemSP
--- Xử lí đăng nhập tài khoản
+-- Xử lí tìm kiếm sản phẩm
 CREATE PROC Sp_KH_TimKiemSP
 	@TUKHOA NVARCHAR(50)	
 AS
@@ -72,9 +72,7 @@ BEGIN
 
 	SELECT MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON
 	FROM SANPHAM
-	WHERE THANHPHANCHINH LIKE '%'+ @TUKHOA + '%' 
-	OR TENSP LIKE '%'+ @TUKHOA + '%' 
-	OR CHITIETSP LIKE '%'+ @TUKHOA + '%' 
+	WHERE THANHPHANCHINH LIKE N'%'+ @TUKHOA + '%' 	
 END
 GO
 
@@ -251,6 +249,8 @@ GO
 
 ----------- Phần SP của Tuấn
 
+-- Phân hệ Nhân Sự
+
 -- Thêm nhân viên mới
 CREATE PROCEDURE SP_NhanSu_ThemNV
 	@MANV VARCHAR(15),
@@ -324,6 +324,59 @@ BEGIN
 	HAVING ABS(DATEDIFF(day, GETDATE(), L.NGAY)) = (SELECT MIN(ABS(DATEDIFF(day, GETDATE(), L.NGAY))) FROM LUONG L1 WHERE L1.MANV = L.MANV GROUP BY L1.MANV, L1.NGAY)
 END
 GO
+
+---- Phân hệ Quản lý (Sử dụng partition)
+
+-- Xuất danh sách các nhân viên và ngày làm việc của nhân viên trong tháng
+CREATE PROC SP_QuanLy_XuatNgayLamViecCuaNVTrongThang
+	@THUTU INT
+AS
+BEGIN
+	SELECT NV.MANV, NV.TENNV, NV.CHINHANHLV, NGAY
+	FROM NHANVIEN NV, DIEMDANH 
+	WHERE NV.MANV = dbo.DIEMDANH.MANV
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+END
+GO
+
+-- Số ngày đi làm của nhân viên trong tháng
+CREATE PROC SP_QuanLy_SoNgayDiLamTrongThang
+	@MANV VARCHAR(15),
+	@THUTU INT,
+	@SONGAYLAM INT OUTPUT
+AS
+BEGIN
+	SELECT @SONGAYLAM = COUNT(*)
+	FROM dbo.DIEMDANH
+	WHERE MANV = @MANV
+	AND $Partition.[DiemDanh_PartitionFunction] (NGAY) IN (@THUTU);
+END
+GO
+
+-- Số lượng đơn hàng, doanh thu, số hàng hóa/nhân viên trong 1 tháng
+CREATE PROC SP_QuanLy_HieuSuatNVTrongThang
+	@MANV VARCHAR(15),
+	@THANG INT,
+	@NAM INT,
+	@SOLUONGDON INT OUTPUT,
+	@SOLUONGHANG INT OUTPUT,
+	@DOANHTHU DECIMAL(19,4) OUTPUT
+AS
+BEGIN
+	-- Số đơn hàng và doanh thu
+	SELECT @SOLUONGDON = COUNT(*), @DOANHTHU = SUM(DH.TONGTIEN)
+	FROM dbo.DONHANG DH
+	WHERE MONTH(DH.NGAYLAP) = @THANG
+	AND YEAR(DH.NGAYLAP) = @NAM
+	AND DH.MANV = @MANV
+	
+	-- Số lượng hàng bán được
+	SELECT @SOLUONGHANG = SUM(CT.SOLUONG)
+	FROM dbo.CT_DONHANG CT, dbo.DONHANG DH
+	WHERE CT.MADH = DH.MADH
+
+END
+GO 
 
 
 --------------------------------------------------------------
@@ -447,6 +500,7 @@ BEGIN
 	SET GIAGIAM=@GIAGIAM
 	WHERE MASP=@MASP
 END
+GO
 -----------------------------------------------------------------------
 --sp của Bình Minh đẹp trai nhất nhóm
 --proc xem danh sách mặt hàng bán chạy theo tháng
@@ -583,18 +637,40 @@ AS
 GO
 
 --proc xem DOANH THU mặt hàng bán được theo tháng
---DROP PROC SP_QL_DOANHTHU_BANDUOC
-CREATE PROC SP_QL_DOANHTHU_BANDUOC @THANG INT, @NAM INT
+CREATE PROC SP_QL_TONGDHDB @THANG INT, @NAM INT
 AS
 	BEGIN
-		SELECT SUM(CT.THANHTIEN) AS DT
-		FROM SANPHAM SP1, DONHANG DH, CT_DONHANG CT, LICHSUNHAP LS
-		WHERE SP1.MASP = CT.MASP AND DH.MADH = CT.MADH AND DH.TINHTRANG = 2 AND MONTH(DH.NGAYLAP) = @THANG AND YEAR(DH.NGAYLAP) = @NAM
-		AND LS.MASP = SP1.MASP AND LS.NGAYNHAP = (SELECT TOP 1 NGAYNHAP
-													FROM LICHSUNHAP
-													WHERE MASP = SP1.MASP
-													ORDER BY NGAYNHAP DESC)
-		GROUP BY SP1.MASP, LS.GIANHAP
+		SELECT COUNT(DH.MADH) 
+                    FROM DONHANG DH, CT_DONHANG CTDH 
+                    WHERE DH.MADH = CTDH.MADH 
+					AND DH.TINHTRANG= 2
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
 	END
 GO
-exec SP_QL_DOANHTHU_BANDUOC 12, 2021
+
+CREATE PROC SP_QL_TONG_SLSP_DB @THANG INT, @NAM INT
+AS
+	BEGIN
+		SELECT SUM(CAST(DH.TONGTIEN AS BIGINT)) , SUM(CAST(CTDH.SOLUONG AS BIGINT))
+                    FROM DONHANG DH, CT_DONHANG CTDH 
+                    WHERE DH.MADH = CTDH.MADH 
+					AND DH.TINHTRANG = 2
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
+	END
+GO
+CREATE PROC SP_QL_TONG_CHIPHI @THANG INT, @NAM INT
+AS
+	BEGIN
+		SELECT SUM(CAST((SP.GIAGOC*CTDH.SOLUONG) AS BIGINT)) 
+                    FROM CT_DONHANG CTDH, SANPHAM SP, DONHANG DH
+                    WHERE CTDH.MASP = SP.MASP 
+					AND DH.TINHTRANG=2
+                    AND CTDH.MADH = DH.MADH 
+                    AND YEAR(DH.NGAYLAP) = @NAM
+                    AND MONTH(DH.NGAYLAP) = @THANG
+	END
+GO
+
+
