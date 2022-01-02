@@ -46,7 +46,7 @@ namespace CSDLNC_CosplayBanHoa
       
         private void Load_Data()
         {
-            string sql = "SELECT TOP 10 MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON " +
+            string sql = "SELECT MASP, TENSP, THANHPHANCHINH, GIAGOC ,KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON " +
                 "FROM SANPHAM";
             tbl_SP = Functions.GetDataToTable(sql);
             dGV_SP_MH_KH.DataSource = tbl_SP;
@@ -55,12 +55,13 @@ namespace CSDLNC_CosplayBanHoa
             dGV_SP_MH_KH.Font = new Font("Time New Roman", 13);
             dGV_SP_MH_KH.Columns[0].HeaderText = "Mã sản phẩm";
             dGV_SP_MH_KH.Columns[1].HeaderText = "Tên sản phẩm";
-            dGV_SP_MH_KH.Columns[2].HeaderText = "Giá gốc";
-            dGV_SP_MH_KH.Columns[3].HeaderText = "Khuyến mãi";
-            dGV_SP_MH_KH.Columns[4].HeaderText = "Mô tả";
-            dGV_SP_MH_KH.Columns[5].HeaderText = "Chi tiết sản phẩm";
-            dGV_SP_MH_KH.Columns[6].HeaderText = "Hình ảnh";
-            dGV_SP_MH_KH.Columns[7].HeaderText = "Số lượng tồn";
+            dGV_SP_MH_KH.Columns[2].HeaderText = "Thành phần chính";
+            dGV_SP_MH_KH.Columns[3].HeaderText = "Giá gốc";
+            dGV_SP_MH_KH.Columns[4].HeaderText = "Khuyến mãi";
+            dGV_SP_MH_KH.Columns[5].HeaderText = "Mô tả";
+            dGV_SP_MH_KH.Columns[6].HeaderText = "Chi tiết sản phẩm";
+            dGV_SP_MH_KH.Columns[7].HeaderText = "Hình ảnh";
+            dGV_SP_MH_KH.Columns[8].HeaderText = "Số lượng tồn";
 
             // set Font cho dữ liệu hiển thị trong cột
             dGV_SP_MH_KH.DefaultCellStyle.Font = new Font("Time New Roman", 12);
@@ -72,9 +73,10 @@ namespace CSDLNC_CosplayBanHoa
             dGV_SP_MH_KH.Columns[3].Width = 200;
             dGV_SP_MH_KH.Columns[4].Width = 200;
             dGV_SP_MH_KH.Columns[5].Width = 200;
-            dGV_SP_MH_KH.Columns[6].Width = 0;
-            dGV_SP_MH_KH.Columns[7].Width = 200;
-            
+            dGV_SP_MH_KH.Columns[6].Width = 200;
+            dGV_SP_MH_KH.Columns[7].Width = 0;
+            dGV_SP_MH_KH.Columns[8].Width = 200;
+
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dGV_SP_MH_KH.AllowUserToAddRows = false;
