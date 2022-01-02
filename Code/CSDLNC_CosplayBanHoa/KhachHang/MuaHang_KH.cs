@@ -93,7 +93,11 @@ namespace CSDLNC_CosplayBanHoa
             }
 
             // set giá trị cho các mục 
-            float giamoi = float.Parse(dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString()) - float.Parse(dGV_SP_MH_KH.CurrentRow.Cells["KHUYENMAI"].Value.ToString());
+            double phantram = (double)(100 - Int32.Parse(dGV_SP_MH_KH.CurrentRow.Cells["KHUYENMAI"].Value.ToString()))/100;
+            double giagoc = double.Parse(dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString());
+            double giamoi = (double)(phantram * giagoc);
+            giamoi = Math.Round(giamoi, 4);
+
             txtBox_tensp_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["TENSP"].Value.ToString();
             txtBox_giacu_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString();
             txtBox_giamoi_MH_KH.Text = giamoi.ToString("0.0000");

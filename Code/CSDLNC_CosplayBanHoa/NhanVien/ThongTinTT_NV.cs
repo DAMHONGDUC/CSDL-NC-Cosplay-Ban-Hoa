@@ -14,13 +14,13 @@ namespace CSDLNC_CosplayBanHoa
     public partial class ThongTinTT_NV : Form
     {
         string MANV;
-        string TENSP, GIAGOC, SLTON, MASP;
+        string TENSP, GIAMOI, SLTON, MASP;
         string GIAGIAM;
         DataTable tbl_KH;
         string madh, makh;
         public ThongTinTT_NV(string masp,
             string tensp,
-            string giagoc,
+            string giamoi,
             string slton,
             string manv
             )
@@ -28,7 +28,7 @@ namespace CSDLNC_CosplayBanHoa
             InitializeComponent();
             TENSP = tensp;
             MASP = masp;
-            GIAGOC = giagoc;
+            GIAMOI = giamoi;
             SLTON = slton;
             MANV = manv;
         }
@@ -45,7 +45,7 @@ namespace CSDLNC_CosplayBanHoa
         private void ThongTinTT_NV_Load(object sender, EventArgs e)
         {
             txtbox_tensp.Text = TENSP;
-            txtbox_dongia.Text = GIAGOC;
+            txtbox_dongia.Text = GIAMOI;
             txtbox_slton.Text = SLTON;
 
             string sql = "SELECT GIAGIAM " +
@@ -59,7 +59,7 @@ namespace CSDLNC_CosplayBanHoa
 
         private void Auto_Tong_Tien()
         {
-            float tongcong = float.Parse(txtbox_dongia.Text.ToString()) * Int32.Parse(txtBox_slmua.Text.Trim().ToString()) - float.Parse(GIAGIAM);
+            float tongcong = (float.Parse(GIAMOI) * Int32.Parse(txtBox_slmua.Text.Trim().ToString())) - float.Parse(GIAGIAM);
             if (tongcong > 0)
                 txtBox_tongcong.Text = tongcong.ToString("0.0000");
             else
