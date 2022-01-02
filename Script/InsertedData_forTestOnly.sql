@@ -1,4 +1,4 @@
-﻿use master
+﻿--use master
 USE HYT
 GO
 
@@ -30,11 +30,11 @@ GO
 
 INSERT INTO SANPHAM
 VALUES
-	('SP1',N'SNOW DROP',N'hoa hồng','https://www.pinterest.com/pin/756956649877065867/',N'HOA SIU DEP',150000,N'999 bong hwa hong',0,999,'1/1/2021'),
-	('SP2',N'lovesick girls',N'hoa hướng dương','https://www.pinterest.com/pin/68742994984/',N'HOA SIU DEP',150000,N'doi hwa mat troi',0,10,'10/1/2021'),
-	('SP3',N'stay',N'hoa tulip','https://www.pinterest.com/pin/443393525823105628/',N'HOA SIU DEP',10000,N'doi hwa mat troi',0,1,'10/10/2021'),
-	('SP4',N'2AM',N'hoa ly','https://www.pinterest.com/pin/422281206039061/',N'HOA SIU DEP',50000,N'hoa tang nguoi yeu cu',10,7,'10/12/2021'),
-	('SP5',N'Hoa biet ly',N'hoa ly','https://www.pinterest.com/pin/35043703341935787/',N'HOA SIU thom',1500000,N'hoa dep hoa thom hoa so 1',15,15,'5/12/2021')
+	('SP1',N'SNOW DROP',N'hoa hồng','https://www.pinterest.com/pin/756956649877065867/',N'HOA SIU DEP',150000,N'999 bong hwa hong',0,999),
+	('SP2',N'lovesick girls',N'hoa hướng dương','https://www.pinterest.com/pin/68742994984/',N'HOA SIU DEP',150000,N'doi hwa mat troi',0,10),
+	('SP3',N'stay',N'hoa tulip','https://www.pinterest.com/pin/443393525823105628/',N'HOA SIU DEP',10000,N'doi hwa mat troi',0,1),
+	('SP4',N'2AM',N'hoa ly','https://www.pinterest.com/pin/422281206039061/',N'HOA SIU DEP',50000,N'hoa tang nguoi yeu cu',10,7),
+	('SP5',N'Hoa biet ly',N'hoa ly','https://www.pinterest.com/pin/35043703341935787/',N'HOA SIU thom',1500000,N'hoa dep hoa thom hoa so 1',15,15)
 GO
 
 INSERT INTO SANPHAM_CHINHANH
@@ -75,11 +75,11 @@ GO
 
 INSERT INTO GIAMGIA
 VALUES
-	('SP1',10000),
-	('SP2',10000),
-	('SP3',10000),
-	('SP4',10000),
-	('SP5',10000)
+	('SP1',10000,'12/20/2021','12/25/2021'),
+	('SP2',10000,'12/20/2021','12/25/2021'),
+	('SP3',10000,'12/20/2021','12/25/2021'),
+	('SP4',10000,'12/20/2021','12/25/2021'),
+	('SP5',10000,'12/20/2021','12/25/2021')
 GO
 
 INSERT INTO KHACHHANG
@@ -99,7 +99,7 @@ GO
 
 INSERT INTO CT_DONHANG
 VALUES
-	('DH1','SP2',10,150000),
+	('DH2','SP3',10,150000),
 	('DH1','SP3',15,150000),
 	('DH1','SP4',10,150000),
 	('DH1','SP5',2,150000),
@@ -108,7 +108,6 @@ VALUES
 	('DH2','SP2',1,150000)
 GO
 
---SELECT * FROM CT_DONHANG
 INSERT INTO DIEMDANH
 VALUES
 	('NV1','12/28/2021'),

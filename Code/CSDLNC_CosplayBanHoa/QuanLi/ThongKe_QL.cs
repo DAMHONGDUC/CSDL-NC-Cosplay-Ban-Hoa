@@ -61,7 +61,8 @@ namespace CSDLNC_CosplayBanHoa
             tbl_QuanLi_MHBC.Columns.Add("DOANHTHU", typeof(System.Decimal));
             foreach (DataRow row in tbl_QuanLi_MHBC.Rows)
             {
-                row["DOANHTHU"] = tbl_QuanLi_MHBC2.Rows[i].Field<Decimal>(0);
+                //row["DOANHTHU"] = tbl_QuanLi_MHBC2.Rows[i].Field<Decimal>(0);
+                row["DOANHTHU"] = "0";
                 i++;
             }
             dgv_MHBC.DataSource = tbl_QuanLi_MHBC;

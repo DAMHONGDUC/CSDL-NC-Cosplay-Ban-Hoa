@@ -30,7 +30,7 @@
         {
             this.dGV_CTDH_KH = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.picBox_anh_DT = new System.Windows.Forms.PictureBox();
+            this.picBox_anh_CTDH = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBox_thanhtien_CTDH_KH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtBox_madh_CTDH_KH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_CTDH_KH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_CTDH)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,15 +76,15 @@
             this.label8.TabIndex = 61;
             this.label8.Text = "CHI TIẾT ĐƠN HÀNG";
             // 
-            // picBox_anh_DT
+            // picBox_anh_CTDH
             // 
-            this.picBox_anh_DT.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
-            this.picBox_anh_DT.Location = new System.Drawing.Point(848, 127);
-            this.picBox_anh_DT.Name = "picBox_anh_DT";
-            this.picBox_anh_DT.Size = new System.Drawing.Size(287, 301);
-            this.picBox_anh_DT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox_anh_DT.TabIndex = 60;
-            this.picBox_anh_DT.TabStop = false;
+            this.picBox_anh_CTDH.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.Hoa_hong;
+            this.picBox_anh_CTDH.Location = new System.Drawing.Point(848, 127);
+            this.picBox_anh_CTDH.Name = "picBox_anh_CTDH";
+            this.picBox_anh_CTDH.Size = new System.Drawing.Size(287, 301);
+            this.picBox_anh_CTDH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_anh_CTDH.TabIndex = 60;
+            this.picBox_anh_CTDH.TabStop = false;
             // 
             // label7
             // 
@@ -218,7 +218,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtBox_madh_CTDH_KH);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.picBox_anh_DT);
+            this.panel1.Controls.Add(this.picBox_anh_CTDH);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtBox_thanhtien_CTDH_KH);
             this.panel1.Controls.Add(this.label1);
@@ -270,7 +270,7 @@
             this.Text = "Chi tiết đơn hàng";
             this.Load += new System.EventHandler(this.CT_DonHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_CTDH_KH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_DT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_CTDH)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -281,7 +281,7 @@
 
         private System.Windows.Forms.DataGridView dGV_CTDH_KH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox picBox_anh_DT;
+        private System.Windows.Forms.PictureBox picBox_anh_CTDH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBox_thanhtien_CTDH_KH;
         private System.Windows.Forms.Label label1;

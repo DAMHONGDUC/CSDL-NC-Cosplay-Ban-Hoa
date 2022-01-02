@@ -35,7 +35,8 @@ namespace CSDLNC_CosplayBanHoa
             dGV_CTDH_KH.Columns[4].HeaderText = "Khuyến mãi";
             dGV_CTDH_KH.Columns[5].HeaderText = "Giá giảm";
             dGV_CTDH_KH.Columns[6].HeaderText = "Số lượng";
-            dGV_CTDH_KH.Columns[7].HeaderText = "Thành tiền";         
+            dGV_CTDH_KH.Columns[7].HeaderText = "Thành tiền";
+            dGV_CTDH_KH.Columns[8].HeaderText = "Hình ảnh";
 
             // set Font cho dữ liệu hiển thị trong cột
             dGV_CTDH_KH.DefaultCellStyle.Font = new Font("Time New Roman", 12);
@@ -48,7 +49,8 @@ namespace CSDLNC_CosplayBanHoa
             dGV_CTDH_KH.Columns[4].Width = 200;
             dGV_CTDH_KH.Columns[5].Width = 200;
             dGV_CTDH_KH.Columns[6].Width = 200;
-            dGV_CTDH_KH.Columns[7].Width = 200;          
+            dGV_CTDH_KH.Columns[7].Width = 200;
+            dGV_CTDH_KH.Columns[8].Width = 200;
 
             //Không cho người dùng thêm dữ liệu trực tiếp
             dGV_CTDH_KH.AllowUserToAddRows = false;
@@ -76,7 +78,20 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_giamgia_CTDH_KH.Text = dGV_CTDH_KH.CurrentRow.Cells["GIAGIAM"].Value.ToString();
             txtBox_khuyenmai_CTDH_KH.Text = dGV_CTDH_KH.CurrentRow.Cells["KHUYENMAI"].Value.ToString();
             txtBox_phuphi_CTDH_KH.Text = "-";
-            txtBox_thanhtien_CTDH_KH.Text = dGV_CTDH_KH.CurrentRow.Cells["THANHTIEN"].Value.ToString();              
+            txtBox_thanhtien_CTDH_KH.Text = dGV_CTDH_KH.CurrentRow.Cells["THANHTIEN"].Value.ToString();
+
+            // load anh 
+            try
+            {
+                picBox_anh_CTDH.Load(dGV_CTDH_KH.CurrentRow.Cells["HINHANH"].Value.ToString());
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
+
+
     }
 }

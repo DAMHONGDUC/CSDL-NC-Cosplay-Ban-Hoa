@@ -102,7 +102,19 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_giacu_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["GIAGOC"].Value.ToString();
             txtBox_giamoi_MH_KH.Text = giamoi.ToString("0.0000");
             txtBox_mota_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["MOTA"].Value.ToString();
-            txtBox_chitietsp_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["CHITIETSP"].Value.ToString();          
+            txtBox_chitietsp_MH_KH.Text = dGV_SP_MH_KH.CurrentRow.Cells["CHITIETSP"].Value.ToString();
+
+            // load anh 
+            try
+            {
+                picBox_anh_DT.Load(dGV_SP_MH_KH.CurrentRow.Cells["HINHANH"].Value.ToString());
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+                return;
+            }
+
         }
 
 
@@ -113,7 +125,8 @@ namespace CSDLNC_CosplayBanHoa
                 dGV_SP_MH_KH.CurrentRow.Cells["TENSP"].Value.ToString(),
                 txtBox_giamoi_MH_KH.Text.Trim().ToString(),
                 dGV_SP_MH_KH.CurrentRow.Cells["SOLUONGTON"].Value.ToString(),
-                MAKH);
+                MAKH,
+                dGV_SP_MH_KH.CurrentRow.Cells["HINHANH"].Value.ToString());
             donHang_KH.StartPosition = FormStartPosition.CenterScreen;
             donHang_KH.Show();
         }
