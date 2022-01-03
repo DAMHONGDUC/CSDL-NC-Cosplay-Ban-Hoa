@@ -84,6 +84,16 @@ namespace CSDLNC_CosplayBanHoa
             textBox_QT_SP_CTSP.Text = dGV_QT_SP.CurrentRow.Cells["CHITIETSP"].Value.ToString();
             textBox_QT_SP_KM.Text = dGV_QT_SP.CurrentRow.Cells["KHUYENMAI"].Value.ToString();
             textBox_HinhAnh.Text = dGV_QT_SP.CurrentRow.Cells["HINHANH"].Value.ToString();
+            // load anh 
+            try
+            {
+                picBox_QT_SP_Anh.Load(textBox_HinhAnh.Text);
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         private void button_ThemSP_Click(object sender, EventArgs e)

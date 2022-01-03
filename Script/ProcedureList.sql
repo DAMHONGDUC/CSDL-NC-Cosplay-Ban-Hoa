@@ -370,6 +370,7 @@ END
 GO
 
 -- Số lượng đơn hàng, doanh thu, số hàng hóa/nhân viên trong 1 tháng
+-- drop proc SP_QuanLy_HieuSuatNVTrongThang
 CREATE PROC SP_QuanLy_HieuSuatNVTrongThang
 	@MANV VARCHAR(15),
 	@THANG INT,
@@ -379,20 +380,22 @@ CREATE PROC SP_QuanLy_HieuSuatNVTrongThang
 	@DOANHTHU DECIMAL(19,4) OUTPUT
 AS
 BEGIN
+	
+	DECLARE @MADH VARCHAR(15)
 	-- Số đơn hàng và doanh thu
-	SELECT @SOLUONGDON = COUNT(*), @DOANHTHU = SUM(DH.TONGTIEN)
-	FROM dbo.DONHANG DH
-	WHERE MONTH(DH.NGAYLAP) = @THANG
-	AND YEAR(DH.NGAYLAP) = @NAM
-	AND DH.MANV = @MANV
+	SELECT @SOLUONGDON = COUNT(*) ,@DOANHTHU = SUM(TONGTIEN), @MADH = MADH
+	FROM dbo.DONHANG 
+	WHERE $Partition.[DonHangNgayNhap_PartitionFunction] (NGAYLAP) IN (@THANG + 1)
+	AND MANV = @MANV
+	GROUP BY MANV, MADH, NGAYLAP
 	
 	-- Số lượng hàng bán được
 	SELECT @SOLUONGHANG = SUM(CT.SOLUONG)
-	FROM dbo.CT_DONHANG CT, dbo.DONHANG DH
-	WHERE CT.MADH = DH.MADH
+	FROM dbo.CT_DONHANG CT
+	WHERE CT.MADH = @MADH
 
 END
-GO 
+GO
 
 
 --------------------------------------------------------------

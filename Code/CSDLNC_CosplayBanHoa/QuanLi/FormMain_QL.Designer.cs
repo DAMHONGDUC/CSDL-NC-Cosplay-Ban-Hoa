@@ -47,9 +47,10 @@
             // panelChildForm_KH
             // 
             this.panelChildForm_KH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm_KH.Location = new System.Drawing.Point(150, 0);
+            this.panelChildForm_KH.Location = new System.Drawing.Point(169, 0);
+            this.panelChildForm_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelChildForm_KH.Name = "panelChildForm_KH";
-            this.panelChildForm_KH.Size = new System.Drawing.Size(1332, 953);
+            this.panelChildForm_KH.Size = new System.Drawing.Size(1498, 1050);
             this.panelChildForm_KH.TabIndex = 7;
             // 
             // panelMenu
@@ -63,8 +64,9 @@
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(150, 953);
+            this.panelMenu.Size = new System.Drawing.Size(169, 1050);
             this.panelMenu.TabIndex = 6;
             // 
             // btn_thietlapgiamgia_QL
@@ -74,9 +76,10 @@
             this.btn_thietlapgiamgia_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thietlapgiamgia_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thietlapgiamgia_QL.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thietlapgiamgia_QL.Location = new System.Drawing.Point(0, 296);
+            this.btn_thietlapgiamgia_QL.Location = new System.Drawing.Point(0, 370);
+            this.btn_thietlapgiamgia_QL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_thietlapgiamgia_QL.Name = "btn_thietlapgiamgia_QL";
-            this.btn_thietlapgiamgia_QL.Size = new System.Drawing.Size(150, 60);
+            this.btn_thietlapgiamgia_QL.Size = new System.Drawing.Size(169, 75);
             this.btn_thietlapgiamgia_QL.TabIndex = 11;
             this.btn_thietlapgiamgia_QL.Text = "Thiết lập giảm giá";
             this.btn_thietlapgiamgia_QL.UseVisualStyleBackColor = true;
@@ -89,9 +92,10 @@
             this.btn_hieusuatnv_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hieusuatnv_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_hieusuatnv_QL.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_hieusuatnv_QL.Location = new System.Drawing.Point(0, 236);
+            this.btn_hieusuatnv_QL.Location = new System.Drawing.Point(0, 295);
+            this.btn_hieusuatnv_QL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_hieusuatnv_QL.Name = "btn_hieusuatnv_QL";
-            this.btn_hieusuatnv_QL.Size = new System.Drawing.Size(150, 60);
+            this.btn_hieusuatnv_QL.Size = new System.Drawing.Size(169, 75);
             this.btn_hieusuatnv_QL.TabIndex = 10;
             this.btn_hieusuatnv_QL.Text = "Hiệu suất nhân viên";
             this.btn_hieusuatnv_QL.UseVisualStyleBackColor = true;
@@ -104,9 +108,10 @@
             this.btn_dangxuat_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangxuat_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangxuat_QL.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_dangxuat_QL.Location = new System.Drawing.Point(0, 833);
+            this.btn_dangxuat_QL.Location = new System.Drawing.Point(0, 900);
+            this.btn_dangxuat_QL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_dangxuat_QL.Name = "btn_dangxuat_QL";
-            this.btn_dangxuat_QL.Size = new System.Drawing.Size(150, 60);
+            this.btn_dangxuat_QL.Size = new System.Drawing.Size(169, 75);
             this.btn_dangxuat_QL.TabIndex = 9;
             this.btn_dangxuat_QL.Text = "Đăng xuất";
             this.btn_dangxuat_QL.UseVisualStyleBackColor = true;
@@ -119,12 +124,14 @@
             this.btn_thoat_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thoat_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 893);
+            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 975);
+            this.btn_thoat_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_thoat_KH.Name = "btn_thoat_KH";
-            this.btn_thoat_KH.Size = new System.Drawing.Size(150, 60);
+            this.btn_thoat_KH.Size = new System.Drawing.Size(169, 75);
             this.btn_thoat_KH.TabIndex = 6;
             this.btn_thoat_KH.Text = "Thoát";
             this.btn_thoat_KH.UseVisualStyleBackColor = true;
+            this.btn_thoat_KH.Click += new System.EventHandler(this.btn_thoat_KH_Click);
             // 
             // btn_thongke_QL
             // 
@@ -133,9 +140,10 @@
             this.btn_thongke_QL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thongke_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thongke_QL.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thongke_QL.Location = new System.Drawing.Point(0, 176);
+            this.btn_thongke_QL.Location = new System.Drawing.Point(0, 220);
+            this.btn_thongke_QL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_thongke_QL.Name = "btn_thongke_QL";
-            this.btn_thongke_QL.Size = new System.Drawing.Size(150, 60);
+            this.btn_thongke_QL.Size = new System.Drawing.Size(169, 75);
             this.btn_thongke_QL.TabIndex = 1;
             this.btn_thongke_QL.Text = "Thống kê";
             this.btn_thongke_QL.UseVisualStyleBackColor = true;
@@ -149,8 +157,9 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 176);
+            this.panel2.Size = new System.Drawing.Size(169, 220);
             this.panel2.TabIndex = 1;
             // 
             // lb_tendoitac_DT
@@ -158,9 +167,9 @@
             this.lb_tendoitac_DT.AutoSize = true;
             this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tendoitac_DT.Location = new System.Drawing.Point(35, 133);
+            this.lb_tendoitac_DT.Location = new System.Drawing.Point(39, 166);
             this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
-            this.lb_tendoitac_DT.Size = new System.Drawing.Size(74, 25);
+            this.lb_tendoitac_DT.Size = new System.Drawing.Size(89, 29);
             this.lb_tendoitac_DT.TabIndex = 1;
             this.lb_tendoitac_DT.Text = "Quản lí";
             // 
@@ -169,28 +178,31 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 174);
+            this.panel1.Location = new System.Drawing.Point(0, 218);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 2);
+            this.panel1.Size = new System.Drawing.Size(169, 2);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FormMain_QL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1667, 1050);
             this.Controls.Add(this.panelChildForm_KH);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain_QL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí";
