@@ -63,6 +63,12 @@ namespace CSDLNC_CosplayBanHoa
                 }
             }
         }
+        // xử lí đăng xuất + đăng nhập lại
+        public void open_FormDangNhap(object obj)
+        {
+            Application.Run(new DangNhap());
+        }
+
 
         private void btn_themdh_NV_Click(object sender, EventArgs e)
         {
@@ -73,6 +79,20 @@ namespace CSDLNC_CosplayBanHoa
         private void FormMain_NV_Load(object sender, EventArgs e)
         {
             btn_themdh_NV.PerformClick();
+        }
+
+        private void btn_dangxuat_KH_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t = new Thread(open_FormDangNhap);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+
+        }
+
+        private void btn_thoat_KH_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

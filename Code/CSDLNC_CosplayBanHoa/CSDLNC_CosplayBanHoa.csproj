@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Loading.Designer.cs">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\FormMain_NV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <Compile Include="QuanLi\TatCaSP_QL.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Form_Loading.resx">
+      <DependentUpon>Form_Loading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\FormMain_NV.resx">
       <DependentUpon>FormMain_NV.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,7 +300,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Image\loadingg.gif" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Image\account.png" />
   </ItemGroup>

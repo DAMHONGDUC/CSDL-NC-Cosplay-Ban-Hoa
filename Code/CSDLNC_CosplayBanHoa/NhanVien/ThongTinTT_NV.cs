@@ -267,8 +267,7 @@ namespace CSDLNC_CosplayBanHoa
             string sql = "SELECT COUNT(*) FROM DONHANG";
             int rows_number = Int32.Parse(Functions.GetFieldValues(sql));
             rows_number++;
-            madh = "DH" + rows_number.ToString();
-
+            madh = "DH" + rows_number.ToString();       
 
 
             if (!cBox_KH_cotk.Checked)

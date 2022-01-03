@@ -45,9 +45,10 @@
             // panelChildForm_KH
             // 
             this.panelChildForm_KH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm_KH.Location = new System.Drawing.Point(150, 0);
+            this.panelChildForm_KH.Location = new System.Drawing.Point(169, 0);
+            this.panelChildForm_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelChildForm_KH.Name = "panelChildForm_KH";
-            this.panelChildForm_KH.Size = new System.Drawing.Size(1332, 953);
+            this.panelChildForm_KH.Size = new System.Drawing.Size(1498, 1050);
             this.panelChildForm_KH.TabIndex = 9;
             // 
             // panelMenu
@@ -59,8 +60,9 @@
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(150, 953);
+            this.panelMenu.Size = new System.Drawing.Size(169, 1050);
             this.panelMenu.TabIndex = 8;
             // 
             // btn_dangxuat_KH
@@ -70,12 +72,14 @@
             this.btn_dangxuat_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangxuat_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangxuat_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_dangxuat_KH.Location = new System.Drawing.Point(0, 833);
+            this.btn_dangxuat_KH.Location = new System.Drawing.Point(0, 900);
+            this.btn_dangxuat_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_dangxuat_KH.Name = "btn_dangxuat_KH";
-            this.btn_dangxuat_KH.Size = new System.Drawing.Size(150, 60);
+            this.btn_dangxuat_KH.Size = new System.Drawing.Size(169, 75);
             this.btn_dangxuat_KH.TabIndex = 9;
             this.btn_dangxuat_KH.Text = "Đăng xuất";
             this.btn_dangxuat_KH.UseVisualStyleBackColor = true;
+            this.btn_dangxuat_KH.Click += new System.EventHandler(this.btn_dangxuat_KH_Click);
             // 
             // btn_thoat_KH
             // 
@@ -84,12 +88,14 @@
             this.btn_thoat_KH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_thoat_KH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 893);
+            this.btn_thoat_KH.Location = new System.Drawing.Point(0, 975);
+            this.btn_thoat_KH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_thoat_KH.Name = "btn_thoat_KH";
-            this.btn_thoat_KH.Size = new System.Drawing.Size(150, 60);
+            this.btn_thoat_KH.Size = new System.Drawing.Size(169, 75);
             this.btn_thoat_KH.TabIndex = 6;
             this.btn_thoat_KH.Text = "Thoát";
             this.btn_thoat_KH.UseVisualStyleBackColor = true;
+            this.btn_thoat_KH.Click += new System.EventHandler(this.btn_thoat_KH_Click);
             // 
             // btn_themdh_NV
             // 
@@ -98,9 +104,10 @@
             this.btn_themdh_NV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_themdh_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_themdh_NV.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_themdh_NV.Location = new System.Drawing.Point(0, 176);
+            this.btn_themdh_NV.Location = new System.Drawing.Point(0, 220);
+            this.btn_themdh_NV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_themdh_NV.Name = "btn_themdh_NV";
-            this.btn_themdh_NV.Size = new System.Drawing.Size(150, 60);
+            this.btn_themdh_NV.Size = new System.Drawing.Size(169, 75);
             this.btn_themdh_NV.TabIndex = 1;
             this.btn_themdh_NV.Text = "Thêm đơn hàng";
             this.btn_themdh_NV.UseVisualStyleBackColor = true;
@@ -114,8 +121,9 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 176);
+            this.panel2.Size = new System.Drawing.Size(169, 220);
             this.panel2.TabIndex = 1;
             // 
             // lb_tendoitac_DT
@@ -123,9 +131,9 @@
             this.lb_tendoitac_DT.AutoSize = true;
             this.lb_tendoitac_DT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lb_tendoitac_DT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lb_tendoitac_DT.Location = new System.Drawing.Point(21, 134);
+            this.lb_tendoitac_DT.Location = new System.Drawing.Point(24, 168);
             this.lb_tendoitac_DT.Name = "lb_tendoitac_DT";
-            this.lb_tendoitac_DT.Size = new System.Drawing.Size(100, 25);
+            this.lb_tendoitac_DT.Size = new System.Drawing.Size(120, 29);
             this.lb_tendoitac_DT.TabIndex = 1;
             this.lb_tendoitac_DT.Text = "Nhân viên";
             // 
@@ -134,28 +142,31 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 174);
+            this.panel1.Location = new System.Drawing.Point(0, 218);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 2);
+            this.panel1.Size = new System.Drawing.Size(169, 2);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CSDLNC_CosplayBanHoa.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FormMain_NV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1667, 1050);
             this.Controls.Add(this.panelChildForm_KH);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên";

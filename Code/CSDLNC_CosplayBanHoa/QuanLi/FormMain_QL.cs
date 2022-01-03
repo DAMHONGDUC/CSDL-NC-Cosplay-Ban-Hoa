@@ -98,5 +98,10 @@ namespace CSDLNC_CosplayBanHoa
             openChildForm(new ThietLapGiamGia_QL());
             ActivateButton(sender);
         }
+
+        private void btn_thoat_KH_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

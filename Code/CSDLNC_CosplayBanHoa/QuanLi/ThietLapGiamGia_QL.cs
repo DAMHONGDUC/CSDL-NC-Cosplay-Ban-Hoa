@@ -102,7 +102,16 @@ namespace CSDLNC_CosplayBanHoa
             textBox_QL_KM.Text = dGV_QL_TLGG.CurrentRow.Cells["KHUYENMAI"].Value.ToString();
             textBox_QL_GiaGoc.Text = dGV_QL_TLGG.CurrentRow.Cells["GIAGOC"].Value.ToString();
             textBox_QL_GIAGIAM.Text = dGV_QL_TLGG.CurrentRow.Cells["GIAGIAM"].Value.ToString();
-            picBox_anh_DT.Text = dGV_QL_TLGG.CurrentRow.Cells["HINHANH"].Value.ToString();
+          
+            try
+            {
+                picBox_anh_DT.Load(dGV_QL_TLGG.CurrentRow.Cells["HINHANH"].Value.ToString());
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
