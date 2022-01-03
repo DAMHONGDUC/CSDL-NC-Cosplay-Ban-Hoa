@@ -93,18 +93,18 @@ namespace CSDLNC_CosplayBanHoa
         
         private void btn_Tim_BanChay_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(() =>
-            {
-                form_loading.StartPosition = FormStartPosition.CenterParent;
-                form_loading.ShowDialog();
-            });
+            //Thread t = new Thread(() =>
+            //{
+            //    form_loading.StartPosition = FormStartPosition.CenterParent;
+            //    form_loading.ShowDialog();
+            //});
 
-            // show form loading         
-            t.Start();
+            //// show form loading         
+            //t.Start();
 
             LoadData();
 
-            form_loading.Close_Form();
+            //form_loading.Close_Form();
         }
 
         private void dgv_MHBC_Click(object sender, EventArgs e)
@@ -212,18 +212,18 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_Tim_BanCham_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(() =>
-            {
-                form_loading.StartPosition = FormStartPosition.CenterParent;
-                form_loading.ShowDialog();
-            });
+            //Thread t = new Thread(() =>
+            //{
+            //    form_loading.StartPosition = FormStartPosition.CenterParent;
+            //    form_loading.ShowDialog();
+            //});
 
-            // show form loading         
-            t.Start();
+            //// show form loading         
+            //t.Start();
 
             LoadDataBanCham();
 
-            form_loading.Close_Form();         
+            //form_loading.Close_Form();         
         }
 
         private void tabPage_mathangbancham_Enter(object sender, EventArgs e)
@@ -346,36 +346,36 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_Tim_DT_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(() =>
-            {
-                form_loading.StartPosition = FormStartPosition.CenterParent;
-                form_loading.ShowDialog();
-            });
+            //Thread t = new Thread(() =>
+            //{
+            //    form_loading.StartPosition = FormStartPosition.CenterParent;
+            //    form_loading.ShowDialog();
+            //});
 
-            // show form loading         
-            t.Start();
+            //// show form loading         
+            //t.Start();
 
             LoadData_DThu();
 
-            form_loading.Close_Form();
+           // form_loading.Close_Form();
         }
 
         private void tabPage_doanhthu_Enter(object sender, EventArgs e)
         {
-            Thread t = new Thread(() =>
-            {
-                form_loading.StartPosition = FormStartPosition.CenterParent;
-                form_loading.ShowDialog();
-            });
+            //Thread t = new Thread(() =>
+            //{
+            //    form_loading.StartPosition = FormStartPosition.CenterParent;
+            //    form_loading.ShowDialog();
+            //});
 
-            // show form loading         
-            t.Start();
+            //// show form loading         
+            //t.Start();
 
             // set năm hiện tại           
             cbo_Nam_DT.Text = Int32.Parse(DateTime.Now.ToString("yyyy")).ToString();
             LoadData_DThu();
 
-            form_loading.Close_Form();           
+            //form_loading.Close_Form();           
         }
     }
 }
