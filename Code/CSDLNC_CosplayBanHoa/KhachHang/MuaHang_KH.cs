@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
@@ -16,6 +16,7 @@ namespace CSDLNC_CosplayBanHoa
         DataTable tbl_SP;
         DataTable tbl_SP2;
         string MAKH;
+        Form_Loading form_loading = new Form_Loading();
 
         public MuaHang_KH(string id)
         {
@@ -27,7 +28,19 @@ namespace CSDLNC_CosplayBanHoa
         private void MuaHang_KH_Load(object sender, EventArgs e)
         {         
             handle_menu();
+
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             Load_Data();
+
+            form_loading.Close_Form();
         }
 
         private void btn_timkiem_MH_KH_Click(object sender, EventArgs e)
@@ -38,10 +51,21 @@ namespace CSDLNC_CosplayBanHoa
                 return;
             }
 
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             string tukhoa = txtBox_timkiem_MH_KH.Text.Trim();
             string sql = "Sp_KH_TimKiemSP '" + tukhoa + "'";
             tbl_SP2 = Functions.GetDataToTable(sql);
             dGV_SP_MH_KH.DataSource = tbl_SP2;
+
+            form_loading.Close_Form();
         }
       
         private void Load_Data()

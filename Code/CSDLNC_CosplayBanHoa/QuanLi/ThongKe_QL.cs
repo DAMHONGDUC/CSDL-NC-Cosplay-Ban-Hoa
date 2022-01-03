@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
@@ -24,6 +24,7 @@ namespace CSDLNC_CosplayBanHoa
         int thang, nam;
         string currYear_DT;
         string currMonth_DT;
+        Form_Loading form_loading = new Form_Loading();
 
         public ThongKe_QL()
         {
@@ -61,8 +62,7 @@ namespace CSDLNC_CosplayBanHoa
             tbl_QuanLi_MHBC.Columns.Add("DOANHTHU", typeof(System.Decimal));
             foreach (DataRow row in tbl_QuanLi_MHBC.Rows)
             {
-                //row["DOANHTHU"] = tbl_QuanLi_MHBC2.Rows[i].Field<Decimal>(0);
-                row["DOANHTHU"] = "0";
+                row["DOANHTHU"] = tbl_QuanLi_MHBC2.Rows[i].Field<Decimal>(0);            
                 i++;
             }
             dgv_MHBC.DataSource = tbl_QuanLi_MHBC;
@@ -93,7 +93,18 @@ namespace CSDLNC_CosplayBanHoa
         
         private void btn_Tim_BanChay_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             LoadData();
+
+            form_loading.Close_Form();
         }
 
         private void dgv_MHBC_Click(object sender, EventArgs e)
@@ -168,7 +179,7 @@ namespace CSDLNC_CosplayBanHoa
             dgv_BanCham.Columns[4].HeaderText = "Lợi nhuận";
 
             // set Font cho dữ liệu hiển thị trong cột
-            dgv_MHBC.DefaultCellStyle.Font = new Font("Time New Roman", 12);
+            dgv_BanCham.DefaultCellStyle.Font = new Font("Time New Roman", 12);
 
             // set kích thước cột
             dgv_BanCham.Columns[0].Width = 200;
@@ -201,7 +212,18 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_Tim_BanCham_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             LoadDataBanCham();
+
+            form_loading.Close_Form();         
         }
 
         private void tabPage_mathangbancham_Enter(object sender, EventArgs e)
@@ -324,14 +346,36 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_Tim_DT_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             LoadData_DThu();
+
+            form_loading.Close_Form();
         }
 
         private void tabPage_doanhthu_Enter(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             // set năm hiện tại           
             cbo_Nam_DT.Text = Int32.Parse(DateTime.Now.ToString("yyyy")).ToString();
             LoadData_DThu();
+
+            form_loading.Close_Form();           
         }
     }
 }

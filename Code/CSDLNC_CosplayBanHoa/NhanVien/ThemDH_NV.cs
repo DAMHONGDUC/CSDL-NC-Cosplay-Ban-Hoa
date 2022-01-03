@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace CSDLNC_CosplayBanHoa
@@ -15,6 +15,7 @@ namespace CSDLNC_CosplayBanHoa
         DataTable tbl_SP;
         DataTable tbl_SP2;
         string MANV;
+        Form_Loading form_loading = new Form_Loading();
 
         public ThemDH_NV(string id)
         {
@@ -25,7 +26,7 @@ namespace CSDLNC_CosplayBanHoa
 
         private void Load_Data()
         {
-            string sql = "SELECT TOP 10 MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON " +
+            string sql = "SELECT MASP, TENSP, GIAGOC, KHUYENMAI, MOTA, CHITIETSP, HINHANH, SOLUONGTON " +
                "FROM SANPHAM";
             tbl_SP = Functions.GetDataToTable(sql);
             dGV_SP_ThemDH.DataSource = tbl_SP;
@@ -97,12 +98,35 @@ namespace CSDLNC_CosplayBanHoa
             txtBox_giacu_ThemDH.Text = dGV_SP_ThemDH.CurrentRow.Cells["GIAGOC"].Value.ToString();
             txtBox_giamoi_ThemDH.Text = giamoi.ToString("0.0000");
             txtBox_mota_ThemDH.Text = dGV_SP_ThemDH.CurrentRow.Cells["MOTA"].Value.ToString();
-            txtBox_chitietsp_ThemDH.Text = dGV_SP_ThemDH.CurrentRow.Cells["CHITIETSP"].Value.ToString(); 
+            txtBox_chitietsp_ThemDH.Text = dGV_SP_ThemDH.CurrentRow.Cells["CHITIETSP"].Value.ToString();
+
+            // load anh 
+            try
+            {
+                picBox_anh_DT.Load(dGV_SP_ThemDH.CurrentRow.Cells["HINHANH"].Value.ToString());
+            }
+            catch (Exception loi)
+            {
+                MessageBox.Show("Load ảnh thất bại, mã lỗi: " + loi.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
         }
 
         private void ThemDH_NV_Load(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             Load_Data();
+
+            form_loading.Close_Form();
         }
 
         private void btn_timkiem_ThemDH_Click(object sender, EventArgs e)

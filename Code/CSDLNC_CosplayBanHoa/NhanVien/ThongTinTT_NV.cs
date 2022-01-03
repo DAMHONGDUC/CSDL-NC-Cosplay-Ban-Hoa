@@ -18,6 +18,8 @@ namespace CSDLNC_CosplayBanHoa
         string GIAGIAM;
         DataTable tbl_KH;
         string madh, makh;
+        string ID;
+
         public ThongTinTT_NV(string masp,
             string tensp,
             string giamoi,
@@ -102,8 +104,8 @@ namespace CSDLNC_CosplayBanHoa
 
                 txtBox_tenkh.Text = tbl_KH.Rows[0].Field<String>(0).ToString();
                 txtBox_sdt.Text = tbl_KH.Rows[0].Field<String>(1).ToString();
-                txtBox_diachi.Text = tbl_KH.Rows[0].Field<String>(2).ToString();
-                txtBox_email.Text = tbl_KH.Rows[0].Field<String>(3).ToString();
+                txtBox_diachi.Text = tbl_KH.Rows[0].Field<String>(3).ToString();
+                txtBox_email.Text = tbl_KH.Rows[0].Field<String>(2).ToString();
                 makh = tbl_KH.Rows[0].Field<String>(4).ToString();
             }
         }
@@ -246,7 +248,7 @@ namespace CSDLNC_CosplayBanHoa
             returnParameter.Direction = ParameterDirection.ReturnValue;
 
             // set giá trị
-            cmd.Parameters["@ID"].Value = madh;
+            cmd.Parameters["@ID"].Value = ID ;
             cmd.Parameters["@TENDN"].Value = txtBox_email.Text;
             cmd.Parameters["@MATKHAU"].Value = txtBox_email.Text;
             cmd.Parameters["@LOAITK"].Value = 1;
@@ -278,6 +280,11 @@ namespace CSDLNC_CosplayBanHoa
                     rows_number = Int32.Parse(Functions.GetFieldValues(sql));
                     rows_number++;
                     makh = "KH" + rows_number.ToString();
+
+                    sql = "SELECT COUNT(*) FROM TAIKHOAN";
+                    rows_number = Int32.Parse(Functions.GetFieldValues(sql));
+                    rows_number++;
+                    ID = "ID" + rows_number.ToString();
 
                     int status = Run_SP_TaoTK_KH();
                 }

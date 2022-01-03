@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
@@ -55,7 +55,18 @@ namespace CSDLNC_CosplayBanHoa
 
         private void btn_xemtatcaSp_SLH_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             Load_Data_TCSP();
+
+            form_loading.Close_Form();
         }
 
         private void dgv_tatcaSP_SLH_Click(object sender, EventArgs e)
