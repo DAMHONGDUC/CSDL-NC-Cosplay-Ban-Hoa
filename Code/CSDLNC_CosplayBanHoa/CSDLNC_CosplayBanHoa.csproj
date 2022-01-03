@@ -202,6 +202,15 @@
     <Compile Include="QuanLi\TatCaSP_QL.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DangNhap, Dang Ki\TT_KH_DK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap, Dang Ki\TT_KH_DK.Designer.cs">
+      <DependentUpon>TT_KH_DK.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangNhap, Dang Ki\TT_KH_DK.resx">
+      <DependentUpon>TT_KH_DK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Loading.resx">
       <DependentUpon>Form_Loading.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,7 +310,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Image\loadingg.gif" />
+    <None Include="Image\loadingg.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\account.png" />

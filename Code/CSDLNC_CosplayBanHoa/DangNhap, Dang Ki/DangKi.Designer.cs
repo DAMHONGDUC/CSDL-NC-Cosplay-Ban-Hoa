@@ -36,7 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBox_matkhau_DK = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox_tendn_DK = new System.Windows.Forms.TextBox();
+            this.cB_TX = new System.Windows.Forms.CheckBox();
+            this.cB_KH = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_show_mk = new System.Windows.Forms.Button();
+            this.btn_show_xnmk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_quaylai
@@ -46,7 +51,7 @@
             this.btn_quaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_quaylai.ForeColor = System.Drawing.Color.White;
-            this.btn_quaylai.Location = new System.Drawing.Point(43, 453);
+            this.btn_quaylai.Location = new System.Drawing.Point(42, 554);
             this.btn_quaylai.Name = "btn_quaylai";
             this.btn_quaylai.Size = new System.Drawing.Size(135, 44);
             this.btn_quaylai.TabIndex = 33;
@@ -72,6 +77,7 @@
             this.txtBox_xacnhanmatkhau_DK.Location = new System.Drawing.Point(42, 360);
             this.txtBox_xacnhanmatkhau_DK.Multiline = true;
             this.txtBox_xacnhanmatkhau_DK.Name = "txtBox_xacnhanmatkhau_DK";
+            this.txtBox_xacnhanmatkhau_DK.PasswordChar = '*';
             this.txtBox_xacnhanmatkhau_DK.Size = new System.Drawing.Size(391, 40);
             this.txtBox_xacnhanmatkhau_DK.TabIndex = 27;
             // 
@@ -82,7 +88,7 @@
             this.btn_dangki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangki.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangki.ForeColor = System.Drawing.Color.White;
-            this.btn_dangki.Location = new System.Drawing.Point(298, 453);
+            this.btn_dangki.Location = new System.Drawing.Point(297, 554);
             this.btn_dangki.Name = "btn_dangki";
             this.btn_dangki.Size = new System.Drawing.Size(135, 44);
             this.btn_dangki.TabIndex = 26;
@@ -131,23 +137,85 @@
             this.txtBox_matkhau_DK.Location = new System.Drawing.Point(42, 256);
             this.txtBox_matkhau_DK.Multiline = true;
             this.txtBox_matkhau_DK.Name = "txtBox_matkhau_DK";
+            this.txtBox_matkhau_DK.PasswordChar = '*';
             this.txtBox_matkhau_DK.Size = new System.Drawing.Size(391, 40);
             this.txtBox_matkhau_DK.TabIndex = 22;
             // 
-            // textBox1
+            // txtBox_tendn_DK
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(42, 159);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(391, 40);
-            this.textBox1.TabIndex = 21;
+            this.txtBox_tendn_DK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBox_tendn_DK.Location = new System.Drawing.Point(42, 159);
+            this.txtBox_tendn_DK.Multiline = true;
+            this.txtBox_tendn_DK.Name = "txtBox_tendn_DK";
+            this.txtBox_tendn_DK.Size = new System.Drawing.Size(391, 40);
+            this.txtBox_tendn_DK.TabIndex = 21;
+            // 
+            // cB_TX
+            // 
+            this.cB_TX.AutoSize = true;
+            this.cB_TX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cB_TX.Location = new System.Drawing.Point(331, 478);
+            this.cB_TX.Name = "cB_TX";
+            this.cB_TX.Size = new System.Drawing.Size(88, 28);
+            this.cB_TX.TabIndex = 37;
+            this.cB_TX.Text = "Tài Xế";
+            this.cB_TX.UseVisualStyleBackColor = true;
+            this.cB_TX.CheckedChanged += new System.EventHandler(this.cB_TX_CheckedChanged);
+            // 
+            // cB_KH
+            // 
+            this.cB_KH.AutoSize = true;
+            this.cB_KH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cB_KH.Location = new System.Drawing.Point(42, 478);
+            this.cB_KH.Name = "cB_KH";
+            this.cB_KH.Size = new System.Drawing.Size(137, 28);
+            this.cB_KH.TabIndex = 36;
+            this.cB_KH.Text = "Khách Hàng";
+            this.cB_KH.UseVisualStyleBackColor = true;
+            this.cB_KH.CheckedChanged += new System.EventHandler(this.cB_KH_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(38, 435);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 24);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Chọn loại tài khoản";
+            // 
+            // btn_show_mk
+            // 
+            this.btn_show_mk.Location = new System.Drawing.Point(358, 302);
+            this.btn_show_mk.Name = "btn_show_mk";
+            this.btn_show_mk.Size = new System.Drawing.Size(75, 23);
+            this.btn_show_mk.TabIndex = 38;
+            this.btn_show_mk.Text = "Show";
+            this.btn_show_mk.UseVisualStyleBackColor = true;
+            this.btn_show_mk.Click += new System.EventHandler(this.btn_show_mk_Click);
+            // 
+            // btn_show_xnmk
+            // 
+            this.btn_show_xnmk.Location = new System.Drawing.Point(358, 406);
+            this.btn_show_xnmk.Name = "btn_show_xnmk";
+            this.btn_show_xnmk.Size = new System.Drawing.Size(75, 23);
+            this.btn_show_xnmk.TabIndex = 39;
+            this.btn_show_xnmk.Text = "Show";
+            this.btn_show_xnmk.UseVisualStyleBackColor = true;
+            this.btn_show_xnmk.Click += new System.EventHandler(this.btn_show_xnmk_Click);
             // 
             // DangKi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 547);
+            this.ClientSize = new System.Drawing.Size(470, 641);
+            this.Controls.Add(this.btn_show_xnmk);
+            this.Controls.Add(this.btn_show_mk);
+            this.Controls.Add(this.cB_TX);
+            this.Controls.Add(this.cB_KH);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_quaylai);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBox_xacnhanmatkhau_DK);
@@ -156,7 +224,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBox_matkhau_DK);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_tendn_DK);
             this.Name = "DangKi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng kí";
@@ -175,6 +243,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBox_matkhau_DK;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox_tendn_DK;
+        private System.Windows.Forms.CheckBox cB_TX;
+        private System.Windows.Forms.CheckBox cB_KH;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_show_mk;
+        private System.Windows.Forms.Button btn_show_xnmk;
     }
 }

@@ -30,6 +30,7 @@
         {
             this.tabControl_sub_thongke = new System.Windows.Forms.TabControl();
             this.tabPage_soluonghang = new System.Windows.Forms.TabPage();
+            this.dgv_tatcaSP_SLH = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.txtBox_slton_SLH = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBox_TenSP_MHBC = new System.Windows.Forms.TextBox();
             this.tabPage_mathangbancham = new System.Windows.Forms.TabPage();
-            this.dgv_BanCham = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbx_Nam = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -109,9 +109,10 @@
             this.txtBox_DT_LoiNhuan = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtBox_DT_SLDH = new System.Windows.Forms.TextBox();
-            this.dgv_tatcaSP_SLH = new System.Windows.Forms.DataGridView();
+            this.dgv_BanCham = new System.Windows.Forms.DataGridView();
             this.tabControl_sub_thongke.SuspendLayout();
             this.tabPage_soluonghang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_SLH)).BeginInit();
             this.tabPage_mathangbanchay.SuspendLayout();
@@ -119,13 +120,12 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage_mathangbancham.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage_doanhthu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DThu)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_sub_thongke
@@ -156,6 +156,18 @@
             this.tabPage_soluonghang.TabIndex = 0;
             this.tabPage_soluonghang.Text = "Số lượng hàng";
             this.tabPage_soluonghang.UseVisualStyleBackColor = true;
+            // 
+            // dgv_tatcaSP_SLH
+            // 
+            this.dgv_tatcaSP_SLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tatcaSP_SLH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tatcaSP_SLH.Location = new System.Drawing.Point(3, 479);
+            this.dgv_tatcaSP_SLH.Name = "dgv_tatcaSP_SLH";
+            this.dgv_tatcaSP_SLH.RowHeadersWidth = 51;
+            this.dgv_tatcaSP_SLH.RowTemplate.Height = 24;
+            this.dgv_tatcaSP_SLH.Size = new System.Drawing.Size(1269, 155);
+            this.dgv_tatcaSP_SLH.TabIndex = 1;
+            this.dgv_tatcaSP_SLH.Click += new System.EventHandler(this.dgv_tatcaSP_SLH_Click);
             // 
             // panel9
             // 
@@ -643,19 +655,6 @@
             this.tabPage_mathangbancham.UseVisualStyleBackColor = true;
             this.tabPage_mathangbancham.Enter += new System.EventHandler(this.tabPage_mathangbancham_Enter);
             // 
-            // dgv_BanCham
-            // 
-            this.dgv_BanCham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_BanCham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_BanCham.Location = new System.Drawing.Point(0, 441);
-            this.dgv_BanCham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_BanCham.Name = "dgv_BanCham";
-            this.dgv_BanCham.RowHeadersWidth = 51;
-            this.dgv_BanCham.RowTemplate.Height = 24;
-            this.dgv_BanCham.Size = new System.Drawing.Size(1275, 195);
-            this.dgv_BanCham.TabIndex = 3;
-            this.dgv_BanCham.Click += new System.EventHandler(this.dgv_BanCham_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cbx_Nam);
@@ -1068,17 +1067,16 @@
             this.txtBox_DT_SLDH.Size = new System.Drawing.Size(257, 35);
             this.txtBox_DT_SLDH.TabIndex = 77;
             // 
-            // dgv_tatcaSP_SLH
+            // dgv_BanCham
             // 
-            this.dgv_tatcaSP_SLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tatcaSP_SLH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tatcaSP_SLH.Location = new System.Drawing.Point(3, 479);
-            this.dgv_tatcaSP_SLH.Name = "dgv_tatcaSP_SLH";
-            this.dgv_tatcaSP_SLH.RowHeadersWidth = 51;
-            this.dgv_tatcaSP_SLH.RowTemplate.Height = 24;
-            this.dgv_tatcaSP_SLH.Size = new System.Drawing.Size(1269, 155);
-            this.dgv_tatcaSP_SLH.TabIndex = 1;
-            this.dgv_tatcaSP_SLH.Click += new System.EventHandler(this.dgv_tatcaSP_SLH_Click);
+            this.dgv_BanCham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_BanCham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_BanCham.Location = new System.Drawing.Point(0, 441);
+            this.dgv_BanCham.Name = "dgv_BanCham";
+            this.dgv_BanCham.RowHeadersWidth = 51;
+            this.dgv_BanCham.RowTemplate.Height = 24;
+            this.dgv_BanCham.Size = new System.Drawing.Size(1275, 195);
+            this.dgv_BanCham.TabIndex = 3;
             // 
             // ThongKe_QL
             // 
@@ -1091,6 +1089,7 @@
             this.Text = "ThongKe_QL";
             this.tabControl_sub_thongke.ResumeLayout(false);
             this.tabPage_soluonghang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_anh_SLH)).EndInit();
@@ -1100,7 +1099,6 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage_mathangbancham.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1108,7 +1106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DThu)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tatcaSP_SLH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BanCham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1152,7 +1150,6 @@
         private System.Windows.Forms.Button btn_Tim_BanChay;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage_mathangbancham;
-        private System.Windows.Forms.DataGridView dgv_BanCham;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtBox_SLDB_BanCham;
@@ -1197,5 +1194,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtBox_slton_SLH;
         private System.Windows.Forms.DataGridView dgv_tatcaSP_SLH;
+        private System.Windows.Forms.DataGridView dgv_BanCham;
     }
 }

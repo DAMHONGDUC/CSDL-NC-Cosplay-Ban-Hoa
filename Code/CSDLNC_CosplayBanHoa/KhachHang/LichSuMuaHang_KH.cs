@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace CSDLNC_CosplayBanHoa
@@ -14,6 +14,7 @@ namespace CSDLNC_CosplayBanHoa
     {
         string MAKH;
         DataTable tbl_LSMH;
+        Form_Loading form_loading = new Form_Loading();
         public LichSuMuaHang_KH(string makh)
         {
             InitializeComponent();
@@ -179,7 +180,18 @@ namespace CSDLNC_CosplayBanHoa
 
         private void LichSuMuaHang_KH_Load(object sender, EventArgs e)
         {
+            Thread t = new Thread(() =>
+            {
+                form_loading.StartPosition = FormStartPosition.CenterParent;
+                form_loading.ShowDialog();
+            });
+
+            // show form loading         
+            t.Start();
+
             Load_Data();
+
+            form_loading.Close_Form();
         }
     }
 }
